@@ -1,0 +1,4 @@
+baseURL = 'https://lihui.net/'
+languageCode = 'en-us'
+title = 'lihui'
+theme = "ananke"
