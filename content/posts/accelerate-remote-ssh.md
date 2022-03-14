@@ -19,7 +19,7 @@ ssh {remote-user}@{remote-ip} -p {remote-ssh-port}
 ```
 即可 无须再输入密码
 
-{{can it simple ??}} yes 为服务器设置别名
+{{can it be simple ??}} yes 为服务器设置别名
 
 我们继续
 
