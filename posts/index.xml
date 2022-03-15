@@ -33,5 +33,14 @@ ssh {remote-user}@{remote-ip} -p {remote-ssh-port} 即可 无须再输入密码
       <description>Test</description>
     </item>
     
+    <item>
+      <title>开篇词</title>
+      <link>https://lihui.net/%E5%BC%80%E7%AF%87%E8%AF%8D.html</link>
+      <pubDate>Sun, 06 Sep 2020 16:03:05 +0000</pubDate>
+      
+      <guid>https://lihui.net/%E5%BC%80%E7%AF%87%E8%AF%8D.html</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
