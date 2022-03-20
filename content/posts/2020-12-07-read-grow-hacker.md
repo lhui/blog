@@ -2,7 +2,7 @@
 title: '[读书笔记]增长黑客'
 author: Li Hui
 type: post
-date: -001-11-30T00:00:00+00:00
+date: 2020-12-07T00:00:00+80:00
 url: /read-grow-hacker.html
 views:
   - 1
