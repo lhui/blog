@@ -5,14 +5,13 @@ type: post
 date: 2020-09-08T13:52:55+00:00
 url: /博客优化wordpress加入redis服务器提高速度.html
 views:
-- 1213
-  bot_views:
-- 484
-  categories:
-- 博客优化
-  tags:
-- 博客优化
-
+  - 1213 
+bot_views:
+  - 484
+categories:
+  - 博客优化
+tags:
+  - 博客优化
 ---
 # 为什么要使用redis
 
