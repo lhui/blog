@@ -6,33 +6,11 @@
     <description>Recent content in Uncategorized on lihui</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Sep 2020 12:33:45 +0000</lastBuildDate><atom:link href="https://lihui.net/categories/uncategorized/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>[Shell编程系列]基础教程1</title>
-      <link>https://lihui.net/shell-1.html</link>
-      <pubDate>Thu, 17 Sep 2020 12:33:45 +0000</pubDate>
-      
-      <guid>https://lihui.net/shell-1.html</guid>
-      <description>前言 Shell是用于访问系统服务的用户界面，可以使用命令行,对系统服务进行访问，但是有一个小小的要求，要求用户熟悉命令和熟悉调用方式。
-GUI(graphical user interface)和CLI(command-line interface）各有各的优点 命令行可以一键直达目标，不需要使用鼠标进行多次寻找和点击 图形化界面可以便捷的操作系统的应用（记忆不用要记忆和使用命令）
-内容 ls显示当前文件夹的内容 使用ls命令可以快速的显示当前文件夹的内容（最常使用的命令 不信你查查你的bash history）
-最常用的命令
-   命令 解释 显示效果     ls 显示当前文件夹的所有内容(不包括隐藏内容)    ls -l 显示当前文件夹的详细内容    ls -A 显示当前文件夹的全部内容（包括隐藏内容 比如.git）     pwd显示当前目录 使用场景： 查找现在在那个目录下
-返回效果
-sudo 使用管理员权限 使用场景： 诶 当前权限无法安装应用，诶 这个软件需要管理员权限，此时就需要sudo 了
-一般来说 可以切换root进行操作（不推荐在服务器上使用root作为直接登陆账户，推荐采用一个非root用户进行登陆 且密码最好不要与root相同）
-输入密码即可切换为root（输入密码的时候隐藏了 所以无法看到密码）
-当前面的变为#(sharp)的形状的时候就已经是root（或者正在使用管理员权限了）
-chmod 为文件授权 使用场景：文件要进行执行，发现权限不够/文件无法写入（readonly权限不够）
-此时我们有一个文件 没有执行权限 无法执行 如下图所示
-Chmod 加上执行权限
-我们可以看到 此时软件可以正常的执行了。 ping pong!</description>
-    </item>
-    
+    <lastBuildDate>Mon, 07 Dec 2020 00:00:00 +8000</lastBuildDate><atom:link href="https://lihui.net/categories/uncategorized/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[读书笔记]增长黑客</title>
       <link>https://lihui.net/read-grow-hacker.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 07 Dec 2020 00:00:00 +8000</pubDate>
       
       <guid>https://lihui.net/read-grow-hacker.html</guid>
       <description>这本书 其实是听书听完的，在上下班的地铁上听完的。
@@ -53,6 +31,28 @@ Chmod 加上执行权限
 一般来说产品的收入的途径来源于客户漏斗模型 即通过一定的方法从市场中做用户获取,在产品和工程中采用用户激活和用户留存的策略来获得用户的付费转化率 进而获得收入.
 如果想让产品获得利润,其中一个很重要的是要有产品,当然还需要有好的产品,好的产品是增长的根本也是活力的根本,增长黑客的基本原则之一就是在确定你的产品是否不可或缺,为何不可或缺以及对谁来说不可或缺之前不要进入快节奏实验阶段,换句话说就是,你必须要了解你的产品的核心价值是什么,对哪些用户来说具备这些核心价值以及为什么(一类例外情况就是社交网络类产品,此类产品的核心价值就是用户本身),首先产品具有不可或缺性,可以满足特定群体的需求,且要有较为友好的用户体验,用户体验是用户是否继续留存的重要因素,且在此之间的产品质量也是很重要的一点. 在没有确定市场需求之前不要过早过猛的发力,Airbnb团队曾言到:&amp;ldquo;是爱创造了增长,而不是增长创造了爱.&amp;quot;,因此要赢得用户的喜爱,就必须创造&amp;quot;啊哈时刻(AhaMoment)&amp;rdquo;.
 用户的&amp;quot;Aha时刻&amp;quot;非常重要,可以用两步来进行简单的评估,第一个是产品的不可或缺性调查,即询问用户,1. 如果这个产品明天无法使用了,你有多失望,[a.非常失望 b.有一点失望 c. 不失望 d. 不适用&amp;ndash;已经弃用产品], 2.如果本产品无法使用了,你会用什么替代产品 3.本产品给你带来了重要价值是什么? 3.你想别人推荐郭本产品吗 4.你认为哪些人能够从本产品中收受益,5.我们该如何改进本产品以更好的满足你的需求 6.我们是否可以通过邮件跟进,邀请你对回答做出进一步说明? 并且要调查目标群体 衡量用户留存 ,快节奏进行试验 跟踪活跃用户的行为 根据市场重新定位产品</description>
+    </item>
+    
+    <item>
+      <title>[Shell编程系列]基础教程1</title>
+      <link>https://lihui.net/shell-1.html</link>
+      <pubDate>Thu, 17 Sep 2020 12:33:45 +0000</pubDate>
+      
+      <guid>https://lihui.net/shell-1.html</guid>
+      <description>前言 Shell是用于访问系统服务的用户界面，可以使用命令行,对系统服务进行访问，但是有一个小小的要求，要求用户熟悉命令和熟悉调用方式。
+GUI(graphical user interface)和CLI(command-line interface）各有各的优点 命令行可以一键直达目标，不需要使用鼠标进行多次寻找和点击 图形化界面可以便捷的操作系统的应用（记忆不用要记忆和使用命令）
+内容 ls显示当前文件夹的内容 使用ls命令可以快速的显示当前文件夹的内容（最常使用的命令 不信你查查你的bash history）
+最常用的命令
+   命令 解释 显示效果     ls 显示当前文件夹的所有内容(不包括隐藏内容)    ls -l 显示当前文件夹的详细内容    ls -A 显示当前文件夹的全部内容（包括隐藏内容 比如.git）     pwd显示当前目录 使用场景： 查找现在在那个目录下
+返回效果
+sudo 使用管理员权限 使用场景： 诶 当前权限无法安装应用，诶 这个软件需要管理员权限，此时就需要sudo 了
+一般来说 可以切换root进行操作（不推荐在服务器上使用root作为直接登陆账户，推荐采用一个非root用户进行登陆 且密码最好不要与root相同）
+输入密码即可切换为root（输入密码的时候隐藏了 所以无法看到密码）
+当前面的变为#(sharp)的形状的时候就已经是root（或者正在使用管理员权限了）
+chmod 为文件授权 使用场景：文件要进行执行，发现权限不够/文件无法写入（readonly权限不够）
+此时我们有一个文件 没有执行权限 无法执行 如下图所示
+Chmod 加上执行权限
+我们可以看到 此时软件可以正常的执行了。 ping pong!</description>
     </item>
     
   </channel>
