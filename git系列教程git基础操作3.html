@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>[Git系列教程]Git基础操作3 | lihui</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="前言 前两章节 我们详细说了Git基础的信息配置和证书的确认，还有简单的项目项目的创建，分支的建立和分支的拉取和分支的推送，本章节，主要说明的是分支的合并。
+本次采用的分支还是上次使用的仓库 https://github.com/lihuiocean/hello-git)步骤 分支合并 使用场景： 当有不同的人进行开发的时候，或者不同的功能进行开发的时候，即将进入测试或者预生产或者生产的时候，我们就会对不同的分支进行合并，从而合并相应的功能，开始测试或者发布。
+命令行
+切换到目的分支（最终你想要的分支上），使用下述的命令进行合并
+命令行
+示例
+返回信息
+冲突合并和解决后续更新。">
+    <meta name="generator" content="Hugo 0.94.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="[Git系列教程]Git基础操作3" />
+<meta property="og:description" content="前言 前两章节 我们详细说了Git基础的信息配置和证书的确认，还有简单的项目项目的创建，分支的建立和分支的拉取和分支的推送，本章节，主要说明的是分支的合并。
+本次采用的分支还是上次使用的仓库 https://github.com/lihuiocean/hello-git)步骤 分支合并 使用场景： 当有不同的人进行开发的时候，或者不同的功能进行开发的时候，即将进入测试或者预生产或者生产的时候，我们就会对不同的分支进行合并，从而合并相应的功能，开始测试或者发布。
+命令行
+切换到目的分支（最终你想要的分支上），使用下述的命令进行合并
+命令行
+示例
+返回信息
+冲突合并和解决后续更新。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lihui.net/git%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8Bgit%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C3.html" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-09-12T15:01:01+00:00" />
+<meta property="article:modified_time" content="2020-09-12T15:01:01+00:00" />
+
+<meta itemprop="name" content="[Git系列教程]Git基础操作3">
+<meta itemprop="description" content="前言 前两章节 我们详细说了Git基础的信息配置和证书的确认，还有简单的项目项目的创建，分支的建立和分支的拉取和分支的推送，本章节，主要说明的是分支的合并。
+本次采用的分支还是上次使用的仓库 https://github.com/lihuiocean/hello-git)步骤 分支合并 使用场景： 当有不同的人进行开发的时候，或者不同的功能进行开发的时候，即将进入测试或者预生产或者生产的时候，我们就会对不同的分支进行合并，从而合并相应的功能，开始测试或者发布。
+命令行
+切换到目的分支（最终你想要的分支上），使用下述的命令进行合并
+命令行
+示例
+返回信息
+冲突合并和解决后续更新。"><meta itemprop="datePublished" content="2020-09-12T15:01:01+00:00" />
+<meta itemprop="dateModified" content="2020-09-12T15:01:01+00:00" />
+<meta itemprop="wordCount" content="14">
+<meta itemprop="keywords" content="Git系列," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Git系列教程]Git基础操作3"/>
+<meta name="twitter:description" content="前言 前两章节 我们详细说了Git基础的信息配置和证书的确认，还有简单的项目项目的创建，分支的建立和分支的拉取和分支的推送，本章节，主要说明的是分支的合并。
+本次采用的分支还是上次使用的仓库 https://github.com/lihuiocean/hello-git)步骤 分支合并 使用场景： 当有不同的人进行开发的时候，或者不同的功能进行开发的时候，即将进入测试或者预生产或者生产的时候，我们就会对不同的分支进行合并，从而合并相应的功能，开始测试或者发布。
+命令行
+切换到目的分支（最终你想要的分支上），使用下述的命令进行合并
+命令行
+示例
+返回信息
+冲突合并和解决后续更新。"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        lihui
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">[Git系列教程]Git基础操作3</h1>
+      
+      <p class="tracked">
+          By <strong>
+          
+              Li Hui
+          
+          </strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-09-12T15:01:01Z">September 12, 2020</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="前言">前言</h1>
+<p>前两章节 我们详细说了Git基础的信息配置和证书的确认，还有简单的项目项目的创建，分支的建立和分支的拉取和分支的推送，本章节，主要说明的是分支的合并。</p>
+<p>本次采用的分支还是上次使用的仓库 <!-- raw HTML omitted --><a href="https://github.com/lihuiocean/hello-git">https://github.com/lihuiocean/hello-git</a>)<!-- raw HTML omitted --></p>
+<h1 id="步骤">步骤</h1>
+<h2 id="分支合并">分支合并</h2>
+<p>使用场景： 当有不同的人进行开发的时候，或者不同的功能进行开发的时候，即将进入测试或者预生产或者生产的时候，我们就会对不同的分支进行合并，从而合并相应的功能，开始测试或者发布。</p>
+<p>命令行</p>
+<p>切换到目的分支（最终你想要的分支上），使用下述的命令进行合并</p>
+<p>命令行</p>
+<!-- raw HTML omitted -->
+<p>示例</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>返回信息</p>
+<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/Pic/pStKRF.png" alt="git-merge"></p>
+<p>冲突合并和解决后续更新。</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/git%E7%B3%BB%E5%88%97" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Git系列</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/git%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C2.html">[Git教程系列]基础操作2</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/git%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97git%E5%88%9D%E6%AC%A1%E9%85%8D%E7%BD%AE.html">[Git教程系列]Git初次配置</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
+    &copy;  lihui 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>CURL | lihui</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.94.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+      <link href="/tags/curl/index.xml" rel="alternate" type="application/rss+xml" title="lihui" />
+      <link href="/tags/curl/index.xml" rel="feed" type="application/rss+xml" title="lihui" />
+      
+    
+    
+    <meta property="og:title" content="CURL" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://lihui.net/tags/curl/" />
+
+<meta itemprop="name" content="CURL">
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CURL"/>
+<meta name="twitter:description" content=""/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="pb3-m pb6-l bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        lihui
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv3 ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+          CURL
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <article class="cf pa3 pa4-m pa4-l">
+    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links mid-gray">
+      <p>Below you will find pages that utilize the taxonomy term “CURL”</p>
+    </div>
+  </article>
+  <div class="mw8 center">
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100  mb4 bg-white">
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        September 25, 2020
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="/learn-curl.html" class="link black dim">
+        CURL学习教程
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      前言 CURL是Linux中使用比较多的软件，我也有所耳闻，我也曾经使用过，不过使用的时间间隔的比较长了，也不知道这篇文章会写多长时间全当记录吧。
+内容 首先看看其帮助的内容，一般cmd帮助中都有其全部命令的信息（不然怎么用啊
+其中有全部的内容 本文章中挑选常用的命令做测试。
+直接请求Get 如果我们不给其指定任何参数 ，其将使用Get请求请求，如果访问某一网址 则返回这个网页
+命令行：
+示例
+返回结果：（因为太多了只是截取了一小部分
+指定用户代理 何为用户代理 当我们使用浏览器等发起网络请求中，就自动的带上浏览器的用户代理，比如我们使用浏览器请求http://lihui.net的时候,使用chrome请求的时候如下图
+最下面的一行，即是用户代理
+在curl加入-A 参数即可以指定用户的user-agent
+那问题来了 curl 不指定user-agent的时候是什么呢 当不指定user-agent的时候默认的为curl/{{version}}
+如何去除呢 可以使用下面的命令可以将user-agent去除
+携带用户cookie 使用参数 -b 可以使得curl 在交互中携带用户的cookie
+命令行如下图所示 下面的命令会向example.com 发送名为A 值为B的cookie 如果要发送多个cookie 要以;分割（都在“”内）
+示例
+返回结果
+因为我的网站没有设置相关的cookie认证 等操作，因此返回的页面是和上面的一样的。
+我们可以发送cookie文件到远端的网站
+发送cookie文件
+命令行
+既然有发送文件了，可不可以接受cookie呢
+答案是肯定的，保存返回的cookie到文件到命令行如下图所示
+总结 curl命令行的作用很大，需要学习的内容还有很多，熟悉命令行的作用也有很大。
+文章引用  http://www.ruanyifeng.com/blog/2019/09/curl-reference.html  
+    </div>
+  </div>
+
+        </div>
+      
+    </section>
+  </div>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
+    &copy;  lihui 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

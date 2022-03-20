@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>[博客优化]为Wordpress加入伪静态 | lihui</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="前言 为什么要加入伪静态呢，是Wordpress的网址不好看吗，嗯。。。。确实是不好看，而且网址之间还是不连续的，我都看傻了http://lihui.net/?p=23这种网址 都猜不出写了啥&hellip;
+加入伪静态的优点有哪些呢？
+首先来说 在一定意义上来讲，搜索引擎对于静态的页面的收录的效果要相对来说要好（当然有很多原因，比如网址不易变动，内容固定，访问速度快等等），因此网站做伪静态对于SEO的效果还是很明显的。
+第二点 就是上述的问题，网页无法辨识内容，从p=23能看出啥 反正我看不出和文章的主要内容git有任何关系，因此Wordpress伪静态的优点也就将地址进行自定义化
+涉及的知识： Nginx 配置 Wordpress配置
+步骤 其实伪静态在nginx很简单，只需要添加一些代码即可
+修改配置文件 在配置想要配置的网站的配置文件***.conf中的网站的位置即server里面加入下面的代码即可
+使得nginx生效 此处也是使用的ngnix的命令 进行安全加载 可以首先进行测试 看配置文件修改的是否正确
+当出现 **** test is success 样式的字眼出现时候证明配置修改的是成功的 当出现fail的时候 修改的配置应该是不正确的。
+下面的为执行命令
+此时ngnix 已经生效 伪静态的服务器端已经配置完成
+Wordpress端的配置 Wordpress端的配置相对来说比较简单，直接找到设置，在从中找到固定链接，进行修改，如下图所示
+我采用的修改为下图所示
+点击保存更改就已经修改成功，此时最好打开一个新的页面（此页面先不关闭），进行测试时候已经修改为伪静态（即上述的形式），如果出现问题，尽快修改回第一个，减少网站的不可访问时间。
+思考 有时候，知识觉得问题很复杂，尝试过后才发现也就那个样子，差不多的。">
+    <meta name="generator" content="Hugo 0.94.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="[博客优化]为Wordpress加入伪静态" />
+<meta property="og:description" content="前言 为什么要加入伪静态呢，是Wordpress的网址不好看吗，嗯。。。。确实是不好看，而且网址之间还是不连续的，我都看傻了http://lihui.net/?p=23这种网址 都猜不出写了啥&hellip;
+加入伪静态的优点有哪些呢？
+首先来说 在一定意义上来讲，搜索引擎对于静态的页面的收录的效果要相对来说要好（当然有很多原因，比如网址不易变动，内容固定，访问速度快等等），因此网站做伪静态对于SEO的效果还是很明显的。
+第二点 就是上述的问题，网页无法辨识内容，从p=23能看出啥 反正我看不出和文章的主要内容git有任何关系，因此Wordpress伪静态的优点也就将地址进行自定义化
+涉及的知识： Nginx 配置 Wordpress配置
+步骤 其实伪静态在nginx很简单，只需要添加一些代码即可
+修改配置文件 在配置想要配置的网站的配置文件***.conf中的网站的位置即server里面加入下面的代码即可
+使得nginx生效 此处也是使用的ngnix的命令 进行安全加载 可以首先进行测试 看配置文件修改的是否正确
+当出现 **** test is success 样式的字眼出现时候证明配置修改的是成功的 当出现fail的时候 修改的配置应该是不正确的。
+下面的为执行命令
+此时ngnix 已经生效 伪静态的服务器端已经配置完成
+Wordpress端的配置 Wordpress端的配置相对来说比较简单，直接找到设置，在从中找到固定链接，进行修改，如下图所示
+我采用的修改为下图所示
+点击保存更改就已经修改成功，此时最好打开一个新的页面（此页面先不关闭），进行测试时候已经修改为伪静态（即上述的形式），如果出现问题，尽快修改回第一个，减少网站的不可访问时间。
+思考 有时候，知识觉得问题很复杂，尝试过后才发现也就那个样子，差不多的。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lihui.net/pseudo-static-wordpress.html" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-09-14T12:07:16+00:00" />
+<meta property="article:modified_time" content="2020-09-14T12:07:16+00:00" />
+
+<meta itemprop="name" content="[博客优化]为Wordpress加入伪静态">
+<meta itemprop="description" content="前言 为什么要加入伪静态呢，是Wordpress的网址不好看吗，嗯。。。。确实是不好看，而且网址之间还是不连续的，我都看傻了http://lihui.net/?p=23这种网址 都猜不出写了啥&hellip;
+加入伪静态的优点有哪些呢？
+首先来说 在一定意义上来讲，搜索引擎对于静态的页面的收录的效果要相对来说要好（当然有很多原因，比如网址不易变动，内容固定，访问速度快等等），因此网站做伪静态对于SEO的效果还是很明显的。
+第二点 就是上述的问题，网页无法辨识内容，从p=23能看出啥 反正我看不出和文章的主要内容git有任何关系，因此Wordpress伪静态的优点也就将地址进行自定义化
+涉及的知识： Nginx 配置 Wordpress配置
+步骤 其实伪静态在nginx很简单，只需要添加一些代码即可
+修改配置文件 在配置想要配置的网站的配置文件***.conf中的网站的位置即server里面加入下面的代码即可
+使得nginx生效 此处也是使用的ngnix的命令 进行安全加载 可以首先进行测试 看配置文件修改的是否正确
+当出现 **** test is success 样式的字眼出现时候证明配置修改的是成功的 当出现fail的时候 修改的配置应该是不正确的。
+下面的为执行命令
+此时ngnix 已经生效 伪静态的服务器端已经配置完成
+Wordpress端的配置 Wordpress端的配置相对来说比较简单，直接找到设置，在从中找到固定链接，进行修改，如下图所示
+我采用的修改为下图所示
+点击保存更改就已经修改成功，此时最好打开一个新的页面（此页面先不关闭），进行测试时候已经修改为伪静态（即上述的形式），如果出现问题，尽快修改回第一个，减少网站的不可访问时间。
+思考 有时候，知识觉得问题很复杂，尝试过后才发现也就那个样子，差不多的。"><meta itemprop="datePublished" content="2020-09-14T12:07:16+00:00" />
+<meta itemprop="dateModified" content="2020-09-14T12:07:16+00:00" />
+<meta itemprop="wordCount" content="40">
+<meta itemprop="keywords" content="博客优化," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[博客优化]为Wordpress加入伪静态"/>
+<meta name="twitter:description" content="前言 为什么要加入伪静态呢，是Wordpress的网址不好看吗，嗯。。。。确实是不好看，而且网址之间还是不连续的，我都看傻了http://lihui.net/?p=23这种网址 都猜不出写了啥&hellip;
+加入伪静态的优点有哪些呢？
+首先来说 在一定意义上来讲，搜索引擎对于静态的页面的收录的效果要相对来说要好（当然有很多原因，比如网址不易变动，内容固定，访问速度快等等），因此网站做伪静态对于SEO的效果还是很明显的。
+第二点 就是上述的问题，网页无法辨识内容，从p=23能看出啥 反正我看不出和文章的主要内容git有任何关系，因此Wordpress伪静态的优点也就将地址进行自定义化
+涉及的知识： Nginx 配置 Wordpress配置
+步骤 其实伪静态在nginx很简单，只需要添加一些代码即可
+修改配置文件 在配置想要配置的网站的配置文件***.conf中的网站的位置即server里面加入下面的代码即可
+使得nginx生效 此处也是使用的ngnix的命令 进行安全加载 可以首先进行测试 看配置文件修改的是否正确
+当出现 **** test is success 样式的字眼出现时候证明配置修改的是成功的 当出现fail的时候 修改的配置应该是不正确的。
+下面的为执行命令
+此时ngnix 已经生效 伪静态的服务器端已经配置完成
+Wordpress端的配置 Wordpress端的配置相对来说比较简单，直接找到设置，在从中找到固定链接，进行修改，如下图所示
+我采用的修改为下图所示
+点击保存更改就已经修改成功，此时最好打开一个新的页面（此页面先不关闭），进行测试时候已经修改为伪静态（即上述的形式），如果出现问题，尽快修改回第一个，减少网站的不可访问时间。
+思考 有时候，知识觉得问题很复杂，尝试过后才发现也就那个样子，差不多的。"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        lihui
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">[博客优化]为Wordpress加入伪静态</h1>
+      
+      <p class="tracked">
+          By <strong>
+          
+              Li Hui
+          
+          </strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-09-14T12:07:16Z">September 14, 2020</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="前言">前言</h1>
+<p>为什么要加入伪静态呢，是Wordpress的网址不好看吗，嗯。。。。确实是不好看，而且网址之间还是不连续的，我都看傻了<!-- raw HTML omitted --><a href="http://lihui.net/?p=23">http://lihui.net/?p=23</a><!-- raw HTML omitted --> 这种网址 都猜不出写了啥&hellip;</p>
+<p>加入伪静态的优点有哪些呢？</p>
+<p>首先来说 在一定意义上来讲，搜索引擎对于静态的页面的收录的效果要相对来说要好（当然有很多原因，比如网址不易变动，内容固定，访问速度快等等），因此网站做伪静态对于SEO的效果还是很明显的。</p>
+<p>第二点 就是上述的问题，网页无法辨识内容，从p=23能看出啥 反正我看不出和文章的主要内容git有任何关系，因此Wordpress伪静态的优点也就将地址进行自定义化</p>
+<p>涉及的知识： Nginx 配置 Wordpress配置</p>
+<h1 id="步骤">步骤</h1>
+<p>其实伪静态在nginx很简单，只需要添加一些代码即可</p>
+<h2 id="修改配置文件">修改配置文件</h2>
+<p>在配置想要配置的网站的配置文件***.conf中的网站的位置即server里面加入下面的代码即可</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="使得nginx生效">使得nginx生效</h2>
+<p>此处也是使用的ngnix的命令 进行安全加载 可以首先进行测试 看配置文件修改的是否正确</p>
+<!-- raw HTML omitted -->
+<p>当出现 **** test is success 样式的字眼出现时候证明配置修改的是成功的 当出现fail的时候 修改的配置应该是不正确的。</p>
+<p>下面的为执行命令</p>
+<!-- raw HTML omitted -->
+<p>此时ngnix 已经生效 伪静态的服务器端已经配置完成</p>
+<h2 id="wordpress端的配置">Wordpress端的配置</h2>
+<p>Wordpress端的配置相对来说比较简单，直接找到设置，在从中找到固定链接，进行修改，如下图所示</p>
+<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/Pic/puXEHz.png" alt="puXEHz"></p>
+<p>我采用的修改为下图所示</p>
+<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/Pic/aSE4gx.png" alt="aSE4gx"></p>
+<p>点击保存更改就已经修改成功，此时最好打开一个新的页面（此页面先不关闭），进行测试时候已经修改为伪静态（即上述的形式），如果出现问题，尽快修改回第一个，减少网站的不可访问时间。</p>
+<h1 id="思考">思考</h1>
+<p>有时候，知识觉得问题很复杂，尝试过后才发现也就那个样子，差不多的。</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">博客优化</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E4%B8%BA%E7%BD%91%E7%AB%99%E6%B7%BB%E5%8A%A0ssl%E8%AF%81%E4%B9%A6.html">[博客优化]为网站添加SSL证书</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96wordpress%E5%8A%A0%E5%85%A5redis%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8F%90%E9%AB%98%E9%80%9F%E5%BA%A6.html">[博客优化]Wordpress加入redis服务器提高速度</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
+    &copy;  lihui 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>[SpringBoot 指南] 连接 mysql 数据库并进行增删改查测试 | lihui</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="落库是软件开发中的重要的事情，软件接受完成请求后，对请求的结果进行落入输入库是一件很重要的事情，而本篇文章想写出的内容就是 Springboot 连接本地的数据库的使用方案，本章文章也是入门的文章，因此篇幅可能不大。
+本篇文章的主要内容有哪些呢？ 连接数据库主要分为
+ 启动数据库 设置依赖 连接数据库并测试 增删改查基本功能  因此文章分为下面的三部分
+1. 启动数据库 本文章为了演示比较简便采用的是 docker 创建的数据库
+Docker 安装很容易安装，此处不再赘述 Docker 命令如何使用将单独写出 本文章只涉及几个日常命令 docker run , docker ps
+命令如下:
+命令释义：
+使用 docker ps 查看容器状态
+使用数据库连接工具连接数据库，并创建数据库 person 和数据表 person
+建表语句
+2. 添加依赖并设置连接信息 2.1 添加依赖 在 build.gradle 中添加如下依赖
+本文采用的是最新的依赖，如果企业使用，推荐使用稳定版本
+所在位置如下:
+点击右上角小象标志刷新依赖
+2.2 配置连接信息 在 resources 目录下添加 application.yml 文件并添加如下配置
+3. 测试连接数据库并测试业务逻辑 3.1 查询数据库测试 代码依次如下:
+Person.java
+PersonRepository.java
+PersonService.java
+PersonController.java
+3.2 测试联通 3.2.1 启动时检测 3.2.2 代码检测 可以看到是返回空数组">
+    <meta name="generator" content="Hugo 0.94.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="[SpringBoot 指南] 连接 mysql 数据库并进行增删改查测试" />
+<meta property="og:description" content="落库是软件开发中的重要的事情，软件接受完成请求后，对请求的结果进行落入输入库是一件很重要的事情，而本篇文章想写出的内容就是 Springboot 连接本地的数据库的使用方案，本章文章也是入门的文章，因此篇幅可能不大。
+本篇文章的主要内容有哪些呢？ 连接数据库主要分为
+ 启动数据库 设置依赖 连接数据库并测试 增删改查基本功能  因此文章分为下面的三部分
+1. 启动数据库 本文章为了演示比较简便采用的是 docker 创建的数据库
+Docker 安装很容易安装，此处不再赘述 Docker 命令如何使用将单独写出 本文章只涉及几个日常命令 docker run , docker ps
+命令如下:
+命令释义：
+使用 docker ps 查看容器状态
+使用数据库连接工具连接数据库，并创建数据库 person 和数据表 person
+建表语句
+2. 添加依赖并设置连接信息 2.1 添加依赖 在 build.gradle 中添加如下依赖
+本文采用的是最新的依赖，如果企业使用，推荐使用稳定版本
+所在位置如下:
+点击右上角小象标志刷新依赖
+2.2 配置连接信息 在 resources 目录下添加 application.yml 文件并添加如下配置
+3. 测试连接数据库并测试业务逻辑 3.1 查询数据库测试 代码依次如下:
+Person.java
+PersonRepository.java
+PersonService.java
+PersonController.java
+3.2 测试联通 3.2.1 启动时检测 3.2.2 代码检测 可以看到是返回空数组" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lihui.net/springboot-start-mysql.html" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-01-02T15:56:05+00:00" />
+<meta property="article:modified_time" content="2022-01-02T15:56:05+00:00" />
+
+<meta itemprop="name" content="[SpringBoot 指南] 连接 mysql 数据库并进行增删改查测试">
+<meta itemprop="description" content="落库是软件开发中的重要的事情，软件接受完成请求后，对请求的结果进行落入输入库是一件很重要的事情，而本篇文章想写出的内容就是 Springboot 连接本地的数据库的使用方案，本章文章也是入门的文章，因此篇幅可能不大。
+本篇文章的主要内容有哪些呢？ 连接数据库主要分为
+ 启动数据库 设置依赖 连接数据库并测试 增删改查基本功能  因此文章分为下面的三部分
+1. 启动数据库 本文章为了演示比较简便采用的是 docker 创建的数据库
+Docker 安装很容易安装，此处不再赘述 Docker 命令如何使用将单独写出 本文章只涉及几个日常命令 docker run , docker ps
+命令如下:
+命令释义：
+使用 docker ps 查看容器状态
+使用数据库连接工具连接数据库，并创建数据库 person 和数据表 person
+建表语句
+2. 添加依赖并设置连接信息 2.1 添加依赖 在 build.gradle 中添加如下依赖
+本文采用的是最新的依赖，如果企业使用，推荐使用稳定版本
+所在位置如下:
+点击右上角小象标志刷新依赖
+2.2 配置连接信息 在 resources 目录下添加 application.yml 文件并添加如下配置
+3. 测试连接数据库并测试业务逻辑 3.1 查询数据库测试 代码依次如下:
+Person.java
+PersonRepository.java
+PersonService.java
+PersonController.java
+3.2 测试联通 3.2.1 启动时检测 3.2.2 代码检测 可以看到是返回空数组"><meta itemprop="datePublished" content="2022-01-02T15:56:05+00:00" />
+<meta itemprop="dateModified" content="2022-01-02T15:56:05+00:00" />
+<meta itemprop="wordCount" content="73">
+<meta itemprop="keywords" content="Springboot," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[SpringBoot 指南] 连接 mysql 数据库并进行增删改查测试"/>
+<meta name="twitter:description" content="落库是软件开发中的重要的事情，软件接受完成请求后，对请求的结果进行落入输入库是一件很重要的事情，而本篇文章想写出的内容就是 Springboot 连接本地的数据库的使用方案，本章文章也是入门的文章，因此篇幅可能不大。
+本篇文章的主要内容有哪些呢？ 连接数据库主要分为
+ 启动数据库 设置依赖 连接数据库并测试 增删改查基本功能  因此文章分为下面的三部分
+1. 启动数据库 本文章为了演示比较简便采用的是 docker 创建的数据库
+Docker 安装很容易安装，此处不再赘述 Docker 命令如何使用将单独写出 本文章只涉及几个日常命令 docker run , docker ps
+命令如下:
+命令释义：
+使用 docker ps 查看容器状态
+使用数据库连接工具连接数据库，并创建数据库 person 和数据表 person
+建表语句
+2. 添加依赖并设置连接信息 2.1 添加依赖 在 build.gradle 中添加如下依赖
+本文采用的是最新的依赖，如果企业使用，推荐使用稳定版本
+所在位置如下:
+点击右上角小象标志刷新依赖
+2.2 配置连接信息 在 resources 目录下添加 application.yml 文件并添加如下配置
+3. 测试连接数据库并测试业务逻辑 3.1 查询数据库测试 代码依次如下:
+Person.java
+PersonRepository.java
+PersonService.java
+PersonController.java
+3.2 测试联通 3.2.1 启动时检测 3.2.2 代码检测 可以看到是返回空数组"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        lihui
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">[SpringBoot 指南] 连接 mysql 数据库并进行增删改查测试</h1>
+      
+      <p class="tracked">
+          By <strong>
+          
+              Li Hui
+          
+          </strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-01-02T15:56:05Z">January 2, 2022</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>落库是软件开发中的重要的事情，软件接受完成请求后，对请求的结果进行落入输入库是一件很重要的事情，而本篇文章想写出的内容就是 Springboot 连接本地的数据库的使用方案，本章文章也是入门的文章，因此篇幅可能不大。</p>
+<p>本篇文章的主要内容有哪些呢？ 连接数据库主要分为</p>
+<ol>
+<li>启动数据库</li>
+<li>设置依赖</li>
+<li>连接数据库并测试 增删改查基本功能</li>
+</ol>
+<p>因此文章分为下面的三部分</p>
+<h2 id="1-启动数据库">1. 启动数据库</h2>
+<p>本文章为了演示比较简便采用的是 docker 创建的数据库</p>
+<p>Docker 安装很容易安装，此处不再赘述 Docker 命令如何使用将单独写出 本文章只涉及几个日常命令 <code>docker run</code> , <code>docker ps</code></p>
+<p>命令如下:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>命令释义：</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>使用 <code>docker ps</code> 查看容器状态</p>
+<p><img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320221342.png" alt=""></p>
+<p>使用数据库连接工具连接数据库，并创建数据库 <code>person</code> 和数据表 <code>person</code></p>
+<p>建表语句</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="2-添加依赖并设置连接信息">2. 添加依赖并设置连接信息</h2>
+<h3 id="21-添加依赖">2.1 添加依赖</h3>
+<p>在 <code>build.gradle</code> 中添加如下依赖</p>
+<p>本文采用的是最新的依赖，如果企业使用，推荐使用稳定版本</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>所在位置如下:</p>
+<p><img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320221427.png" alt=""></p>
+<p>点击右上角小象标志刷新依赖</p>
+<p><img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320221504.png" alt=""></p>
+<h3 id="22-配置连接信息">2.2 配置连接信息</h3>
+<p>在 resources 目录下添加 <code>application.yml</code> 文件并添加如下配置</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="3-测试连接数据库并测试业务逻辑">3. 测试连接数据库并测试业务逻辑</h2>
+<h3 id="31-查询数据库测试">3.1 查询数据库测试</h3>
+<p>代码依次如下:</p>
+<p><code>Person.java</code></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><code>PersonRepository.java</code></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><code>PersonService.java</code></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><code>PersonController.java</code></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h3 id="32-测试联通">3.2 测试联通</h3>
+<h4 id="321-启动时检测">3.2.1 启动时检测</h4>
+<p><img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320221528.png" alt=""></p>
+<h4 id="322-代码检测">3.2.2 代码检测</h4>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>可以看到是返回空数组</p>
+<p>我们在数据库中插入数据</p>
+<p>SQL 如下：</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>再次请求</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<blockquote>
+</blockquote>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/springboot" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Springboot</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/springboot-create-first-api.html">[SpringBoot 指南] 如何开始 Springboot 之旅 实现自己第一个接口</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
+    &copy;  lihui 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

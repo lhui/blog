@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>如何使用 gitbook cli工具 | lihui</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="gitbook 是一个极好的工具帮助我们来写一个富有逻辑性的书籍。使用 gitbook cli 可以轻松地帮助我们非写作化的进程，使得我们更加专注于写作本身。
+关于 gitbook cli 工具其实写作的内容并不多主要涉及的是两个方面，第一个是对应的 node 版本要选择正确，此步骤可以采用 node 版本控制工具 nvm 解决， 第二个就是 gitbook cli 工具的使用方法。
+1. 安装 nvm node 版本管理工具 1.1 安装 nvm 安装方式可以参考官方链接 https://github.com/nvm-sh/nvm#install--update-script此篇文章的安装版本可能已经过时 本文书写时间 2022-01-09 如果距离过长，请直接找到上述网站安装
+``
+1.2 下载 node 10 并使用 node 10 这里的命令也比较简单
+此时 terminal 中就是 10 的版本， 我们下面开始安装 gitbook cli 应用
+2. 安装 gitbook cli 工具并使用 2.1 安装 此时 gitbook cli 工具已经全局安装好了
+2.2 使用 此时 gitbook cli 就已经创建好，至于具体文件含义，我找到了一个更具体的文档，列在下方，直接看下面的文档更好理解如何使用。">
+    <meta name="generator" content="Hugo 0.94.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="如何使用 gitbook cli工具" />
+<meta property="og:description" content="gitbook 是一个极好的工具帮助我们来写一个富有逻辑性的书籍。使用 gitbook cli 可以轻松地帮助我们非写作化的进程，使得我们更加专注于写作本身。
+关于 gitbook cli 工具其实写作的内容并不多主要涉及的是两个方面，第一个是对应的 node 版本要选择正确，此步骤可以采用 node 版本控制工具 nvm 解决， 第二个就是 gitbook cli 工具的使用方法。
+1. 安装 nvm node 版本管理工具 1.1 安装 nvm 安装方式可以参考官方链接 https://github.com/nvm-sh/nvm#install--update-script此篇文章的安装版本可能已经过时 本文书写时间 2022-01-09 如果距离过长，请直接找到上述网站安装
+``
+1.2 下载 node 10 并使用 node 10 这里的命令也比较简单
+此时 terminal 中就是 10 的版本， 我们下面开始安装 gitbook cli 应用
+2. 安装 gitbook cli 工具并使用 2.1 安装 此时 gitbook cli 工具已经全局安装好了
+2.2 使用 此时 gitbook cli 就已经创建好，至于具体文件含义，我找到了一个更具体的文档，列在下方，直接看下面的文档更好理解如何使用。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lihui.net/how-to-use-gitbook.html" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-01-09T15:43:27+00:00" />
+<meta property="article:modified_time" content="2022-01-09T15:43:27+00:00" />
+
+<meta itemprop="name" content="如何使用 gitbook cli工具">
+<meta itemprop="description" content="gitbook 是一个极好的工具帮助我们来写一个富有逻辑性的书籍。使用 gitbook cli 可以轻松地帮助我们非写作化的进程，使得我们更加专注于写作本身。
+关于 gitbook cli 工具其实写作的内容并不多主要涉及的是两个方面，第一个是对应的 node 版本要选择正确，此步骤可以采用 node 版本控制工具 nvm 解决， 第二个就是 gitbook cli 工具的使用方法。
+1. 安装 nvm node 版本管理工具 1.1 安装 nvm 安装方式可以参考官方链接 https://github.com/nvm-sh/nvm#install--update-script此篇文章的安装版本可能已经过时 本文书写时间 2022-01-09 如果距离过长，请直接找到上述网站安装
+``
+1.2 下载 node 10 并使用 node 10 这里的命令也比较简单
+此时 terminal 中就是 10 的版本， 我们下面开始安装 gitbook cli 应用
+2. 安装 gitbook cli 工具并使用 2.1 安装 此时 gitbook cli 工具已经全局安装好了
+2.2 使用 此时 gitbook cli 就已经创建好，至于具体文件含义，我找到了一个更具体的文档，列在下方，直接看下面的文档更好理解如何使用。"><meta itemprop="datePublished" content="2022-01-09T15:43:27+00:00" />
+<meta itemprop="dateModified" content="2022-01-09T15:43:27+00:00" />
+<meta itemprop="wordCount" content="68">
+<meta itemprop="keywords" content="gitbook," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="如何使用 gitbook cli工具"/>
+<meta name="twitter:description" content="gitbook 是一个极好的工具帮助我们来写一个富有逻辑性的书籍。使用 gitbook cli 可以轻松地帮助我们非写作化的进程，使得我们更加专注于写作本身。
+关于 gitbook cli 工具其实写作的内容并不多主要涉及的是两个方面，第一个是对应的 node 版本要选择正确，此步骤可以采用 node 版本控制工具 nvm 解决， 第二个就是 gitbook cli 工具的使用方法。
+1. 安装 nvm node 版本管理工具 1.1 安装 nvm 安装方式可以参考官方链接 https://github.com/nvm-sh/nvm#install--update-script此篇文章的安装版本可能已经过时 本文书写时间 2022-01-09 如果距离过长，请直接找到上述网站安装
+``
+1.2 下载 node 10 并使用 node 10 这里的命令也比较简单
+此时 terminal 中就是 10 的版本， 我们下面开始安装 gitbook cli 应用
+2. 安装 gitbook cli 工具并使用 2.1 安装 此时 gitbook cli 工具已经全局安装好了
+2.2 使用 此时 gitbook cli 就已经创建好，至于具体文件含义，我找到了一个更具体的文档，列在下方，直接看下面的文档更好理解如何使用。"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        lihui
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">如何使用 gitbook cli工具</h1>
+      
+      <p class="tracked">
+          By <strong>
+          
+              Li Hui
+          
+          </strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-01-09T15:43:27Z">January 9, 2022</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>gitbook 是一个极好的工具帮助我们来写一个富有逻辑性的书籍。使用 gitbook cli 可以轻松地帮助我们非写作化的进程，使得我们更加专注于写作本身。</p>
+<p>关于 gitbook cli 工具其实写作的内容并不多主要涉及的是两个方面，第一个是对应的 node 版本要选择正确，此步骤可以采用 node 版本控制工具 nvm 解决， 第二个就是 gitbook cli 工具的使用方法。</p>
+<h2 id="1-安装-nvm-node-版本管理工具">1. 安装 nvm node 版本管理工具</h2>
+<h3 id="11-安装-nvm">1.1 安装 nvm</h3>
+<p>安装方式可以参考官方链接 <!-- raw HTML omitted --><a href="https://github.com/nvm-sh/nvm#install--update-script">https://github.com/nvm-sh/nvm#install--update-script</a><!-- raw HTML omitted --></p>
+<p>此篇文章的安装版本可能已经过时 本文书写时间 2022-01-09 如果距离过长，请直接找到上述网站安装</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>``</p>
+<h3 id="12-下载-node-10-并使用-node-10">1.2 下载 node 10 并使用 node 10</h3>
+<p>这里的命令也比较简单</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>此时 terminal 中就是 10 的版本， 我们下面开始安装 gitbook cli 应用</p>
+<h2 id="2-安装-gitbook-cli-工具并使用">2. 安装 gitbook cli 工具并使用</h2>
+<h3 id="21-安装">2.1 安装</h3>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>此时 gitbook cli 工具已经全局安装好了</p>
+<h2 id="22-使用">2.2 使用</h2>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>此时 gitbook cli 就已经创建好，至于具体文件含义，我找到了一个更具体的文档，列在下方，直接看下面的文档更好理解如何使用。</p>
+<p><!-- raw HTML omitted --><a href="https://chrisniael.gitbooks.io/gitbook-documentation/content/">https://chrisniael.gitbooks.io/gitbook-documentation/content/</a><!-- raw HTML omitted --></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/gitbook" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">gitbook</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
+    &copy;  lihui 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

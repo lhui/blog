@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>[安全系列]生成ssh证书 | lihui</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="前言 生成ssh证书有什么作用，首先可以快速的登陆服务器，无需每次数输入密码，只需要配置一次ssh证书即可，即可以直接通过ssh登陆证书，借此用处我们可以使用ssh证书对git仓库进行操作，无需要每次上载的时候都需要输入密码，输密码想想都麻烦，再说谁不想简单一点呢？
+而且这步骤很简单。此处记录以下指令，以便后续查看。
+内容 因为本步骤记录的是生成证书的代码 这就很简单了，不需要太多的代码，生成证书的前置条件是需要有openssh.Linux/Mac预置了相关的软件，Windows用户只需要安装Git即可。https://git-scm.com/注： 自版本1803起，Windows 10中已包含基于OpenSSH的客户端和服务器程序。默认情况下，SSH客户端和密钥代理已启用并可用，并且SSH服务器是可选的按需功能。
+图源：wikipedia
+最重要的步骤：生成证书 可以生成不带邮箱的和带邮箱，下面先给出带邮箱的，而后给一个不带邮箱的
+带邮箱的(来源：https://docs.github.com/cn/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+执行该命令后会显示你的要储存的位置
+此时一般选择默认即可 文件保存在/Users/you/.ssh/id_rsa（Mac） /home/you/.ssh/id_rsa(Linux) /c/Users/you/.ssh/id_rsa(Windows)
+中 而后要求输入安全密码
+此时最好输入安全密码，可以多一层保障，即使你的证书丢了也不必担心安全问题，当然不输入密码也是可以的
+此时密钥已经在相应的位置生成，可以进行其他的操作。
+下面为不是输入密码的，直接省去一个参数即可。其他的操作相同
+总结 生成ssh-key是一个非常简单的事情，通过这个简单的事情，可以为以后的事情增加工作效率，不得不说是一个一劳永逸的事情。">
+    <meta name="generator" content="Hugo 0.94.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="[安全系列]生成ssh证书" />
+<meta property="og:description" content="前言 生成ssh证书有什么作用，首先可以快速的登陆服务器，无需每次数输入密码，只需要配置一次ssh证书即可，即可以直接通过ssh登陆证书，借此用处我们可以使用ssh证书对git仓库进行操作，无需要每次上载的时候都需要输入密码，输密码想想都麻烦，再说谁不想简单一点呢？
+而且这步骤很简单。此处记录以下指令，以便后续查看。
+内容 因为本步骤记录的是生成证书的代码 这就很简单了，不需要太多的代码，生成证书的前置条件是需要有openssh.Linux/Mac预置了相关的软件，Windows用户只需要安装Git即可。https://git-scm.com/注： 自版本1803起，Windows 10中已包含基于OpenSSH的客户端和服务器程序。默认情况下，SSH客户端和密钥代理已启用并可用，并且SSH服务器是可选的按需功能。
+图源：wikipedia
+最重要的步骤：生成证书 可以生成不带邮箱的和带邮箱，下面先给出带邮箱的，而后给一个不带邮箱的
+带邮箱的(来源：https://docs.github.com/cn/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+执行该命令后会显示你的要储存的位置
+此时一般选择默认即可 文件保存在/Users/you/.ssh/id_rsa（Mac） /home/you/.ssh/id_rsa(Linux) /c/Users/you/.ssh/id_rsa(Windows)
+中 而后要求输入安全密码
+此时最好输入安全密码，可以多一层保障，即使你的证书丢了也不必担心安全问题，当然不输入密码也是可以的
+此时密钥已经在相应的位置生成，可以进行其他的操作。
+下面为不是输入密码的，直接省去一个参数即可。其他的操作相同
+总结 生成ssh-key是一个非常简单的事情，通过这个简单的事情，可以为以后的事情增加工作效率，不得不说是一个一劳永逸的事情。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lihui.net/gen-sshkey.html" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-09-22T00:00:39+00:00" />
+<meta property="article:modified_time" content="2020-09-22T00:00:39+00:00" />
+
+<meta itemprop="name" content="[安全系列]生成ssh证书">
+<meta itemprop="description" content="前言 生成ssh证书有什么作用，首先可以快速的登陆服务器，无需每次数输入密码，只需要配置一次ssh证书即可，即可以直接通过ssh登陆证书，借此用处我们可以使用ssh证书对git仓库进行操作，无需要每次上载的时候都需要输入密码，输密码想想都麻烦，再说谁不想简单一点呢？
+而且这步骤很简单。此处记录以下指令，以便后续查看。
+内容 因为本步骤记录的是生成证书的代码 这就很简单了，不需要太多的代码，生成证书的前置条件是需要有openssh.Linux/Mac预置了相关的软件，Windows用户只需要安装Git即可。https://git-scm.com/注： 自版本1803起，Windows 10中已包含基于OpenSSH的客户端和服务器程序。默认情况下，SSH客户端和密钥代理已启用并可用，并且SSH服务器是可选的按需功能。
+图源：wikipedia
+最重要的步骤：生成证书 可以生成不带邮箱的和带邮箱，下面先给出带邮箱的，而后给一个不带邮箱的
+带邮箱的(来源：https://docs.github.com/cn/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+执行该命令后会显示你的要储存的位置
+此时一般选择默认即可 文件保存在/Users/you/.ssh/id_rsa（Mac） /home/you/.ssh/id_rsa(Linux) /c/Users/you/.ssh/id_rsa(Windows)
+中 而后要求输入安全密码
+此时最好输入安全密码，可以多一层保障，即使你的证书丢了也不必担心安全问题，当然不输入密码也是可以的
+此时密钥已经在相应的位置生成，可以进行其他的操作。
+下面为不是输入密码的，直接省去一个参数即可。其他的操作相同
+总结 生成ssh-key是一个非常简单的事情，通过这个简单的事情，可以为以后的事情增加工作效率，不得不说是一个一劳永逸的事情。"><meta itemprop="datePublished" content="2020-09-22T00:00:39+00:00" />
+<meta itemprop="dateModified" content="2020-09-22T00:00:39+00:00" />
+<meta itemprop="wordCount" content="24">
+<meta itemprop="keywords" content="SSH," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[安全系列]生成ssh证书"/>
+<meta name="twitter:description" content="前言 生成ssh证书有什么作用，首先可以快速的登陆服务器，无需每次数输入密码，只需要配置一次ssh证书即可，即可以直接通过ssh登陆证书，借此用处我们可以使用ssh证书对git仓库进行操作，无需要每次上载的时候都需要输入密码，输密码想想都麻烦，再说谁不想简单一点呢？
+而且这步骤很简单。此处记录以下指令，以便后续查看。
+内容 因为本步骤记录的是生成证书的代码 这就很简单了，不需要太多的代码，生成证书的前置条件是需要有openssh.Linux/Mac预置了相关的软件，Windows用户只需要安装Git即可。https://git-scm.com/注： 自版本1803起，Windows 10中已包含基于OpenSSH的客户端和服务器程序。默认情况下，SSH客户端和密钥代理已启用并可用，并且SSH服务器是可选的按需功能。
+图源：wikipedia
+最重要的步骤：生成证书 可以生成不带邮箱的和带邮箱，下面先给出带邮箱的，而后给一个不带邮箱的
+带邮箱的(来源：https://docs.github.com/cn/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+执行该命令后会显示你的要储存的位置
+此时一般选择默认即可 文件保存在/Users/you/.ssh/id_rsa（Mac） /home/you/.ssh/id_rsa(Linux) /c/Users/you/.ssh/id_rsa(Windows)
+中 而后要求输入安全密码
+此时最好输入安全密码，可以多一层保障，即使你的证书丢了也不必担心安全问题，当然不输入密码也是可以的
+此时密钥已经在相应的位置生成，可以进行其他的操作。
+下面为不是输入密码的，直接省去一个参数即可。其他的操作相同
+总结 生成ssh-key是一个非常简单的事情，通过这个简单的事情，可以为以后的事情增加工作效率，不得不说是一个一劳永逸的事情。"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        lihui
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">[安全系列]生成ssh证书</h1>
+      
+      <p class="tracked">
+          By <strong>
+          
+              Li Hui
+          
+          </strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-09-22T00:00:39Z">September 22, 2020</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="前言">前言</h1>
+<p>生成ssh证书有什么作用，首先可以快速的登陆服务器，无需每次数输入密码，只需要配置一次ssh证书即可，即可以直接通过ssh登陆证书，借此用处我们可以使用ssh证书对git仓库进行操作，无需要每次上载的时候都需要输入密码，输密码想想都麻烦，再说谁不想简单一点呢？</p>
+<p>而且这步骤很简单。此处记录以下指令，以便后续查看。</p>
+<h1 id="内容">内容</h1>
+<p>因为本步骤记录的是生成证书的代码 这就很简单了，不需要太多的代码，生成证书的前置条件是需要有openssh.Linux/Mac预置了相关的软件，Windows用户只需要安装Git即可。<!-- raw HTML omitted --><a href="https://git-scm.com/">https://git-scm.com/</a><!-- raw HTML omitted --></p>
+<p><strong>注： 自版本1803起，<!-- raw HTML omitted -->Windows 10中<!-- raw HTML omitted -->已包含基于<!-- raw HTML omitted -->OpenSSH<!-- raw HTML omitted -->的客户端和服务器程序。默认情况下，SSH客户端和密钥代理已启用并可用，并且SSH服务器是可选的按需功能。</strong></p>
+<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/Pic/n5tfyK.jpg" alt="n5tfyK"></p>
+<p>图源：wikipedia</p>
+<p><strong>最重要的步骤：生成证书 可以生成不带邮箱的和带邮箱，下面先给出带邮箱的，而后给一个不带邮箱的</strong></p>
+<p>带邮箱的(来源：<!-- raw HTML omitted --><a href="https://docs.github.com/cn/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">https://docs.github.com/cn/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</a><!-- raw HTML omitted -->)</p>
+<!-- raw HTML omitted -->
+<p>执行该命令后会显示你的要储存的位置</p>
+<!-- raw HTML omitted -->
+<p>此时一般选择默认即可 文件保存在/Users/you/.ssh/id_rsa（Mac） /home/you/.ssh/id_rsa(Linux) /c/Users/you/.ssh/id_rsa(Windows)</p>
+<p>中 而后要求输入安全密码</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>此时最好输入安全密码，可以多一层保障，即使你的证书丢了也不必担心安全问题，当然不输入密码也是可以的</p>
+<p>此时密钥已经在相应的位置生成，可以进行其他的操作。</p>
+<p>下面为不是输入密码的，直接省去一个参数即可。其他的操作相同</p>
+<!-- raw HTML omitted -->
+<h1 id="总结">总结</h1>
+<p>生成ssh-key是一个非常简单的事情，通过这个简单的事情，可以为以后的事情增加工作效率，不得不说是一个一劳永逸的事情。</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/ssh" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">SSH</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
+    &copy;  lihui 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

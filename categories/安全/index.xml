@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>安全 on lihui</title>
+    <link>https://lihui.net/categories/%E5%AE%89%E5%85%A8/</link>
+    <description>Recent content in 安全 on lihui</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Sep 2020 00:00:39 +0000</lastBuildDate><atom:link href="https://lihui.net/categories/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[安全系列]生成ssh证书</title>
+      <link>https://lihui.net/gen-sshkey.html</link>
+      <pubDate>Tue, 22 Sep 2020 00:00:39 +0000</pubDate>
+      
+      <guid>https://lihui.net/gen-sshkey.html</guid>
+      <description>前言 生成ssh证书有什么作用，首先可以快速的登陆服务器，无需每次数输入密码，只需要配置一次ssh证书即可，即可以直接通过ssh登陆证书，借此用处我们可以使用ssh证书对git仓库进行操作，无需要每次上载的时候都需要输入密码，输密码想想都麻烦，再说谁不想简单一点呢？
+而且这步骤很简单。此处记录以下指令，以便后续查看。
+内容 因为本步骤记录的是生成证书的代码 这就很简单了，不需要太多的代码，生成证书的前置条件是需要有openssh.Linux/Mac预置了相关的软件，Windows用户只需要安装Git即可。https://git-scm.com/注： 自版本1803起，Windows 10中已包含基于OpenSSH的客户端和服务器程序。默认情况下，SSH客户端和密钥代理已启用并可用，并且SSH服务器是可选的按需功能。
+图源：wikipedia
+最重要的步骤：生成证书 可以生成不带邮箱的和带邮箱，下面先给出带邮箱的，而后给一个不带邮箱的
+带邮箱的(来源：https://docs.github.com/cn/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+执行该命令后会显示你的要储存的位置
+此时一般选择默认即可 文件保存在/Users/you/.ssh/id_rsa（Mac） /home/you/.ssh/id_rsa(Linux) /c/Users/you/.ssh/id_rsa(Windows)
+中 而后要求输入安全密码
+此时最好输入安全密码，可以多一层保障，即使你的证书丢了也不必担心安全问题，当然不输入密码也是可以的
+此时密钥已经在相应的位置生成，可以进行其他的操作。
+下面为不是输入密码的，直接省去一个参数即可。其他的操作相同
+总结 生成ssh-key是一个非常简单的事情，通过这个简单的事情，可以为以后的事情增加工作效率，不得不说是一个一劳永逸的事情。</description>
+    </item>
+    
+    <item>
+      <title>[安全相关]使用腾讯云子账号提高账号安全性</title>
+      <link>https://lihui.net/security-sub-account.html</link>
+      <pubDate>Wed, 16 Sep 2020 15:05:08 +0000</pubDate>
+      
+      <guid>https://lihui.net/security-sub-account.html</guid>
+      <description>前言 为什么使用子账号呢？
+子账号可以提高安全性，如果我们采用主账号的key进行授权的时候，其他人一旦获取到我们的key，便对我们形成致命的打击，如果我们采用子账号，一方面，我们可以快速的撤销授权，避免损失，在最差的情况下，我们保证受损的是最少的，这些不妨事一种容灾的好方法。此处仅书写了腾讯云的系统，未涉及到其他的系统，在安全的角度上应该各个系统都有相应的系统，此处仅以腾讯云为例。
+步骤 首先登陆账号 首先在腾讯云的网站上登陆你的账号 https://cloud.tencent.com/进入腾讯云的子账号访问管理系统 https://cloud.tencent.com/创建相对应的账号 也就是上面的用户 ，点击创建用户
+进入下述的界面
+此处选择快速创建（因为此处未涉及到重要的步骤，快速过）
+会看到下属的界面 拥有四个项目 用户名 访问方式 用户权限 和可接受消息类型
+用户名随意 按照自己喜好即可
+访问方式 软件使用的话可以采用编程登陆（仅允许编程登陆更安全一点）
+用户权限 选择你要为子用户分配的权限 比如此处仅授权COS的操作（用于操作对象存储 比如图床等等使用方式）
+可接受消息类型 为下述的这几种 比较容易理解（如果为命令行使用的话，此处均不需要）
+验证安全方式 即可以创建新的用户
+最后的最后 还希望妥善保管好你的key
+总结 安全问题，无论何时都是大问题，提早一步进行解决，可以减轻后面的慌张，还是希望在读的你不会出现安全性的问题。</description>
+    </item>
+    
+  </channel>
+</rss>

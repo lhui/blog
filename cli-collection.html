@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>轻松学CLI应用总章节 | lihui</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="前言 在以前的文章中，写了一部分cli应用和GUI应用的好处和坏处，以前的我认为使用gui应用是一件轻松的事情，只需要简单的用鼠标点击几下，就可以完成需要的操作，为何还要去学习上个世纪的命令行呢，学习命令行会好用吗。但是现在的我开始悄无声息地喜欢上了命令行，重复的工作直接使用命令行，就会变得轻松起来，双手不必离开键盘就可以将所有的事情都办了，而且命令行是一件酷酷的事情。
+图片来源：https://www.avast.com/c-hacker内容 不出意外的话，我将书写一系列的文章，说明如何使用各个命令行工具，快速的使用命令行操作我们需要操作的事情，并对其中的优势进行分析和总结。
+写这篇文章时候我们想到的CLI的应用（我在日常生活中可能会用到的）有这些，对这些进行一些说明。
+   应用名称 应用简评 应用网站 应用说明博文     Github CLI(gh) 操作使用GitHub https://cli.github.com/    wordpress CLI(wp) 操作使用Wordpress https://wp-cli.org/    Rancher CLI 操作使用rancher https://rancher.com/docs/rancher/v2.x/en/cli/                 还有一些CLI应用也是很棒的，但是鉴于时间因素，无法一一的进行说明分析，暂时列到下面，有兴趣的可以尝试。可能不全欢迎进行添加。
+   应用名称 应用简评 应用网站     Vue CLI vue.js 开发的标准工具 https://cli.vuejs.org/   Angular CLI Angular开发的标准工具 https://cli.">
+    <meta name="generator" content="Hugo 0.94.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="轻松学CLI应用总章节" />
+<meta property="og:description" content="前言 在以前的文章中，写了一部分cli应用和GUI应用的好处和坏处，以前的我认为使用gui应用是一件轻松的事情，只需要简单的用鼠标点击几下，就可以完成需要的操作，为何还要去学习上个世纪的命令行呢，学习命令行会好用吗。但是现在的我开始悄无声息地喜欢上了命令行，重复的工作直接使用命令行，就会变得轻松起来，双手不必离开键盘就可以将所有的事情都办了，而且命令行是一件酷酷的事情。
+图片来源：https://www.avast.com/c-hacker内容 不出意外的话，我将书写一系列的文章，说明如何使用各个命令行工具，快速的使用命令行操作我们需要操作的事情，并对其中的优势进行分析和总结。
+写这篇文章时候我们想到的CLI的应用（我在日常生活中可能会用到的）有这些，对这些进行一些说明。
+   应用名称 应用简评 应用网站 应用说明博文     Github CLI(gh) 操作使用GitHub https://cli.github.com/    wordpress CLI(wp) 操作使用Wordpress https://wp-cli.org/    Rancher CLI 操作使用rancher https://rancher.com/docs/rancher/v2.x/en/cli/                 还有一些CLI应用也是很棒的，但是鉴于时间因素，无法一一的进行说明分析，暂时列到下面，有兴趣的可以尝试。可能不全欢迎进行添加。
+   应用名称 应用简评 应用网站     Vue CLI vue.js 开发的标准工具 https://cli.vuejs.org/   Angular CLI Angular开发的标准工具 https://cli." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lihui.net/cli-collection.html" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-09-19T08:54:39+00:00" />
+<meta property="article:modified_time" content="2020-09-19T08:54:39+00:00" />
+
+<meta itemprop="name" content="轻松学CLI应用总章节">
+<meta itemprop="description" content="前言 在以前的文章中，写了一部分cli应用和GUI应用的好处和坏处，以前的我认为使用gui应用是一件轻松的事情，只需要简单的用鼠标点击几下，就可以完成需要的操作，为何还要去学习上个世纪的命令行呢，学习命令行会好用吗。但是现在的我开始悄无声息地喜欢上了命令行，重复的工作直接使用命令行，就会变得轻松起来，双手不必离开键盘就可以将所有的事情都办了，而且命令行是一件酷酷的事情。
+图片来源：https://www.avast.com/c-hacker内容 不出意外的话，我将书写一系列的文章，说明如何使用各个命令行工具，快速的使用命令行操作我们需要操作的事情，并对其中的优势进行分析和总结。
+写这篇文章时候我们想到的CLI的应用（我在日常生活中可能会用到的）有这些，对这些进行一些说明。
+   应用名称 应用简评 应用网站 应用说明博文     Github CLI(gh) 操作使用GitHub https://cli.github.com/    wordpress CLI(wp) 操作使用Wordpress https://wp-cli.org/    Rancher CLI 操作使用rancher https://rancher.com/docs/rancher/v2.x/en/cli/                 还有一些CLI应用也是很棒的，但是鉴于时间因素，无法一一的进行说明分析，暂时列到下面，有兴趣的可以尝试。可能不全欢迎进行添加。
+   应用名称 应用简评 应用网站     Vue CLI vue.js 开发的标准工具 https://cli.vuejs.org/   Angular CLI Angular开发的标准工具 https://cli."><meta itemprop="datePublished" content="2020-09-19T08:54:39+00:00" />
+<meta itemprop="dateModified" content="2020-09-19T08:54:39+00:00" />
+<meta itemprop="wordCount" content="36">
+<meta itemprop="keywords" content="CLI,Shell," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="轻松学CLI应用总章节"/>
+<meta name="twitter:description" content="前言 在以前的文章中，写了一部分cli应用和GUI应用的好处和坏处，以前的我认为使用gui应用是一件轻松的事情，只需要简单的用鼠标点击几下，就可以完成需要的操作，为何还要去学习上个世纪的命令行呢，学习命令行会好用吗。但是现在的我开始悄无声息地喜欢上了命令行，重复的工作直接使用命令行，就会变得轻松起来，双手不必离开键盘就可以将所有的事情都办了，而且命令行是一件酷酷的事情。
+图片来源：https://www.avast.com/c-hacker内容 不出意外的话，我将书写一系列的文章，说明如何使用各个命令行工具，快速的使用命令行操作我们需要操作的事情，并对其中的优势进行分析和总结。
+写这篇文章时候我们想到的CLI的应用（我在日常生活中可能会用到的）有这些，对这些进行一些说明。
+   应用名称 应用简评 应用网站 应用说明博文     Github CLI(gh) 操作使用GitHub https://cli.github.com/    wordpress CLI(wp) 操作使用Wordpress https://wp-cli.org/    Rancher CLI 操作使用rancher https://rancher.com/docs/rancher/v2.x/en/cli/                 还有一些CLI应用也是很棒的，但是鉴于时间因素，无法一一的进行说明分析，暂时列到下面，有兴趣的可以尝试。可能不全欢迎进行添加。
+   应用名称 应用简评 应用网站     Vue CLI vue.js 开发的标准工具 https://cli.vuejs.org/   Angular CLI Angular开发的标准工具 https://cli."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        lihui
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">轻松学CLI应用总章节</h1>
+      
+      <p class="tracked">
+          By <strong>
+          
+              Li Hui
+          
+          </strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-09-19T08:54:39Z">September 19, 2020</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="前言">前言</h1>
+<p>在以前的文章中，写了一部分cli应用和GUI应用的好处和坏处，以前的我认为使用gui应用是一件轻松的事情，只需要简单的用鼠标点击几下，就可以完成需要的操作，为何还要去学习上个世纪的命令行呢，学习命令行会好用吗。但是现在的我开始悄无声息地喜欢上了命令行，重复的工作直接使用命令行，就会变得轻松起来，双手不必离开键盘就可以将所有的事情都办了，而且命令行是一件酷酷的事情。</p>
+<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/Pic/AVIaAs.png" alt="AVIaAs"></p>
+<p>图片来源：<!-- raw HTML omitted --><a href="https://www.avast.com/c-hacker">https://www.avast.com/c-hacker</a><!-- raw HTML omitted --></p>
+<h1 id="内容">内容</h1>
+<p>不出意外的话，我将书写一系列的文章，说明如何使用各个命令行工具，快速的使用命令行操作我们需要操作的事情，并对其中的优势进行分析和总结。</p>
+<p>写这篇文章时候我们想到的CLI的应用（我在日常生活中可能会用到的）有这些，对这些进行一些说明。</p>
+<table>
+<thead>
+<tr>
+<th>应用名称</th>
+<th>应用简评</th>
+<th>应用网站</th>
+<th>应用说明博文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Github CLI(gh)</td>
+<td>操作使用GitHub</td>
+<td><!-- raw HTML omitted --><a href="https://cli.github.com/">https://cli.github.com/</a><!-- raw HTML omitted --></td>
+<td></td>
+</tr>
+<tr>
+<td>wordpress CLI(wp)</td>
+<td>操作使用Wordpress</td>
+<td><!-- raw HTML omitted --><a href="https://wp-cli.org/">https://wp-cli.org/</a><!-- raw HTML omitted --></td>
+<td></td>
+</tr>
+<tr>
+<td>Rancher CLI</td>
+<td>操作使用rancher</td>
+<td><!-- raw HTML omitted --><a href="https://rancher.com/docs/rancher/v2.x/en/cli/">https://rancher.com/docs/rancher/v2.x/en/cli/</a><!-- raw HTML omitted --></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>还有一些CLI应用也是很棒的，但是鉴于时间因素，无法一一的进行说明分析，暂时列到下面，有兴趣的可以尝试。可能不全欢迎进行添加。</p>
+<table>
+<thead>
+<tr>
+<th>应用名称</th>
+<th>应用简评</th>
+<th>应用网站</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vue CLI</td>
+<td>vue.js 开发的标准工具</td>
+<td><!-- raw HTML omitted --><a href="https://cli.vuejs.org/">https://cli.vuejs.org/</a><!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>Angular CLI</td>
+<td>Angular开发的标准工具</td>
+<td><!-- raw HTML omitted --><a href="https://cli.angular.io/">https://cli.angular.io/</a><!-- raw HTML omitted --></td>
+</tr>
+</tbody>
+</table>
+<h1 id="结语">结语</h1>
+<p>这一篇文章作为CLI应用的分析的总章节，通过后续章节，我们将详细的分析CLI应用的使用方法，而后动手实践出一个自己的CLI应用。创建CLI应用预计采用文章+视频的方式进行输出。</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/cli" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">CLI</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/shell" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Shell</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/shell-2.html">[Shell编程系列]基础教程2</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
+    &copy;  lihui 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

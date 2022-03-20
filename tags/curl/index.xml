@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CURL on lihui</title>
+    <link>https://lihui.net/tags/curl/</link>
+    <description>Recent content in CURL on lihui</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Sep 2020 00:00:28 +0000</lastBuildDate><atom:link href="https://lihui.net/tags/curl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CURL学习教程</title>
+      <link>https://lihui.net/learn-curl.html</link>
+      <pubDate>Fri, 25 Sep 2020 00:00:28 +0000</pubDate>
+      
+      <guid>https://lihui.net/learn-curl.html</guid>
+      <description>前言 CURL是Linux中使用比较多的软件，我也有所耳闻，我也曾经使用过，不过使用的时间间隔的比较长了，也不知道这篇文章会写多长时间全当记录吧。
+内容 首先看看其帮助的内容，一般cmd帮助中都有其全部命令的信息（不然怎么用啊
+其中有全部的内容 本文章中挑选常用的命令做测试。
+直接请求Get 如果我们不给其指定任何参数 ，其将使用Get请求请求，如果访问某一网址 则返回这个网页
+命令行：
+示例
+返回结果：（因为太多了只是截取了一小部分
+指定用户代理 何为用户代理 当我们使用浏览器等发起网络请求中，就自动的带上浏览器的用户代理，比如我们使用浏览器请求http://lihui.net的时候,使用chrome请求的时候如下图
+最下面的一行，即是用户代理
+在curl加入-A 参数即可以指定用户的user-agent
+那问题来了 curl 不指定user-agent的时候是什么呢 当不指定user-agent的时候默认的为curl/{{version}}
+如何去除呢 可以使用下面的命令可以将user-agent去除
+携带用户cookie 使用参数 -b 可以使得curl 在交互中携带用户的cookie
+命令行如下图所示 下面的命令会向example.com 发送名为A 值为B的cookie 如果要发送多个cookie 要以;分割（都在“”内）
+示例
+返回结果
+因为我的网站没有设置相关的cookie认证 等操作，因此返回的页面是和上面的一样的。
+我们可以发送cookie文件到远端的网站
+发送cookie文件
+命令行
+既然有发送文件了，可不可以接受cookie呢
+答案是肯定的，保存返回的cookie到文件到命令行如下图所示
+总结 curl命令行的作用很大，需要学习的内容还有很多，熟悉命令行的作用也有很大。
+文章引用  http://www.ruanyifeng.com/blog/2019/09/curl-reference.html  </description>
+    </item>
+    
+  </channel>
+</rss>

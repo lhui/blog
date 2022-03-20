@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>SSH | lihui</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.94.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+      <link href="/tags/ssh/index.xml" rel="alternate" type="application/rss+xml" title="lihui" />
+      <link href="/tags/ssh/index.xml" rel="feed" type="application/rss+xml" title="lihui" />
+      
+    
+    
+    <meta property="og:title" content="SSH" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://lihui.net/tags/ssh/" />
+
+<meta itemprop="name" content="SSH">
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SSH"/>
+<meta name="twitter:description" content=""/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="pb3-m pb6-l bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        lihui
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv3 ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+          SSH
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <article class="cf pa3 pa4-m pa4-l">
+    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links mid-gray">
+      <p>Below you will find pages that utilize the taxonomy term “SSH”</p>
+    </div>
+  </article>
+  <div class="mw8 center">
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100  mb4 bg-white">
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        September 22, 2020
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="/gen-sshkey.html" class="link black dim">
+        [安全系列]生成ssh证书
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      前言 生成ssh证书有什么作用，首先可以快速的登陆服务器，无需每次数输入密码，只需要配置一次ssh证书即可，即可以直接通过ssh登陆证书，借此用处我们可以使用ssh证书对git仓库进行操作，无需要每次上载的时候都需要输入密码，输密码想想都麻烦，再说谁不想简单一点呢？
+而且这步骤很简单。此处记录以下指令，以便后续查看。
+内容 因为本步骤记录的是生成证书的代码 这就很简单了，不需要太多的代码，生成证书的前置条件是需要有openssh.Linux/Mac预置了相关的软件，Windows用户只需要安装Git即可。https://git-scm.com/注： 自版本1803起，Windows 10中已包含基于OpenSSH的客户端和服务器程序。默认情况下，SSH客户端和密钥代理已启用并可用，并且SSH服务器是可选的按需功能。
+图源：wikipedia
+最重要的步骤：生成证书 可以生成不带邮箱的和带邮箱，下面先给出带邮箱的，而后给一个不带邮箱的
+带邮箱的(来源：https://docs.github.com/cn/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+执行该命令后会显示你的要储存的位置
+此时一般选择默认即可 文件保存在/Users/you/.ssh/id_rsa（Mac） /home/you/.ssh/id_rsa(Linux) /c/Users/you/.ssh/id_rsa(Windows)
+中 而后要求输入安全密码
+此时最好输入安全密码，可以多一层保障，即使你的证书丢了也不必担心安全问题，当然不输入密码也是可以的
+此时密钥已经在相应的位置生成，可以进行其他的操作。
+下面为不是输入密码的，直接省去一个参数即可。其他的操作相同
+总结 生成ssh-key是一个非常简单的事情，通过这个简单的事情，可以为以后的事情增加工作效率，不得不说是一个一劳永逸的事情。
+    </div>
+  </div>
+
+        </div>
+      
+    </section>
+  </div>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
+    &copy;  lihui 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

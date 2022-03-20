@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>[Linux系列]创建Linux用户 | lihui</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="前言 如果直接在Linux中使用root账户,真的十分危险,root拥有最高的权限,一方面如果安装其他的软件,虽然说是畅通无阻,但是与之同时带来的问题是,如果一旦账户让其他人拿到,岂不是很危险,因此推荐采用先创建的账户进入,特殊的时候采用切换到root以保证服务器的安全.
+步骤 创建用户 创建用户是一个重要的问题 当然也特别的简单
+为用户设定密码
+一般推荐是新的服务器首先创建新的组,再在组的基础上创建新的用户,这样子的话比较稳妥,
+创建用户组 命令行
+如果现在是root账户 且命令行前的是#(sharp) 可以直接使用
+示例:
+查看所有的用户组
+返回信息：(一般不要截这张图，这张图会暴露你所有的用户组，我这是开发测试机器，随时重置系统所以无所谓)
+创建一个新用户到用户组中 命令行
+示例：
+检测是否生效
+返回信息：
+总结 创建用户的目的在于什么呢？ 有的是不同的用户操作不同的内容，将用户相互隔离，有的是为了安全起见，就和操作系统一样，如果都是一个root，一个新手 用户直接rm了 岂不是很恐怖，而且也极大的保护了用户的内容不被其他人看到。">
+    <meta name="generator" content="Hugo 0.94.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="[Linux系列]创建Linux用户" />
+<meta property="og:description" content="前言 如果直接在Linux中使用root账户,真的十分危险,root拥有最高的权限,一方面如果安装其他的软件,虽然说是畅通无阻,但是与之同时带来的问题是,如果一旦账户让其他人拿到,岂不是很危险,因此推荐采用先创建的账户进入,特殊的时候采用切换到root以保证服务器的安全.
+步骤 创建用户 创建用户是一个重要的问题 当然也特别的简单
+为用户设定密码
+一般推荐是新的服务器首先创建新的组,再在组的基础上创建新的用户,这样子的话比较稳妥,
+创建用户组 命令行
+如果现在是root账户 且命令行前的是#(sharp) 可以直接使用
+示例:
+查看所有的用户组
+返回信息：(一般不要截这张图，这张图会暴露你所有的用户组，我这是开发测试机器，随时重置系统所以无所谓)
+创建一个新用户到用户组中 命令行
+示例：
+检测是否生效
+返回信息：
+总结 创建用户的目的在于什么呢？ 有的是不同的用户操作不同的内容，将用户相互隔离，有的是为了安全起见，就和操作系统一样，如果都是一个root，一个新手 用户直接rm了 岂不是很恐怖，而且也极大的保护了用户的内容不被其他人看到。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lihui.net/create-linux-user.html" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-09-26T15:46:58+00:00" />
+<meta property="article:modified_time" content="2020-09-26T15:46:58+00:00" />
+
+<meta itemprop="name" content="[Linux系列]创建Linux用户">
+<meta itemprop="description" content="前言 如果直接在Linux中使用root账户,真的十分危险,root拥有最高的权限,一方面如果安装其他的软件,虽然说是畅通无阻,但是与之同时带来的问题是,如果一旦账户让其他人拿到,岂不是很危险,因此推荐采用先创建的账户进入,特殊的时候采用切换到root以保证服务器的安全.
+步骤 创建用户 创建用户是一个重要的问题 当然也特别的简单
+为用户设定密码
+一般推荐是新的服务器首先创建新的组,再在组的基础上创建新的用户,这样子的话比较稳妥,
+创建用户组 命令行
+如果现在是root账户 且命令行前的是#(sharp) 可以直接使用
+示例:
+查看所有的用户组
+返回信息：(一般不要截这张图，这张图会暴露你所有的用户组，我这是开发测试机器，随时重置系统所以无所谓)
+创建一个新用户到用户组中 命令行
+示例：
+检测是否生效
+返回信息：
+总结 创建用户的目的在于什么呢？ 有的是不同的用户操作不同的内容，将用户相互隔离，有的是为了安全起见，就和操作系统一样，如果都是一个root，一个新手 用户直接rm了 岂不是很恐怖，而且也极大的保护了用户的内容不被其他人看到。"><meta itemprop="datePublished" content="2020-09-26T15:46:58+00:00" />
+<meta itemprop="dateModified" content="2020-09-26T15:46:58+00:00" />
+<meta itemprop="wordCount" content="26">
+<meta itemprop="keywords" content="Linux," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Linux系列]创建Linux用户"/>
+<meta name="twitter:description" content="前言 如果直接在Linux中使用root账户,真的十分危险,root拥有最高的权限,一方面如果安装其他的软件,虽然说是畅通无阻,但是与之同时带来的问题是,如果一旦账户让其他人拿到,岂不是很危险,因此推荐采用先创建的账户进入,特殊的时候采用切换到root以保证服务器的安全.
+步骤 创建用户 创建用户是一个重要的问题 当然也特别的简单
+为用户设定密码
+一般推荐是新的服务器首先创建新的组,再在组的基础上创建新的用户,这样子的话比较稳妥,
+创建用户组 命令行
+如果现在是root账户 且命令行前的是#(sharp) 可以直接使用
+示例:
+查看所有的用户组
+返回信息：(一般不要截这张图，这张图会暴露你所有的用户组，我这是开发测试机器，随时重置系统所以无所谓)
+创建一个新用户到用户组中 命令行
+示例：
+检测是否生效
+返回信息：
+总结 创建用户的目的在于什么呢？ 有的是不同的用户操作不同的内容，将用户相互隔离，有的是为了安全起见，就和操作系统一样，如果都是一个root，一个新手 用户直接rm了 岂不是很恐怖，而且也极大的保护了用户的内容不被其他人看到。"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        lihui
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">[Linux系列]创建Linux用户</h1>
+      
+      <p class="tracked">
+          By <strong>
+          
+              Li Hui
+          
+          </strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-09-26T15:46:58Z">September 26, 2020</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="前言">前言</h1>
+<p>如果直接在Linux中使用root账户,真的十分危险,root拥有最高的权限,一方面如果安装其他的软件,虽然说是畅通无阻,但是与之同时带来的问题是,如果一旦账户让其他人拿到,岂不是很危险,因此推荐采用先创建的账户进入,特殊的时候采用切换到root以保证服务器的安全.</p>
+<h1 id="步骤">步骤</h1>
+<h1 id="创建用户">创建用户</h1>
+<p>创建用户是一个重要的问题 当然也特别的简单</p>
+<!-- raw HTML omitted -->
+<p>为用户设定密码</p>
+<!-- raw HTML omitted -->
+<p>一般推荐是新的服务器首先创建新的组,再在组的基础上创建新的用户,这样子的话比较稳妥,</p>
+<h2 id="创建用户组">创建用户组</h2>
+<p>命令行</p>
+<!-- raw HTML omitted -->
+<p>如果现在是root账户 且命令行前的是#(sharp) 可以直接使用</p>
+<!-- raw HTML omitted -->
+<p>示例:</p>
+<!-- raw HTML omitted -->
+<p>查看所有的用户组</p>
+<!-- raw HTML omitted -->
+<p>返回信息：(一般不要截这张图，这张图会暴露你所有的用户组，我这是开发测试机器，随时重置系统所以无所谓)</p>
+<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/Pic/image-20200926233604960.png" alt="image-20200926233604960"></p>
+<h2 id="创建一个新用户到用户组中">创建一个新用户到用户组中</h2>
+<p>命令行</p>
+<!-- raw HTML omitted -->
+<p>示例：</p>
+<!-- raw HTML omitted -->
+<p>检测是否生效</p>
+<!-- raw HTML omitted -->
+<p>返回信息：</p>
+<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/Pic/2KUmgT.png" alt="2KUmgT"></p>
+<h1 id="总结">总结</h1>
+<p>创建用户的目的在于什么呢？ 有的是不同的用户操作不同的内容，将用户相互隔离，有的是为了安全起见，就和操作系统一样，如果都是一个root，一个新手 用户直接rm了 岂不是很恐怖，而且也极大的保护了用户的内容不被其他人看到。</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/linux" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Linux</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/change-ssh-port.html">[Linux系列]修改SSH端口 防止端口扫描</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/linux-change-hostname.html">[linux系列] 修改主机用户名</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
+    &copy;  lihui 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>React JSX语法再实践 | lihui</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="我们上一节封装了一个按钮，这一节我们继续理解封装的概念和了解封装组件需要注意的事项
+首先我们回顾上一篇最后的代码，代码如下
+我们最终调用的形式如下所示 Button({color:&lsquo;blue&rsquo;, text:&lsquo;Confirm&rsquo;}) 进行创建，其实我们发现 Button 和 button 或者和 em 一样都可以 作为一个元素存在，我们可以以 Button 为基础创建特定属性的按钮，将其称为自定义类型的元素 或者可以称为组件元素。和上一节相同，我们可以采用 JSON 结构来描述它
+上述结构和我们文中的第一个结果，因此可以进一步的对其中的元素做封装
+比如我们对通常使用警告的颜色为红色, 但是我们红色提示的文字可能不同，此处我们封装一个危险的按钮的示例
+比如书中给了一个很好的示例
+这是一个弹出的删除账户的组件，其中有文字以及确定和取消的按钮，删除账户的组件就完成了。
+我们后面将继续介绍 JSX 的语法">
+    <meta name="generator" content="Hugo 0.94.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="React JSX语法再实践" />
+<meta property="og:description" content="我们上一节封装了一个按钮，这一节我们继续理解封装的概念和了解封装组件需要注意的事项
+首先我们回顾上一篇最后的代码，代码如下
+我们最终调用的形式如下所示 Button({color:&lsquo;blue&rsquo;, text:&lsquo;Confirm&rsquo;}) 进行创建，其实我们发现 Button 和 button 或者和 em 一样都可以 作为一个元素存在，我们可以以 Button 为基础创建特定属性的按钮，将其称为自定义类型的元素 或者可以称为组件元素。和上一节相同，我们可以采用 JSON 结构来描述它
+上述结构和我们文中的第一个结果，因此可以进一步的对其中的元素做封装
+比如我们对通常使用警告的颜色为红色, 但是我们红色提示的文字可能不同，此处我们封装一个危险的按钮的示例
+比如书中给了一个很好的示例
+这是一个弹出的删除账户的组件，其中有文字以及确定和取消的按钮，删除账户的组件就完成了。
+我们后面将继续介绍 JSX 的语法" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lihui.net/react-jsx-re-action.html" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-01-07T14:41:37+00:00" />
+<meta property="article:modified_time" content="2022-01-07T14:41:37+00:00" />
+
+<meta itemprop="name" content="React JSX语法再实践">
+<meta itemprop="description" content="我们上一节封装了一个按钮，这一节我们继续理解封装的概念和了解封装组件需要注意的事项
+首先我们回顾上一篇最后的代码，代码如下
+我们最终调用的形式如下所示 Button({color:&lsquo;blue&rsquo;, text:&lsquo;Confirm&rsquo;}) 进行创建，其实我们发现 Button 和 button 或者和 em 一样都可以 作为一个元素存在，我们可以以 Button 为基础创建特定属性的按钮，将其称为自定义类型的元素 或者可以称为组件元素。和上一节相同，我们可以采用 JSON 结构来描述它
+上述结构和我们文中的第一个结果，因此可以进一步的对其中的元素做封装
+比如我们对通常使用警告的颜色为红色, 但是我们红色提示的文字可能不同，此处我们封装一个危险的按钮的示例
+比如书中给了一个很好的示例
+这是一个弹出的删除账户的组件，其中有文字以及确定和取消的按钮，删除账户的组件就完成了。
+我们后面将继续介绍 JSX 的语法"><meta itemprop="datePublished" content="2022-01-07T14:41:37+00:00" />
+<meta itemprop="dateModified" content="2022-01-07T14:41:37+00:00" />
+<meta itemprop="wordCount" content="26">
+<meta itemprop="keywords" content="react," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="React JSX语法再实践"/>
+<meta name="twitter:description" content="我们上一节封装了一个按钮，这一节我们继续理解封装的概念和了解封装组件需要注意的事项
+首先我们回顾上一篇最后的代码，代码如下
+我们最终调用的形式如下所示 Button({color:&lsquo;blue&rsquo;, text:&lsquo;Confirm&rsquo;}) 进行创建，其实我们发现 Button 和 button 或者和 em 一样都可以 作为一个元素存在，我们可以以 Button 为基础创建特定属性的按钮，将其称为自定义类型的元素 或者可以称为组件元素。和上一节相同，我们可以采用 JSON 结构来描述它
+上述结构和我们文中的第一个结果，因此可以进一步的对其中的元素做封装
+比如我们对通常使用警告的颜色为红色, 但是我们红色提示的文字可能不同，此处我们封装一个危险的按钮的示例
+比如书中给了一个很好的示例
+这是一个弹出的删除账户的组件，其中有文字以及确定和取消的按钮，删除账户的组件就完成了。
+我们后面将继续介绍 JSX 的语法"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        lihui
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">React JSX语法再实践</h1>
+      
+      <p class="tracked">
+          By <strong>
+          
+              Li Hui
+          
+          </strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-01-07T14:41:37Z">January 7, 2022</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>我们上一节封装了一个按钮，这一节我们继续理解封装的概念和了解封装组件需要注意的事项</p>
+<p>首先我们回顾上一篇最后的代码，代码如下</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>我们最终调用的形式如下所示 Button({color:&lsquo;blue&rsquo;, text:&lsquo;Confirm&rsquo;}) 进行创建，其实我们发现 <code>Button</code> 和 <code>button</code> 或者和 <code>em</code> 一样都可以 作为一个元素存在，我们可以以 Button 为基础创建特定属性的按钮，将其称为自定义类型的元素 或者可以称为组件元素。和上一节相同，我们可以采用 JSON 结构来描述它</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>上述结构和我们文中的第一个结果，因此可以进一步的对其中的元素做封装</p>
+<p>比如我们对通常使用警告的颜色为红色, 但是我们红色提示的文字可能不同，此处我们封装一个危险的按钮的示例</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>比如书中给了一个很好的示例</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>这是一个弹出的删除账户的组件，其中有文字以及确定和取消的按钮，删除账户的组件就完成了。</p>
+<p>我们后面将继续介绍 JSX 的语法</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/react" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">react</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/create-react-component.html">React 组件示例</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/how-to-create-first-react-app.html">如何搭建第一个 React 程序</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
+    &copy;  lihui 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>博客优化 on lihui</title>
+    <link>https://lihui.net/categories/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/</link>
+    <description>Recent content in 博客优化 on lihui</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 14 Sep 2020 12:07:16 +0000</lastBuildDate><atom:link href="https://lihui.net/categories/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[博客优化]为Wordpress加入伪静态</title>
+      <link>https://lihui.net/pseudo-static-wordpress.html</link>
+      <pubDate>Mon, 14 Sep 2020 12:07:16 +0000</pubDate>
+      
+      <guid>https://lihui.net/pseudo-static-wordpress.html</guid>
+      <description>前言 为什么要加入伪静态呢，是Wordpress的网址不好看吗，嗯。。。。确实是不好看，而且网址之间还是不连续的，我都看傻了http://lihui.net/?p=23这种网址 都猜不出写了啥&amp;hellip;
+加入伪静态的优点有哪些呢？
+首先来说 在一定意义上来讲，搜索引擎对于静态的页面的收录的效果要相对来说要好（当然有很多原因，比如网址不易变动，内容固定，访问速度快等等），因此网站做伪静态对于SEO的效果还是很明显的。
+第二点 就是上述的问题，网页无法辨识内容，从p=23能看出啥 反正我看不出和文章的主要内容git有任何关系，因此Wordpress伪静态的优点也就将地址进行自定义化
+涉及的知识： Nginx 配置 Wordpress配置
+步骤 其实伪静态在nginx很简单，只需要添加一些代码即可
+修改配置文件 在配置想要配置的网站的配置文件***.conf中的网站的位置即server里面加入下面的代码即可
+使得nginx生效 此处也是使用的ngnix的命令 进行安全加载 可以首先进行测试 看配置文件修改的是否正确
+当出现 **** test is success 样式的字眼出现时候证明配置修改的是成功的 当出现fail的时候 修改的配置应该是不正确的。
+下面的为执行命令
+此时ngnix 已经生效 伪静态的服务器端已经配置完成
+Wordpress端的配置 Wordpress端的配置相对来说比较简单，直接找到设置，在从中找到固定链接，进行修改，如下图所示
+我采用的修改为下图所示
+点击保存更改就已经修改成功，此时最好打开一个新的页面（此页面先不关闭），进行测试时候已经修改为伪静态（即上述的形式），如果出现问题，尽快修改回第一个，减少网站的不可访问时间。
+思考 有时候，知识觉得问题很复杂，尝试过后才发现也就那个样子，差不多的。</description>
+    </item>
+    
+    <item>
+      <title>[博客优化]为网站添加SSL证书</title>
+      <link>https://lihui.net/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E4%B8%BA%E7%BD%91%E7%AB%99%E6%B7%BB%E5%8A%A0ssl%E8%AF%81%E4%B9%A6.html</link>
+      <pubDate>Wed, 09 Sep 2020 15:01:33 +0000</pubDate>
+      
+      <guid>https://lihui.net/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E4%B8%BA%E7%BD%91%E7%AB%99%E6%B7%BB%E5%8A%A0ssl%E8%AF%81%E4%B9%A6.html</guid>
+      <description>前言 网站的SSL有什么作用呢？ 如果没有SSL证书，连接可能不安全，与网站交互的信息可能被其他人获取，对于无论是自己或者自己的用户都是一种损失，而且还会造成网站劫持等等问题，使用SSL证书可以大大地减轻网站的安全性的问题。
+使用SSL有什么缺点吗？ 有的 使用SSL证书会增加网站的访问速度，对网站的速度有些许的影响，且还会遇到网站证书过期的问题，直接弹出一个错误页面，很容易让人产生网站中毒的错觉。
+过程 预备条件 本文的环境
+ 腾讯云轻量云服务器CentOS 7 (安装了 Ngnix Wordpress 等服务 )  虽然本文章是为Wordpress配置的，但是其中的步骤是对于每一个网站都是通用的，无论是静态页面还是动态的页面，而或是其他的页面都是可以使用的，主要是配置Ngnix.
+主要分为两个步骤：获取SSL证书和配置Ngnix证书
+获取SSL证书 获取证书的方式有很多，比如购买证书或者使用免费的证书，其中免费的证书也有很多中，比如使用各个云厂商的免费证书，只需要验证很少的东西就可以得到一个一年有效期的证书，或者是采用一直以来比较火的免费证书 let&amp;rsquo;s encrypt ,此种证书有三个月的有效期，可以进行续期，因为其免费，易用备受推崇。
+本文采用的是申请let&amp;rsquo;s encrypt 证书
+采用certbot申请证书，大大的减轻申请证书的复杂程度，可以做到简单，快速直接。
+获取得到证书后，将将会放到指定的位置 /etc/letsencrypt/live/domian.com/ 下面 可以直接放在此目录下，以供后期的使用
+Ngnix 配置 首先找到自己的配置文件的位置。
+腾讯云的轻量主机配置文件的位置是在 /usr/local/lighthouse/software/ngnix/config
+修改其中的ngnix config 修改其中的配置
+重新启动服务
+总结 本篇博客还没写完，其中的内容，后续（不出意外的话应该尽快）补上。</description>
+    </item>
+    
+    <item>
+      <title>[博客优化]Wordpress加入redis服务器提高速度</title>
+      <link>https://lihui.net/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96wordpress%E5%8A%A0%E5%85%A5redis%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8F%90%E9%AB%98%E9%80%9F%E5%BA%A6.html</link>
+      <pubDate>Tue, 08 Sep 2020 13:52:55 +0000</pubDate>
+      
+      <guid>https://lihui.net/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96wordpress%E5%8A%A0%E5%85%A5redis%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8F%90%E9%AB%98%E9%80%9F%E5%BA%A6.html</guid>
+      <description>为什么要使用redis Redis 是一个基于内存的数据库管理系统，相对于mysql等数据库，拥有读取速度快的有点，相比于mysql直接从硬盘中够读取数据，从内存中读取数据的效率会变得快的多。
+采用Redis可以大幅度的提高网页的首屏速度，当然提高Wordpress的首屏速度的方法有很多，比如静态化等等，当然这都是后话，本次记录的是采用redis提高网页的访问速度。
+安装设置过程 本次的机器配置：
+ CentOS 7 腾讯云轻量云服务器一台 终端软件一个（可以直接使用网页）  安装redis(推荐采用yum源) 加入epel源 安装redis 启动服务 此时不会显示任何信息
+此时redis的服务已经启动 可以使用redis-cli进入命令行模式 进行测试 比较可爱的ping pong 就出现了
+Wordpress加入插件 我采用的是下面的插件（下载数量比较高）
+进行配置 进入插件的设置界面 点击 Enable Object Cache 启动后会自动进行连接 当发现connected的时候证明连接成功
+速度对比 加入缓存前（2020-09-08 21:23） 加入缓存后 （2020-09-08 21:31） 结论 经过测试发现有所提升，但是提升的不是很明显（也可以说很明晰），也可能和无线网和腾讯云轻量云晚上的宽带有影响，使用此种方法，可以减少磁盘的读写，更加快速的读取信息。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>如何搭建第一个 React 程序 | lihui</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="最近在公司中的项目中是一个 React native 开发的程序，因此就有了这个文章，搭建第一个 React 的程序。
+这个应该会很快写完，毕竟比较简单，这篇文章的目的还是尝试如何创建第一个React程序
+学习一个事物，我认为最大限度的降低初学者的成本是最重要的，毕竟创造一个新的软件为了让其他人使用，而不是让做出来的软件自己都不用。
+Mozilla 关于 JSX 语法的描述
+由于 JSX 是 HTML 和 JavaScript 的结合，因此一些开发人员认为它很直观。其他人则说它的混合特性使它变得混乱。但是，一旦熟悉了它，它将使您能够更快，更直观地构建用户界面，并使其他人一眼就能更好地理解您的代码库。
+本文分为下面几个方面 1. 环境预配置, 2. 创建并演示
+1. 环境预配置 环境预配置采用 NodeJS 环境 详情可以参考 Mozilla 安装 NodeJS 环境配置 2. 创建并演示 安装完成 nodejs 后可以使用下列命令创建项目名称为 moz-todo-react 的 React 应用
+在刚才的 terminal 中输入以下命令
+会自动打开地址 http://localhost:3000/ , 效果如下
+未来我们会有新的章节来介绍文章的内容以及如何使用 React 进行软件开发
+实践与写作大约使用 40 分钟
+遗留问题：
+ npm vs yarn 有什么不同，日常使用哪一个最好？  参考文章">
+    <meta name="generator" content="Hugo 0.94.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="如何搭建第一个 React 程序" />
+<meta property="og:description" content="最近在公司中的项目中是一个 React native 开发的程序，因此就有了这个文章，搭建第一个 React 的程序。
+这个应该会很快写完，毕竟比较简单，这篇文章的目的还是尝试如何创建第一个React程序
+学习一个事物，我认为最大限度的降低初学者的成本是最重要的，毕竟创造一个新的软件为了让其他人使用，而不是让做出来的软件自己都不用。
+Mozilla 关于 JSX 语法的描述
+由于 JSX 是 HTML 和 JavaScript 的结合，因此一些开发人员认为它很直观。其他人则说它的混合特性使它变得混乱。但是，一旦熟悉了它，它将使您能够更快，更直观地构建用户界面，并使其他人一眼就能更好地理解您的代码库。
+本文分为下面几个方面 1. 环境预配置, 2. 创建并演示
+1. 环境预配置 环境预配置采用 NodeJS 环境 详情可以参考 Mozilla 安装 NodeJS 环境配置 2. 创建并演示 安装完成 nodejs 后可以使用下列命令创建项目名称为 moz-todo-react 的 React 应用
+在刚才的 terminal 中输入以下命令
+会自动打开地址 http://localhost:3000/ , 效果如下
+未来我们会有新的章节来介绍文章的内容以及如何使用 React 进行软件开发
+实践与写作大约使用 40 分钟
+遗留问题：
+ npm vs yarn 有什么不同，日常使用哪一个最好？  参考文章" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lihui.net/how-to-create-first-react-app.html" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-01-05T14:22:22+00:00" />
+<meta property="article:modified_time" content="2022-01-05T14:22:22+00:00" />
+
+<meta itemprop="name" content="如何搭建第一个 React 程序">
+<meta itemprop="description" content="最近在公司中的项目中是一个 React native 开发的程序，因此就有了这个文章，搭建第一个 React 的程序。
+这个应该会很快写完，毕竟比较简单，这篇文章的目的还是尝试如何创建第一个React程序
+学习一个事物，我认为最大限度的降低初学者的成本是最重要的，毕竟创造一个新的软件为了让其他人使用，而不是让做出来的软件自己都不用。
+Mozilla 关于 JSX 语法的描述
+由于 JSX 是 HTML 和 JavaScript 的结合，因此一些开发人员认为它很直观。其他人则说它的混合特性使它变得混乱。但是，一旦熟悉了它，它将使您能够更快，更直观地构建用户界面，并使其他人一眼就能更好地理解您的代码库。
+本文分为下面几个方面 1. 环境预配置, 2. 创建并演示
+1. 环境预配置 环境预配置采用 NodeJS 环境 详情可以参考 Mozilla 安装 NodeJS 环境配置 2. 创建并演示 安装完成 nodejs 后可以使用下列命令创建项目名称为 moz-todo-react 的 React 应用
+在刚才的 terminal 中输入以下命令
+会自动打开地址 http://localhost:3000/ , 效果如下
+未来我们会有新的章节来介绍文章的内容以及如何使用 React 进行软件开发
+实践与写作大约使用 40 分钟
+遗留问题：
+ npm vs yarn 有什么不同，日常使用哪一个最好？  参考文章"><meta itemprop="datePublished" content="2022-01-05T14:22:22+00:00" />
+<meta itemprop="dateModified" content="2022-01-05T14:22:22+00:00" />
+<meta itemprop="wordCount" content="63">
+<meta itemprop="keywords" content="react," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="如何搭建第一个 React 程序"/>
+<meta name="twitter:description" content="最近在公司中的项目中是一个 React native 开发的程序，因此就有了这个文章，搭建第一个 React 的程序。
+这个应该会很快写完，毕竟比较简单，这篇文章的目的还是尝试如何创建第一个React程序
+学习一个事物，我认为最大限度的降低初学者的成本是最重要的，毕竟创造一个新的软件为了让其他人使用，而不是让做出来的软件自己都不用。
+Mozilla 关于 JSX 语法的描述
+由于 JSX 是 HTML 和 JavaScript 的结合，因此一些开发人员认为它很直观。其他人则说它的混合特性使它变得混乱。但是，一旦熟悉了它，它将使您能够更快，更直观地构建用户界面，并使其他人一眼就能更好地理解您的代码库。
+本文分为下面几个方面 1. 环境预配置, 2. 创建并演示
+1. 环境预配置 环境预配置采用 NodeJS 环境 详情可以参考 Mozilla 安装 NodeJS 环境配置 2. 创建并演示 安装完成 nodejs 后可以使用下列命令创建项目名称为 moz-todo-react 的 React 应用
+在刚才的 terminal 中输入以下命令
+会自动打开地址 http://localhost:3000/ , 效果如下
+未来我们会有新的章节来介绍文章的内容以及如何使用 React 进行软件开发
+实践与写作大约使用 40 分钟
+遗留问题：
+ npm vs yarn 有什么不同，日常使用哪一个最好？  参考文章"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        lihui
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">如何搭建第一个 React 程序</h1>
+      
+      <p class="tracked">
+          By <strong>
+          
+              Li Hui
+          
+          </strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-01-05T14:22:22Z">January 5, 2022</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>最近在公司中的项目中是一个 React native 开发的程序，因此就有了这个文章，搭建第一个 React 的程序。</p>
+<p>这个应该会很快写完，毕竟比较简单，这篇文章的目的还是尝试如何创建第一个React程序</p>
+<p>学习一个事物，我认为最大限度的降低初学者的成本是最重要的，毕竟创造一个新的软件为了让其他人使用，而不是让做出来的软件自己都不用。<br>
+Mozilla 关于 JSX 语法的描述</p>
+<p><code>由于 JSX 是 HTML 和 JavaScript 的结合，因此一些开发人员认为它很直观。其他人则说它的混合特性使它变得混乱。但是，一旦熟悉了它，它将使您能够更快，更直观地构建用户界面，并使其他人一眼就能更好地理解您的代码库。</code></p>
+<p>本文分为下面几个方面 1. 环境预配置, 2. 创建并演示</p>
+<h2 id="1-环境预配置">1. 环境预配置</h2>
+<p>环境预配置采用 NodeJS 环境 详情可以参考 <!-- raw HTML omitted -->Mozilla 安装 NodeJS 环境配置 <!-- raw HTML omitted --></p>
+<h2 id="2-创建并演示">2. 创建并演示</h2>
+<p>安装完成 nodejs 后可以使用下列命令创建项目名称为 <code>moz-todo-react</code> 的 React 应用</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/react-moz-starter.png" alt=""></p>
+<p>在刚才的 terminal 中输入以下命令</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>会自动打开地址 http://localhost:3000/ , 效果如下<br>
+<img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/first-react.png" alt=""></p>
+<p>未来我们会有新的章节来介绍文章的内容以及如何使用 React 进行软件开发</p>
+<p>实践与写作大约使用 40 分钟</p>
+<p>遗留问题：</p>
+<ol>
+<li>npm vs yarn 有什么不同，日常使用哪一个最好？</li>
+</ol>
+<p>参考文章</p>
+<p><!-- raw HTML omitted --><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">https://developer.mozilla.org/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started</a><!-- raw HTML omitted --></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/react" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">react</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
+    &copy;  lihui 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

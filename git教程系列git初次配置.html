@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>[Git教程系列]Git初次配置 | lihui</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="前沿 Git作为一个比较优秀的分支管理系统，收到很多的人的喜爱，其分布式的分支系统，可以与远端分离进行独立的开发，大大的减少了分支系统对于网络联通性的依赖。
+且其分支控制方面，轻量级，速度快备受人们所喜爱。
+因为Git的操作比较多，Git的操作分为多部分来书写，以便可以细细记录下来，官方的教程地址https://git-scm.com其中有详细的教程和软件。本文章的作为记录本人 认为重要的指令而书写。
+基本步骤 首先下载软件 此步骤比较简单，直接下载https://git-scm.com下载安装即可。 步骤比较简单，不过多赘述。
+定义自己的信息 打开命令行（terminal/bash/powershell）输入下面的命令行
+通过上述的命令行 我们就对自己的信息做了声明 每一次提交都会带着这些信息，且这些信息不可以删除（特指单独删除，删除分支o r删除commit 不算（连commit都没有了 有用户的信息也没有用了呀（😂））
+进行验证 证书的安装 为什么使用证书，使用证书有必要吗？
+使用证书可以大大的简便代提交者的工作，代码提交者无需每次提交的时候都需要登陆，只需要一次设置证书，以后所有的提交都不需要再次登陆，避免忘记密码无法提交的尴尬（逃
+其实作为命令行Mac版本和Windows版本或者Linux版本其实并无差别，毕竟都是使用的是bash或者类bash
+生成证书 命令为
+首先是选择放置的位置，保持默认即可 再是输入密钥的密码的密钥，可以输入，也可以不输入，我选择的是不输入（直接回车）。
+证书而后生成完成。
+去查找相应的证书 一般是在 用户目录下的.ssh 文件夹中 id_rsa.pub为公钥，可以给其他人，id_rsa为私钥，除了你自己其他人都不能拥有，拥有了私钥就等于有了你的授权书，可以拿着你的授权书去干其他的事情。
+将公钥复制下来，复制到GitHub等软件等ssh连接处进行粘贴，保存，此时密钥的连接就可以建立了。
+建立测试命令
+效果：
+此时输入yes 进行连接即可 而后显示连接成功的信息
+显示上述的显示证明连接成功。">
+    <meta name="generator" content="Hugo 0.94.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="[Git教程系列]Git初次配置" />
+<meta property="og:description" content="前沿 Git作为一个比较优秀的分支管理系统，收到很多的人的喜爱，其分布式的分支系统，可以与远端分离进行独立的开发，大大的减少了分支系统对于网络联通性的依赖。
+且其分支控制方面，轻量级，速度快备受人们所喜爱。
+因为Git的操作比较多，Git的操作分为多部分来书写，以便可以细细记录下来，官方的教程地址https://git-scm.com其中有详细的教程和软件。本文章的作为记录本人 认为重要的指令而书写。
+基本步骤 首先下载软件 此步骤比较简单，直接下载https://git-scm.com下载安装即可。 步骤比较简单，不过多赘述。
+定义自己的信息 打开命令行（terminal/bash/powershell）输入下面的命令行
+通过上述的命令行 我们就对自己的信息做了声明 每一次提交都会带着这些信息，且这些信息不可以删除（特指单独删除，删除分支o r删除commit 不算（连commit都没有了 有用户的信息也没有用了呀（😂））
+进行验证 证书的安装 为什么使用证书，使用证书有必要吗？
+使用证书可以大大的简便代提交者的工作，代码提交者无需每次提交的时候都需要登陆，只需要一次设置证书，以后所有的提交都不需要再次登陆，避免忘记密码无法提交的尴尬（逃
+其实作为命令行Mac版本和Windows版本或者Linux版本其实并无差别，毕竟都是使用的是bash或者类bash
+生成证书 命令为
+首先是选择放置的位置，保持默认即可 再是输入密钥的密码的密钥，可以输入，也可以不输入，我选择的是不输入（直接回车）。
+证书而后生成完成。
+去查找相应的证书 一般是在 用户目录下的.ssh 文件夹中 id_rsa.pub为公钥，可以给其他人，id_rsa为私钥，除了你自己其他人都不能拥有，拥有了私钥就等于有了你的授权书，可以拿着你的授权书去干其他的事情。
+将公钥复制下来，复制到GitHub等软件等ssh连接处进行粘贴，保存，此时密钥的连接就可以建立了。
+建立测试命令
+效果：
+此时输入yes 进行连接即可 而后显示连接成功的信息
+显示上述的显示证明连接成功。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lihui.net/git%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97git%E5%88%9D%E6%AC%A1%E9%85%8D%E7%BD%AE.html" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-09-10T15:51:27+00:00" />
+<meta property="article:modified_time" content="2020-09-10T15:51:27+00:00" />
+
+<meta itemprop="name" content="[Git教程系列]Git初次配置">
+<meta itemprop="description" content="前沿 Git作为一个比较优秀的分支管理系统，收到很多的人的喜爱，其分布式的分支系统，可以与远端分离进行独立的开发，大大的减少了分支系统对于网络联通性的依赖。
+且其分支控制方面，轻量级，速度快备受人们所喜爱。
+因为Git的操作比较多，Git的操作分为多部分来书写，以便可以细细记录下来，官方的教程地址https://git-scm.com其中有详细的教程和软件。本文章的作为记录本人 认为重要的指令而书写。
+基本步骤 首先下载软件 此步骤比较简单，直接下载https://git-scm.com下载安装即可。 步骤比较简单，不过多赘述。
+定义自己的信息 打开命令行（terminal/bash/powershell）输入下面的命令行
+通过上述的命令行 我们就对自己的信息做了声明 每一次提交都会带着这些信息，且这些信息不可以删除（特指单独删除，删除分支o r删除commit 不算（连commit都没有了 有用户的信息也没有用了呀（😂））
+进行验证 证书的安装 为什么使用证书，使用证书有必要吗？
+使用证书可以大大的简便代提交者的工作，代码提交者无需每次提交的时候都需要登陆，只需要一次设置证书，以后所有的提交都不需要再次登陆，避免忘记密码无法提交的尴尬（逃
+其实作为命令行Mac版本和Windows版本或者Linux版本其实并无差别，毕竟都是使用的是bash或者类bash
+生成证书 命令为
+首先是选择放置的位置，保持默认即可 再是输入密钥的密码的密钥，可以输入，也可以不输入，我选择的是不输入（直接回车）。
+证书而后生成完成。
+去查找相应的证书 一般是在 用户目录下的.ssh 文件夹中 id_rsa.pub为公钥，可以给其他人，id_rsa为私钥，除了你自己其他人都不能拥有，拥有了私钥就等于有了你的授权书，可以拿着你的授权书去干其他的事情。
+将公钥复制下来，复制到GitHub等软件等ssh连接处进行粘贴，保存，此时密钥的连接就可以建立了。
+建立测试命令
+效果：
+此时输入yes 进行连接即可 而后显示连接成功的信息
+显示上述的显示证明连接成功。"><meta itemprop="datePublished" content="2020-09-10T15:51:27+00:00" />
+<meta itemprop="dateModified" content="2020-09-10T15:51:27+00:00" />
+<meta itemprop="wordCount" content="39">
+<meta itemprop="keywords" content="Git系列," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Git教程系列]Git初次配置"/>
+<meta name="twitter:description" content="前沿 Git作为一个比较优秀的分支管理系统，收到很多的人的喜爱，其分布式的分支系统，可以与远端分离进行独立的开发，大大的减少了分支系统对于网络联通性的依赖。
+且其分支控制方面，轻量级，速度快备受人们所喜爱。
+因为Git的操作比较多，Git的操作分为多部分来书写，以便可以细细记录下来，官方的教程地址https://git-scm.com其中有详细的教程和软件。本文章的作为记录本人 认为重要的指令而书写。
+基本步骤 首先下载软件 此步骤比较简单，直接下载https://git-scm.com下载安装即可。 步骤比较简单，不过多赘述。
+定义自己的信息 打开命令行（terminal/bash/powershell）输入下面的命令行
+通过上述的命令行 我们就对自己的信息做了声明 每一次提交都会带着这些信息，且这些信息不可以删除（特指单独删除，删除分支o r删除commit 不算（连commit都没有了 有用户的信息也没有用了呀（😂））
+进行验证 证书的安装 为什么使用证书，使用证书有必要吗？
+使用证书可以大大的简便代提交者的工作，代码提交者无需每次提交的时候都需要登陆，只需要一次设置证书，以后所有的提交都不需要再次登陆，避免忘记密码无法提交的尴尬（逃
+其实作为命令行Mac版本和Windows版本或者Linux版本其实并无差别，毕竟都是使用的是bash或者类bash
+生成证书 命令为
+首先是选择放置的位置，保持默认即可 再是输入密钥的密码的密钥，可以输入，也可以不输入，我选择的是不输入（直接回车）。
+证书而后生成完成。
+去查找相应的证书 一般是在 用户目录下的.ssh 文件夹中 id_rsa.pub为公钥，可以给其他人，id_rsa为私钥，除了你自己其他人都不能拥有，拥有了私钥就等于有了你的授权书，可以拿着你的授权书去干其他的事情。
+将公钥复制下来，复制到GitHub等软件等ssh连接处进行粘贴，保存，此时密钥的连接就可以建立了。
+建立测试命令
+效果：
+此时输入yes 进行连接即可 而后显示连接成功的信息
+显示上述的显示证明连接成功。"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        lihui
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">[Git教程系列]Git初次配置</h1>
+      
+      <p class="tracked">
+          By <strong>
+          
+              Li Hui
+          
+          </strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-09-10T15:51:27Z">September 10, 2020</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="前沿">前沿</h1>
+<p>Git作为一个比较优秀的分支管理系统，收到很多的人的喜爱，其分布式的分支系统，可以与远端分离进行独立的开发，大大的减少了分支系统对于网络联通性的依赖。</p>
+<p>且其分支控制方面，轻量级，速度快备受人们所喜爱。</p>
+<p>因为Git的操作比较多，Git的操作分为多部分来书写，以便可以细细记录下来，官方的教程地址<!-- raw HTML omitted --><a href="https://git-scm.com">https://git-scm.com</a><!-- raw HTML omitted --> 其中有详细的教程和软件。本文章的作为记录本人 认为重要的指令而书写。</p>
+<h1 id="基本步骤">基本步骤</h1>
+<h2 id="首先下载软件">首先下载软件</h2>
+<p>此步骤比较简单，直接下载<!-- raw HTML omitted --><a href="https://git-scm.com">https://git-scm.com</a><!-- raw HTML omitted --> 下载安装即可。 步骤比较简单，不过多赘述。</p>
+<h2 id="定义自己的信息">定义自己的信息</h2>
+<p>打开命令行（terminal/bash/powershell）输入下面的命令行</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>通过上述的命令行 我们就对自己的信息做了声明 <strong>每一次提交都会带着这些信息，且这些信息不可以删除（特指单独删除，删除分支o r删除commit 不算（连commit都没有了 有用户的信息也没有用了呀（😂））</strong></p>
+<h3 id="进行验证">进行验证</h3>
+<!-- raw HTML omitted -->
+<h2 id="证书的安装">证书的安装</h2>
+<p>为什么使用证书，使用证书有必要吗？</p>
+<p>使用证书可以大大的简便代提交者的工作，代码提交者无需每次提交的时候都需要登陆，只需要一次设置证书，以后所有的提交都不需要再次登陆，避免忘记密码无法提交的尴尬（逃</p>
+<p>其实作为命令行Mac版本和Windows版本或者Linux版本其实并无差别，毕竟都是使用的是bash或者类bash</p>
+<h3 id="生成证书">生成证书</h3>
+<p>命令为</p>
+<!-- raw HTML omitted -->
+<p>首先是选择放置的位置，保持默认即可 再是输入密钥的密码的密钥，可以输入，也可以不输入，我选择的是不输入（直接回车）。</p>
+<p>证书而后生成完成。</p>
+<p>去查找相应的证书 一般是在 用户目录下的.ssh 文件夹中 id_rsa.pub为公钥，可以给其他人，id_rsa为私钥，除了你自己其他人都不能拥有，拥有了私钥就等于有了你的授权书，可以拿着你的授权书去干其他的事情。</p>
+<p>将公钥复制下来，复制到GitHub等软件等ssh连接处进行粘贴，保存，此时密钥的连接就可以建立了。</p>
+<p>建立测试命令</p>
+<!-- raw HTML omitted -->
+<p>效果：</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>此时输入yes 进行连接即可 而后显示连接成功的信息</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>显示上述的显示证明连接成功。</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/git%E7%B3%BB%E5%88%97" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Git系列</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
+    &copy;  lihui 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>使用Ubuntu 及宝塔搭建Ghost平台 | lihui</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="说明:
+ 安装Ghost博客的步骤比较多一点，在此记录下，以备以后学习与检查。
+ 所需:
+ 服务器或者本地虚拟机*1 SSH 软件*1 电脑*1  安装步骤 1. 安装宝塔面板 这一步骤在上一篇文章发表过,可以查看一下上一篇的文章
+2. 配置安装Ghost 1. 首先使用SSH软件连接实例 这个简单，直接在XShell 或者Putty中填写服务器的信息即可
+2. 创建新用户 本文以ghoster为例 切换到Root权限下：
+为新用户 增加 sudo权限
+切换到ghoster用户 并确定sudo权限
+如上图所示 # 开头则表明已经具有sudo 权限
+3. 更新安装包 使用ghoster 更新系统
+直接使用上面的用户root更新服务器即可
+可能会出现下面的情况 直接点击回车即可
+4. 软件安装（本处只需要安装NodeJS即可，其他软件宝塔面板已经安装上） 本处只需要安装Node.JS即可，其他的环境（Nginx, MySQL）使用宝塔面板已经安装上
+加入源
+安装NodeJS
+５.安装配置Ghost 安装Ghost
+切换到/www/wwwroot/目录下（为了查找的时候方便，原则上任何一个可以操作的目录均可），进行安装配置
+切换目录
+创建文件夹 ghost
+为ghoster用户配置此文件夹的权限
+修改文件夹权限
+进入文件夹安装程序（此时用户仍为ghoster）
+开始使用ghost-cli安装ghost 博客
+前期准备 在宝塔中创建新的数据库
+开始安装Ghost
+此时注意 当需要进行Ngnix的配置的时候输入N (此处不需要进行Nginx的配置),一会我们使用宝塔对Nignx进行配置
+安装结束后 会默认采用2368端口进行监听 注意显示的端口 如果不知道的化 可以查看安装目录的config.production.json 的port字段即可">
+    <meta name="generator" content="Hugo 0.94.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="使用Ubuntu 及宝塔搭建Ghost平台" />
+<meta property="og:description" content="说明:
+ 安装Ghost博客的步骤比较多一点，在此记录下，以备以后学习与检查。
+ 所需:
+ 服务器或者本地虚拟机*1 SSH 软件*1 电脑*1  安装步骤 1. 安装宝塔面板 这一步骤在上一篇文章发表过,可以查看一下上一篇的文章
+2. 配置安装Ghost 1. 首先使用SSH软件连接实例 这个简单，直接在XShell 或者Putty中填写服务器的信息即可
+2. 创建新用户 本文以ghoster为例 切换到Root权限下：
+为新用户 增加 sudo权限
+切换到ghoster用户 并确定sudo权限
+如上图所示 # 开头则表明已经具有sudo 权限
+3. 更新安装包 使用ghoster 更新系统
+直接使用上面的用户root更新服务器即可
+可能会出现下面的情况 直接点击回车即可
+4. 软件安装（本处只需要安装NodeJS即可，其他软件宝塔面板已经安装上） 本处只需要安装Node.JS即可，其他的环境（Nginx, MySQL）使用宝塔面板已经安装上
+加入源
+安装NodeJS
+５.安装配置Ghost 安装Ghost
+切换到/www/wwwroot/目录下（为了查找的时候方便，原则上任何一个可以操作的目录均可），进行安装配置
+切换目录
+创建文件夹 ghost
+为ghoster用户配置此文件夹的权限
+修改文件夹权限
+进入文件夹安装程序（此时用户仍为ghoster）
+开始使用ghost-cli安装ghost 博客
+前期准备 在宝塔中创建新的数据库
+开始安装Ghost
+此时注意 当需要进行Ngnix的配置的时候输入N (此处不需要进行Nginx的配置),一会我们使用宝塔对Nignx进行配置
+安装结束后 会默认采用2368端口进行监听 注意显示的端口 如果不知道的化 可以查看安装目录的config.production.json 的port字段即可" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lihui.net/use-ubuntu-bt-install-ghost.html" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-01-10T07:51:36+00:00" />
+<meta property="article:modified_time" content="2021-01-10T07:51:36+00:00" />
+
+<meta itemprop="name" content="使用Ubuntu 及宝塔搭建Ghost平台">
+<meta itemprop="description" content="说明:
+ 安装Ghost博客的步骤比较多一点，在此记录下，以备以后学习与检查。
+ 所需:
+ 服务器或者本地虚拟机*1 SSH 软件*1 电脑*1  安装步骤 1. 安装宝塔面板 这一步骤在上一篇文章发表过,可以查看一下上一篇的文章
+2. 配置安装Ghost 1. 首先使用SSH软件连接实例 这个简单，直接在XShell 或者Putty中填写服务器的信息即可
+2. 创建新用户 本文以ghoster为例 切换到Root权限下：
+为新用户 增加 sudo权限
+切换到ghoster用户 并确定sudo权限
+如上图所示 # 开头则表明已经具有sudo 权限
+3. 更新安装包 使用ghoster 更新系统
+直接使用上面的用户root更新服务器即可
+可能会出现下面的情况 直接点击回车即可
+4. 软件安装（本处只需要安装NodeJS即可，其他软件宝塔面板已经安装上） 本处只需要安装Node.JS即可，其他的环境（Nginx, MySQL）使用宝塔面板已经安装上
+加入源
+安装NodeJS
+５.安装配置Ghost 安装Ghost
+切换到/www/wwwroot/目录下（为了查找的时候方便，原则上任何一个可以操作的目录均可），进行安装配置
+切换目录
+创建文件夹 ghost
+为ghoster用户配置此文件夹的权限
+修改文件夹权限
+进入文件夹安装程序（此时用户仍为ghoster）
+开始使用ghost-cli安装ghost 博客
+前期准备 在宝塔中创建新的数据库
+开始安装Ghost
+此时注意 当需要进行Ngnix的配置的时候输入N (此处不需要进行Nginx的配置),一会我们使用宝塔对Nignx进行配置
+安装结束后 会默认采用2368端口进行监听 注意显示的端口 如果不知道的化 可以查看安装目录的config.production.json 的port字段即可"><meta itemprop="datePublished" content="2021-01-10T07:51:36+00:00" />
+<meta itemprop="dateModified" content="2021-01-10T07:51:36+00:00" />
+<meta itemprop="wordCount" content="76">
+<meta itemprop="keywords" content="Ghost,Linux,宝塔," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用Ubuntu 及宝塔搭建Ghost平台"/>
+<meta name="twitter:description" content="说明:
+ 安装Ghost博客的步骤比较多一点，在此记录下，以备以后学习与检查。
+ 所需:
+ 服务器或者本地虚拟机*1 SSH 软件*1 电脑*1  安装步骤 1. 安装宝塔面板 这一步骤在上一篇文章发表过,可以查看一下上一篇的文章
+2. 配置安装Ghost 1. 首先使用SSH软件连接实例 这个简单，直接在XShell 或者Putty中填写服务器的信息即可
+2. 创建新用户 本文以ghoster为例 切换到Root权限下：
+为新用户 增加 sudo权限
+切换到ghoster用户 并确定sudo权限
+如上图所示 # 开头则表明已经具有sudo 权限
+3. 更新安装包 使用ghoster 更新系统
+直接使用上面的用户root更新服务器即可
+可能会出现下面的情况 直接点击回车即可
+4. 软件安装（本处只需要安装NodeJS即可，其他软件宝塔面板已经安装上） 本处只需要安装Node.JS即可，其他的环境（Nginx, MySQL）使用宝塔面板已经安装上
+加入源
+安装NodeJS
+５.安装配置Ghost 安装Ghost
+切换到/www/wwwroot/目录下（为了查找的时候方便，原则上任何一个可以操作的目录均可），进行安装配置
+切换目录
+创建文件夹 ghost
+为ghoster用户配置此文件夹的权限
+修改文件夹权限
+进入文件夹安装程序（此时用户仍为ghoster）
+开始使用ghost-cli安装ghost 博客
+前期准备 在宝塔中创建新的数据库
+开始安装Ghost
+此时注意 当需要进行Ngnix的配置的时候输入N (此处不需要进行Nginx的配置),一会我们使用宝塔对Nignx进行配置
+安装结束后 会默认采用2368端口进行监听 注意显示的端口 如果不知道的化 可以查看安装目录的config.production.json 的port字段即可"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        lihui
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">使用Ubuntu 及宝塔搭建Ghost平台</h1>
+      
+      <p class="tracked">
+          By <strong>
+          
+              Li Hui
+          
+          </strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2021-01-10T07:51:36Z">January 10, 2021</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>说明:</p>
+<blockquote>
+<p>安装Ghost博客的步骤比较多一点，在此记录下，以备以后学习与检查。</p>
+</blockquote>
+<p>所需:</p>
+<ol>
+<li>服务器或者本地虚拟机*1</li>
+<li>SSH 软件*1</li>
+<li>电脑*1</li>
+</ol>
+<h1 id="安装步骤">安装步骤</h1>
+<h2 id="1-安装宝塔面板">1. 安装宝塔面板</h2>
+<p>这一步骤在上一篇文章发表过,可以查看一下上一篇的文章</p>
+<h2 id="2-配置安装ghost">2. 配置安装Ghost</h2>
+<h3 id="1-首先使用ssh软件连接实例">1. 首先使用SSH软件连接实例</h3>
+<p>这个简单，直接在XShell 或者Putty中填写服务器的信息即可</p>
+<h3 id="2-创建新用户-本文以ghoster为例">2. 创建新用户 本文以ghoster为例</h3>
+<p>切换到Root权限下：</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210110071637122.png" alt="image-20210110071637122"></p>
+<p>为新用户 增加 sudo权限</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>切换到ghoster用户 并确定sudo权限</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210110071952094.png" alt="image-20210110071952094"></p>
+<p>如上图所示 # 开头则表明已经具有sudo 权限</p>
+<h3 id="3-更新安装包">3. 更新安装包</h3>
+<p>使用ghoster 更新系统</p>
+<p>直接使用上面的用户root更新服务器即可</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>可能会出现下面的情况 直接点击回车即可</p>
+<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210110072305254.png" alt="image-20210110072305254"></p>
+<h3 id="4-软件安装本处只需要安装nodejs即可其他软件宝塔面板已经安装上">4. 软件安装（本处只需要安装NodeJS即可，其他软件宝塔面板已经安装上）</h3>
+<p>本处只需要安装Node.JS即可，其他的环境（Nginx, MySQL）使用宝塔面板已经安装上</p>
+<p>加入源</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>安装NodeJS</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h3 id="５安装配置ghost">５.安装配置Ghost</h3>
+<p>安装Ghost</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>切换到/www/wwwroot/目录下（为了查找的时候方便，原则上任何一个可以操作的目录均可），进行安装配置</p>
+<p>切换目录</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>创建文件夹 ghost</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>为ghoster用户配置此文件夹的权限</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>修改文件夹权限</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>进入文件夹安装程序（此时用户仍为ghoster）</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>开始使用ghost-cli安装ghost 博客</p>
+<p>前期准备 在宝塔中创建新的数据库</p>
+<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210110084937179.png" alt="image-20210110084937179"></p>
+<p>开始安装Ghost</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>此时注意 当需要进行Ngnix的配置的时候输入N (此处不需要进行Nginx的配置),一会我们使用宝塔对Nignx进行配置</p>
+<p>安装结束后 会默认采用2368端口进行监听 注意显示的端口 如果不知道的化 可以查看安装目录的config.production.json 的port字段即可</p>
+<h2 id="3-配置代理ssl证书">3. 配置代理+SSL证书</h2>
+<p>这一个步骤的主要目的是使用宝塔面板直接对相应的服务进行反向代理, 将对口映射到网址上,确保网址可以使用,通知配置SSL证书,保证网站可以安全传输信息.</p>
+<p>首先第一步 配置证书</p>
+<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210110154403350.png" alt="image-20210110154403350"></p>
+<p>点击文件验证即可,简单快速</p>
+<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210110154535967.png" alt="image-20210110154535967"></p>
+<p>按照顺序添加信息即可 目标URL根据上一步骤的端口号码填写即可.</p>
+<p>而后就可以访问网址对应用进行访问,进行配置即可.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/ghost" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Ghost</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/linux" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Linux</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%E5%AE%9D%E5%A1%94" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">宝塔</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/install-bt-panel.html">[Linux]Ubuntu安装宝塔面板</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/create-linux-user.html">[Linux系列]创建Linux用户</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/change-ssh-port.html">[Linux系列]修改SSH端口 防止端口扫描</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/linux-change-hostname.html">[linux系列] 修改主机用户名</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
+    &copy;  lihui 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

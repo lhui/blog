@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell on lihui</title>
+    <link>https://lihui.net/categories/shell/</link>
+    <description>Recent content in Shell on lihui</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Sep 2020 08:54:39 +0000</lastBuildDate><atom:link href="https://lihui.net/categories/shell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>轻松学CLI应用总章节</title>
+      <link>https://lihui.net/cli-collection.html</link>
+      <pubDate>Sat, 19 Sep 2020 08:54:39 +0000</pubDate>
+      
+      <guid>https://lihui.net/cli-collection.html</guid>
+      <description>前言 在以前的文章中，写了一部分cli应用和GUI应用的好处和坏处，以前的我认为使用gui应用是一件轻松的事情，只需要简单的用鼠标点击几下，就可以完成需要的操作，为何还要去学习上个世纪的命令行呢，学习命令行会好用吗。但是现在的我开始悄无声息地喜欢上了命令行，重复的工作直接使用命令行，就会变得轻松起来，双手不必离开键盘就可以将所有的事情都办了，而且命令行是一件酷酷的事情。
+图片来源：https://www.avast.com/c-hacker内容 不出意外的话，我将书写一系列的文章，说明如何使用各个命令行工具，快速的使用命令行操作我们需要操作的事情，并对其中的优势进行分析和总结。
+写这篇文章时候我们想到的CLI的应用（我在日常生活中可能会用到的）有这些，对这些进行一些说明。
+   应用名称 应用简评 应用网站 应用说明博文     Github CLI(gh) 操作使用GitHub https://cli.github.com/    wordpress CLI(wp) 操作使用Wordpress https://wp-cli.org/    Rancher CLI 操作使用rancher https://rancher.com/docs/rancher/v2.x/en/cli/                 还有一些CLI应用也是很棒的，但是鉴于时间因素，无法一一的进行说明分析，暂时列到下面，有兴趣的可以尝试。可能不全欢迎进行添加。
+   应用名称 应用简评 应用网站     Vue CLI vue.js 开发的标准工具 https://cli.vuejs.org/   Angular CLI Angular开发的标准工具 https://cli.</description>
+    </item>
+    
+    <item>
+      <title>[Shell编程系列]基础教程2</title>
+      <link>https://lihui.net/shell-2.html</link>
+      <pubDate>Fri, 18 Sep 2020 14:52:15 +0000</pubDate>
+      
+      <guid>https://lihui.net/shell-2.html</guid>
+      <description>前言 上一章节 是关于基础命令ls chomd sudo pwd 的 前面的四个命令对于我们的日常的使用都有相当重要的作用，本期我们将查看以下的几个命令：移动文件命令mv(也可以用作重命名)，复制文件cp ,在控制台显示字符串 echo
+内容 移动/重命名文件mv
+移动文件
+重命名文件
+复制文件cp 命令行
+echo打印字符串 这个就很简单了
+直接echo 字符串就可以,以后加上变量，可能会更有用一点
+命令行
+示例
+返回结果
+总结 Shell命令具有很重要的作用，熟练使用Shell脚本，可以在一定程度上大幅度提高开发效率，不过shell脚本的内容似乎有点多，因此学习可能会花费一些时间，不过收获是很丰富的。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Docker | lihui</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.94.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+      <link href="/tags/docker/index.xml" rel="alternate" type="application/rss+xml" title="lihui" />
+      <link href="/tags/docker/index.xml" rel="feed" type="application/rss+xml" title="lihui" />
+      
+    
+    
+    <meta property="og:title" content="Docker" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://lihui.net/tags/docker/" />
+
+<meta itemprop="name" content="Docker">
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Docker"/>
+<meta name="twitter:description" content=""/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="pb3-m pb6-l bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        lihui
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv3 ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+          Docker
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <article class="cf pa3 pa4-m pa4-l">
+    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links mid-gray">
+      <p>Below you will find pages that utilize the taxonomy term “Docker”</p>
+    </div>
+  </article>
+  <div class="mw8 center">
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100  mb4 bg-white">
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        January 13, 2021
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="/docker-base-command.html" class="link black dim">
+        Docker基础命令
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      前言 随着容器化技术的推广,在不久的将来,大多数的公司都将采用容器化技术对现有的业务进行改造,因此容器化是一个大趋势, 在当下, 正值云原生的发展的前期, 掌握容器化技术, 对于云原生的业务的了解也是一种帮助, 本文主要还是整理一下Docker的基本命令, Docker基本命令其实很好找到, 本文只是对自己的掌握的命令的一个总结和对Docker命令的整理, 以防自己以后会忘记.
+本文采用的是https://www.docker.com/play-with-docker提供的 每次提供四个小时的试用期, 完全可以满足使用.
+内容 获取镜像(docker pull) 命令 image_name是镜像的名称 后面如果没有tag 则默认拉去最新的镜像,如果有则拉去对应Tag号的镜像
+demo 带Tag 不带Tag 查看镜像信息 命令&amp;&amp;demo 搜寻镜像 命令 参数解释
+demo 删除镜像 删除一个或者多个镜像 注意删除容器时 docker rm CONTAINER
+命令 参数
+demo 创建镜像 从一个变化的容器种创建一个镜像,为何这样说,因为容器是可写的,而镜像也就是image是只读的.
+命令 参数
+demo 存入和载入镜像 存入镜像 导出镜像为本地tar文档
+命令 参数
+demo 载入镜像 将导出的tar文件导入到本地镜像仓库中,会导入镜像和其元数据信息
+命令 参数
+demo 
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        January 11, 2021
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="/docker-init.html" class="link black dim">
+        Docker原理研究
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      前言 为何要了解原理? 了解原理对于Docker的学习使用有什么好处吗? Docker和其他的虚拟化(比如KVM等虚拟化的方式)有什么区别? 为啥现在人们都开始用Docker了?
+首先来说 如果实际使用的话, 涉及到简单的使用方面,其实并不会涉及到原理的问题, 一般的软件也好, 编程语言也好, 其主要目的是为了让人更少的关心原理的问题,将更多的精力放在处理业务逻辑上, 对于原理方面的问题, 最好可以一点都不用考虑, 那对我们来说了解原理有什么好处呢? 花时间了解,很少使用的原理到底值不值?
+我认为,了解原理是对问题本质的一种把握, 其实事情都有相似的地方, 软件的产生都有它存在的意义和目的, Docker解决了什么问题呢? 这个问题好像并没有什么标准的方案? 我在此写一下我自己的看法.
+首先解决的是环境不一致的问题, 常见的情况如下:
+A: 你的程序跑不起来啊?
+B: 不可能的,在我的机器上好好的,怎么在你的机器上不行了呢? 肯定是你系统环境和我的环境不一致造成的.
+第一个问题: 环境不一致的问题.
+A: 我的应用为啥自从你的应用上线后就不好使了? 是不是你的应用在这台服务器做了什么?
+B: 我修改了
+```,可能对环境造成了影响,没办法的,**环境无法隔离**啊.
+第二个问题: 同一台服务器环境无法隔离,如果采用虚拟化(尤指虚拟机),则会出现下面的情况
+A: 为啥我应用很小,还需要再虚拟机上跑, 还得浪费一个装操作系统的资源,而且启动一个虚拟机还这么慢.
+B: 这没办法,服务机的虚拟化解决的是资源调配的问题,Docker解决的是应用的开发,测试和部署的问题.
+第三个问题: 服务器虚拟化浪费资源,且启动启动过程慢
+所以Docker解决的是什么问题: 1. 隔绝物理硬件差异性和系统差异性 2. 快速分发和部署
+那Docker的原理是什么呢? Docker使用Go语言开发, 使用Linux内核和内核的功能(Cgroup和namspace)来分割进程,以便各进程相互独立运行,Cgroups是Linux的尼日河功能,它让两件事情变为可能,限制Linux进程组的资源占用(内存 CPU);为进程组制作PID UTS IPC 网络 用户及转载命名空间, 而采用Union FS 等技术 可以实现将一个文件系统挂载到其他的文件系统之上.由此可以将系统的进程 网络 文件系统进行隔离,从而实现Docker的环境的隔离.
+引用
+ https://juejin.cn/post/6844904039180681229 https://www.jianshu.com/p/7a58ad7fade4  
+    </div>
+  </div>
+
+        </div>
+      
+    </section>
+  </div>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
+    &copy;  lihui 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

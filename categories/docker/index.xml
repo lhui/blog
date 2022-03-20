@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on lihui</title>
+    <link>https://lihui.net/categories/docker/</link>
+    <description>Recent content in Docker on lihui</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Jan 2021 15:57:45 +0000</lastBuildDate><atom:link href="https://lihui.net/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker基础命令</title>
+      <link>https://lihui.net/docker-base-command.html</link>
+      <pubDate>Wed, 13 Jan 2021 15:57:45 +0000</pubDate>
+      
+      <guid>https://lihui.net/docker-base-command.html</guid>
+      <description>前言 随着容器化技术的推广,在不久的将来,大多数的公司都将采用容器化技术对现有的业务进行改造,因此容器化是一个大趋势, 在当下, 正值云原生的发展的前期, 掌握容器化技术, 对于云原生的业务的了解也是一种帮助, 本文主要还是整理一下Docker的基本命令, Docker基本命令其实很好找到, 本文只是对自己的掌握的命令的一个总结和对Docker命令的整理, 以防自己以后会忘记.
+本文采用的是https://www.docker.com/play-with-docker提供的 每次提供四个小时的试用期, 完全可以满足使用.
+内容 获取镜像(docker pull) 命令 image_name是镜像的名称 后面如果没有tag 则默认拉去最新的镜像,如果有则拉去对应Tag号的镜像
+demo 带Tag 不带Tag 查看镜像信息 命令&amp;amp;&amp;amp;demo 搜寻镜像 命令 参数解释
+demo 删除镜像 删除一个或者多个镜像 注意删除容器时 docker rm CONTAINER
+命令 参数
+demo 创建镜像 从一个变化的容器种创建一个镜像,为何这样说,因为容器是可写的,而镜像也就是image是只读的.
+命令 参数
+demo 存入和载入镜像 存入镜像 导出镜像为本地tar文档
+命令 参数
+demo 载入镜像 将导出的tar文件导入到本地镜像仓库中,会导入镜像和其元数据信息
+命令 参数
+demo </description>
+    </item>
+    
+  </channel>
+</rss>

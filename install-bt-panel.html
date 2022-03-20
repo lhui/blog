@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>[Linux]Ubuntu安装宝塔面板 | lihui</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="准备:  服务器一个(本机虚拟机也可以) 上网环境 SSH软件(Putty || Xshell)  涉及网址:  https://www.bt.cn/ https://www.netsarang.com/zh/xshell/ https://www.putty.org/  安装步骤: 1. 购买服务器 || 打开虚拟机 这一步骤比较简单,略过
+2. 连接SSH 下载SSH软件,安装,这一步骤比较简单,略过
+3. 安装宝塔 宝塔首页选择对应的系统,选择下面的立即安装
+选择合适的Linux发行版 本文使用的Ubuntu ,不过我更推荐CentOS(本文时间2021年1月3日 CentOS正在经历变革,以后可能会有新的稳定发行版),点击复制代码即可
+打开SSH客户端,并连接服务器
+将上述复制的内容粘贴 根据提示进行操作,下面的地方输入y即可
+最终会出现 下面的提示 面板地址和username 和password 关键信息此处打码 注意在相应的内容服务商开通8888端口的TCP协议访问权限
+输入面板地址 进行访问(若此时访问时间过长,或者地址无法访问,请在此查看是否在服务商中放行了8888端口) 而后出现下面的画面证明安装面板成功
+安装LNPM环境 同意协议后 推荐安装第一个LNMP的环境
+等待程序安装完成即可
+总结 宝塔的安装还是相对来说比较简单的,总结下来需要一下的步骤, 1. 购买服务器 2. 安装SSH软件并登录到服务器 3. 安装宝塔的环境 4. 安装LNPM的环境.
+此处注意:
+ 当不需要面板服务进行操作的时候推荐在后台关闭掉面板服务,宝塔面板出现严重性的问题,至少已经发生了两次了,数据安全一定要保证. 注意修改SSH端口 SSH端口一定不要用22 端口 现在有很多工具可以扫描22号端口 修改为其他的端口 防止被扫描  ">
+    <meta name="generator" content="Hugo 0.94.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="[Linux]Ubuntu安装宝塔面板" />
+<meta property="og:description" content="准备:  服务器一个(本机虚拟机也可以) 上网环境 SSH软件(Putty || Xshell)  涉及网址:  https://www.bt.cn/ https://www.netsarang.com/zh/xshell/ https://www.putty.org/  安装步骤: 1. 购买服务器 || 打开虚拟机 这一步骤比较简单,略过
+2. 连接SSH 下载SSH软件,安装,这一步骤比较简单,略过
+3. 安装宝塔 宝塔首页选择对应的系统,选择下面的立即安装
+选择合适的Linux发行版 本文使用的Ubuntu ,不过我更推荐CentOS(本文时间2021年1月3日 CentOS正在经历变革,以后可能会有新的稳定发行版),点击复制代码即可
+打开SSH客户端,并连接服务器
+将上述复制的内容粘贴 根据提示进行操作,下面的地方输入y即可
+最终会出现 下面的提示 面板地址和username 和password 关键信息此处打码 注意在相应的内容服务商开通8888端口的TCP协议访问权限
+输入面板地址 进行访问(若此时访问时间过长,或者地址无法访问,请在此查看是否在服务商中放行了8888端口) 而后出现下面的画面证明安装面板成功
+安装LNPM环境 同意协议后 推荐安装第一个LNMP的环境
+等待程序安装完成即可
+总结 宝塔的安装还是相对来说比较简单的,总结下来需要一下的步骤, 1. 购买服务器 2. 安装SSH软件并登录到服务器 3. 安装宝塔的环境 4. 安装LNPM的环境.
+此处注意:
+ 当不需要面板服务进行操作的时候推荐在后台关闭掉面板服务,宝塔面板出现严重性的问题,至少已经发生了两次了,数据安全一定要保证. 注意修改SSH端口 SSH端口一定不要用22 端口 现在有很多工具可以扫描22号端口 修改为其他的端口 防止被扫描  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lihui.net/install-bt-panel.html" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-01-03T15:56:30+00:00" />
+<meta property="article:modified_time" content="2021-01-03T15:56:30+00:00" />
+
+<meta itemprop="name" content="[Linux]Ubuntu安装宝塔面板">
+<meta itemprop="description" content="准备:  服务器一个(本机虚拟机也可以) 上网环境 SSH软件(Putty || Xshell)  涉及网址:  https://www.bt.cn/ https://www.netsarang.com/zh/xshell/ https://www.putty.org/  安装步骤: 1. 购买服务器 || 打开虚拟机 这一步骤比较简单,略过
+2. 连接SSH 下载SSH软件,安装,这一步骤比较简单,略过
+3. 安装宝塔 宝塔首页选择对应的系统,选择下面的立即安装
+选择合适的Linux发行版 本文使用的Ubuntu ,不过我更推荐CentOS(本文时间2021年1月3日 CentOS正在经历变革,以后可能会有新的稳定发行版),点击复制代码即可
+打开SSH客户端,并连接服务器
+将上述复制的内容粘贴 根据提示进行操作,下面的地方输入y即可
+最终会出现 下面的提示 面板地址和username 和password 关键信息此处打码 注意在相应的内容服务商开通8888端口的TCP协议访问权限
+输入面板地址 进行访问(若此时访问时间过长,或者地址无法访问,请在此查看是否在服务商中放行了8888端口) 而后出现下面的画面证明安装面板成功
+安装LNPM环境 同意协议后 推荐安装第一个LNMP的环境
+等待程序安装完成即可
+总结 宝塔的安装还是相对来说比较简单的,总结下来需要一下的步骤, 1. 购买服务器 2. 安装SSH软件并登录到服务器 3. 安装宝塔的环境 4. 安装LNPM的环境.
+此处注意:
+ 当不需要面板服务进行操作的时候推荐在后台关闭掉面板服务,宝塔面板出现严重性的问题,至少已经发生了两次了,数据安全一定要保证. 注意修改SSH端口 SSH端口一定不要用22 端口 现在有很多工具可以扫描22号端口 修改为其他的端口 防止被扫描  "><meta itemprop="datePublished" content="2021-01-03T15:56:30+00:00" />
+<meta itemprop="dateModified" content="2021-01-03T15:56:30+00:00" />
+<meta itemprop="wordCount" content="60">
+<meta itemprop="keywords" content="Linux," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Linux]Ubuntu安装宝塔面板"/>
+<meta name="twitter:description" content="准备:  服务器一个(本机虚拟机也可以) 上网环境 SSH软件(Putty || Xshell)  涉及网址:  https://www.bt.cn/ https://www.netsarang.com/zh/xshell/ https://www.putty.org/  安装步骤: 1. 购买服务器 || 打开虚拟机 这一步骤比较简单,略过
+2. 连接SSH 下载SSH软件,安装,这一步骤比较简单,略过
+3. 安装宝塔 宝塔首页选择对应的系统,选择下面的立即安装
+选择合适的Linux发行版 本文使用的Ubuntu ,不过我更推荐CentOS(本文时间2021年1月3日 CentOS正在经历变革,以后可能会有新的稳定发行版),点击复制代码即可
+打开SSH客户端,并连接服务器
+将上述复制的内容粘贴 根据提示进行操作,下面的地方输入y即可
+最终会出现 下面的提示 面板地址和username 和password 关键信息此处打码 注意在相应的内容服务商开通8888端口的TCP协议访问权限
+输入面板地址 进行访问(若此时访问时间过长,或者地址无法访问,请在此查看是否在服务商中放行了8888端口) 而后出现下面的画面证明安装面板成功
+安装LNPM环境 同意协议后 推荐安装第一个LNMP的环境
+等待程序安装完成即可
+总结 宝塔的安装还是相对来说比较简单的,总结下来需要一下的步骤, 1. 购买服务器 2. 安装SSH软件并登录到服务器 3. 安装宝塔的环境 4. 安装LNPM的环境.
+此处注意:
+ 当不需要面板服务进行操作的时候推荐在后台关闭掉面板服务,宝塔面板出现严重性的问题,至少已经发生了两次了,数据安全一定要保证. 注意修改SSH端口 SSH端口一定不要用22 端口 现在有很多工具可以扫描22号端口 修改为其他的端口 防止被扫描  "/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        lihui
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">[Linux]Ubuntu安装宝塔面板</h1>
+      
+      <p class="tracked">
+          By <strong>
+          
+              Li Hui
+          
+          </strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2021-01-03T15:56:30Z">January 3, 2021</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="准备">准备:</h1>
+<ol>
+<li>服务器一个(本机虚拟机也可以)</li>
+<li>上网环境</li>
+<li>SSH软件(Putty || Xshell)</li>
+</ol>
+<h1 id="涉及网址">涉及网址:</h1>
+<ol>
+<li><a href="https://www.bt.cn/">https://www.bt.cn/</a></li>
+<li><a href="https://www.netsarang.com/zh/xshell/">https://www.netsarang.com/zh/xshell/</a></li>
+<li><a href="https://www.putty.org/">https://www.putty.org/</a></li>
+</ol>
+<h1 id="安装步骤">安装步骤:</h1>
+<h2 id="1-购买服务器--打开虚拟机">1. 购买服务器 || 打开虚拟机</h2>
+<p>这一步骤比较简单,略过</p>
+<h2 id="2-连接ssh">2. 连接SSH</h2>
+<p>下载SSH软件,安装,这一步骤比较简单,略过</p>
+<h2 id="3-安装宝塔">3. 安装宝塔</h2>
+<p><!-- raw HTML omitted -->宝塔首页<!-- raw HTML omitted -->选择对应的系统,选择下面的立即安装</p>
+<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210103182035280.png" alt="image-20210103182035280"></p>
+<p>选择合适的Linux发行版 本文使用的Ubuntu ,不过我更推荐CentOS(本文时间2021年1月3日 CentOS正在经历变革,以后可能会有新的稳定发行版),点击复制代码即可</p>
+<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210103182329523.png" alt="image-20210103182329523"></p>
+<p>打开SSH客户端,并连接服务器</p>
+<p>将上述复制的内容粘贴 根据提示进行操作,下面的地方输入y即可</p>
+<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210103182623014.png" alt="image-20210103182623014"></p>
+<p>最终会出现 下面的提示 面板地址和username 和password 关键信息此处打码 <strong>注意在相应的内容服务商开通8888端口的TCP协议访问权限</strong></p>
+<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210103184806088.png" alt="image-20210103184806088"></p>
+<p>输入面板地址 进行访问(若此时访问时间过长,或者地址无法访问,请在此查看是否在服务商中放行了8888端口) 而后出现下面的画面证明安装面板成功</p>
+<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210103185143029.png" alt="image-20210103185143029"></p>
+<h2 id="安装lnpm环境">安装LNPM环境</h2>
+<p>同意协议后 推荐安装第一个LNMP的环境</p>
+<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210103185328658.png" alt="image-20210103185328658"></p>
+<p>等待程序安装完成即可</p>
+<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210103185423377.png" alt="image-20210103185423377"></p>
+<h1 id="总结">总结</h1>
+<p>宝塔的安装还是相对来说比较简单的,总结下来需要一下的步骤, 1. 购买服务器 2. 安装SSH软件并登录到服务器 3. 安装宝塔的环境 4. 安装LNPM的环境.</p>
+<p>此处注意:</p>
+<ol>
+<li>当不需要面板服务进行操作的时候推荐在后台关闭掉面板服务,宝塔面板出现严重性的问题,至少已经发生了两次了,数据安全一定要保证.</li>
+<li>注意修改SSH端口 SSH端口一定不要用22 端口 现在有很多工具可以扫描22号端口 修改为其他的端口 防止被扫描</li>
+</ol>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/linux" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Linux</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/create-linux-user.html">[Linux系列]创建Linux用户</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/change-ssh-port.html">[Linux系列]修改SSH端口 防止端口扫描</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/linux-change-hostname.html">[linux系列] 修改主机用户名</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
+    &copy;  lihui 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

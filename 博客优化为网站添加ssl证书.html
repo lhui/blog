@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>[博客优化]为网站添加SSL证书 | lihui</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="前言 网站的SSL有什么作用呢？ 如果没有SSL证书，连接可能不安全，与网站交互的信息可能被其他人获取，对于无论是自己或者自己的用户都是一种损失，而且还会造成网站劫持等等问题，使用SSL证书可以大大地减轻网站的安全性的问题。
+使用SSL有什么缺点吗？ 有的 使用SSL证书会增加网站的访问速度，对网站的速度有些许的影响，且还会遇到网站证书过期的问题，直接弹出一个错误页面，很容易让人产生网站中毒的错觉。
+过程 预备条件 本文的环境
+ 腾讯云轻量云服务器CentOS 7 (安装了 Ngnix Wordpress 等服务 )  虽然本文章是为Wordpress配置的，但是其中的步骤是对于每一个网站都是通用的，无论是静态页面还是动态的页面，而或是其他的页面都是可以使用的，主要是配置Ngnix.
+主要分为两个步骤：获取SSL证书和配置Ngnix证书
+获取SSL证书 获取证书的方式有很多，比如购买证书或者使用免费的证书，其中免费的证书也有很多中，比如使用各个云厂商的免费证书，只需要验证很少的东西就可以得到一个一年有效期的证书，或者是采用一直以来比较火的免费证书 let&rsquo;s encrypt ,此种证书有三个月的有效期，可以进行续期，因为其免费，易用备受推崇。
+本文采用的是申请let&rsquo;s encrypt 证书
+采用certbot申请证书，大大的减轻申请证书的复杂程度，可以做到简单，快速直接。
+获取得到证书后，将将会放到指定的位置 /etc/letsencrypt/live/domian.com/ 下面 可以直接放在此目录下，以供后期的使用
+Ngnix 配置 首先找到自己的配置文件的位置。
+腾讯云的轻量主机配置文件的位置是在 /usr/local/lighthouse/software/ngnix/config
+修改其中的ngnix config 修改其中的配置
+重新启动服务
+总结 本篇博客还没写完，其中的内容，后续（不出意外的话应该尽快）补上。">
+    <meta name="generator" content="Hugo 0.94.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="[博客优化]为网站添加SSL证书" />
+<meta property="og:description" content="前言 网站的SSL有什么作用呢？ 如果没有SSL证书，连接可能不安全，与网站交互的信息可能被其他人获取，对于无论是自己或者自己的用户都是一种损失，而且还会造成网站劫持等等问题，使用SSL证书可以大大地减轻网站的安全性的问题。
+使用SSL有什么缺点吗？ 有的 使用SSL证书会增加网站的访问速度，对网站的速度有些许的影响，且还会遇到网站证书过期的问题，直接弹出一个错误页面，很容易让人产生网站中毒的错觉。
+过程 预备条件 本文的环境
+ 腾讯云轻量云服务器CentOS 7 (安装了 Ngnix Wordpress 等服务 )  虽然本文章是为Wordpress配置的，但是其中的步骤是对于每一个网站都是通用的，无论是静态页面还是动态的页面，而或是其他的页面都是可以使用的，主要是配置Ngnix.
+主要分为两个步骤：获取SSL证书和配置Ngnix证书
+获取SSL证书 获取证书的方式有很多，比如购买证书或者使用免费的证书，其中免费的证书也有很多中，比如使用各个云厂商的免费证书，只需要验证很少的东西就可以得到一个一年有效期的证书，或者是采用一直以来比较火的免费证书 let&rsquo;s encrypt ,此种证书有三个月的有效期，可以进行续期，因为其免费，易用备受推崇。
+本文采用的是申请let&rsquo;s encrypt 证书
+采用certbot申请证书，大大的减轻申请证书的复杂程度，可以做到简单，快速直接。
+获取得到证书后，将将会放到指定的位置 /etc/letsencrypt/live/domian.com/ 下面 可以直接放在此目录下，以供后期的使用
+Ngnix 配置 首先找到自己的配置文件的位置。
+腾讯云的轻量主机配置文件的位置是在 /usr/local/lighthouse/software/ngnix/config
+修改其中的ngnix config 修改其中的配置
+重新启动服务
+总结 本篇博客还没写完，其中的内容，后续（不出意外的话应该尽快）补上。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lihui.net/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E4%B8%BA%E7%BD%91%E7%AB%99%E6%B7%BB%E5%8A%A0ssl%E8%AF%81%E4%B9%A6.html" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-09-09T15:01:33+00:00" />
+<meta property="article:modified_time" content="2020-09-09T15:01:33+00:00" />
+
+<meta itemprop="name" content="[博客优化]为网站添加SSL证书">
+<meta itemprop="description" content="前言 网站的SSL有什么作用呢？ 如果没有SSL证书，连接可能不安全，与网站交互的信息可能被其他人获取，对于无论是自己或者自己的用户都是一种损失，而且还会造成网站劫持等等问题，使用SSL证书可以大大地减轻网站的安全性的问题。
+使用SSL有什么缺点吗？ 有的 使用SSL证书会增加网站的访问速度，对网站的速度有些许的影响，且还会遇到网站证书过期的问题，直接弹出一个错误页面，很容易让人产生网站中毒的错觉。
+过程 预备条件 本文的环境
+ 腾讯云轻量云服务器CentOS 7 (安装了 Ngnix Wordpress 等服务 )  虽然本文章是为Wordpress配置的，但是其中的步骤是对于每一个网站都是通用的，无论是静态页面还是动态的页面，而或是其他的页面都是可以使用的，主要是配置Ngnix.
+主要分为两个步骤：获取SSL证书和配置Ngnix证书
+获取SSL证书 获取证书的方式有很多，比如购买证书或者使用免费的证书，其中免费的证书也有很多中，比如使用各个云厂商的免费证书，只需要验证很少的东西就可以得到一个一年有效期的证书，或者是采用一直以来比较火的免费证书 let&rsquo;s encrypt ,此种证书有三个月的有效期，可以进行续期，因为其免费，易用备受推崇。
+本文采用的是申请let&rsquo;s encrypt 证书
+采用certbot申请证书，大大的减轻申请证书的复杂程度，可以做到简单，快速直接。
+获取得到证书后，将将会放到指定的位置 /etc/letsencrypt/live/domian.com/ 下面 可以直接放在此目录下，以供后期的使用
+Ngnix 配置 首先找到自己的配置文件的位置。
+腾讯云的轻量主机配置文件的位置是在 /usr/local/lighthouse/software/ngnix/config
+修改其中的ngnix config 修改其中的配置
+重新启动服务
+总结 本篇博客还没写完，其中的内容，后续（不出意外的话应该尽快）补上。"><meta itemprop="datePublished" content="2020-09-09T15:01:33+00:00" />
+<meta itemprop="dateModified" content="2020-09-09T15:01:33+00:00" />
+<meta itemprop="wordCount" content="42">
+<meta itemprop="keywords" content="博客优化," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[博客优化]为网站添加SSL证书"/>
+<meta name="twitter:description" content="前言 网站的SSL有什么作用呢？ 如果没有SSL证书，连接可能不安全，与网站交互的信息可能被其他人获取，对于无论是自己或者自己的用户都是一种损失，而且还会造成网站劫持等等问题，使用SSL证书可以大大地减轻网站的安全性的问题。
+使用SSL有什么缺点吗？ 有的 使用SSL证书会增加网站的访问速度，对网站的速度有些许的影响，且还会遇到网站证书过期的问题，直接弹出一个错误页面，很容易让人产生网站中毒的错觉。
+过程 预备条件 本文的环境
+ 腾讯云轻量云服务器CentOS 7 (安装了 Ngnix Wordpress 等服务 )  虽然本文章是为Wordpress配置的，但是其中的步骤是对于每一个网站都是通用的，无论是静态页面还是动态的页面，而或是其他的页面都是可以使用的，主要是配置Ngnix.
+主要分为两个步骤：获取SSL证书和配置Ngnix证书
+获取SSL证书 获取证书的方式有很多，比如购买证书或者使用免费的证书，其中免费的证书也有很多中，比如使用各个云厂商的免费证书，只需要验证很少的东西就可以得到一个一年有效期的证书，或者是采用一直以来比较火的免费证书 let&rsquo;s encrypt ,此种证书有三个月的有效期，可以进行续期，因为其免费，易用备受推崇。
+本文采用的是申请let&rsquo;s encrypt 证书
+采用certbot申请证书，大大的减轻申请证书的复杂程度，可以做到简单，快速直接。
+获取得到证书后，将将会放到指定的位置 /etc/letsencrypt/live/domian.com/ 下面 可以直接放在此目录下，以供后期的使用
+Ngnix 配置 首先找到自己的配置文件的位置。
+腾讯云的轻量主机配置文件的位置是在 /usr/local/lighthouse/software/ngnix/config
+修改其中的ngnix config 修改其中的配置
+重新启动服务
+总结 本篇博客还没写完，其中的内容，后续（不出意外的话应该尽快）补上。"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        lihui
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">[博客优化]为网站添加SSL证书</h1>
+      
+      <p class="tracked">
+          By <strong>
+          
+              Li Hui
+          
+          </strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-09-09T15:01:33Z">September 9, 2020</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="前言">前言</h1>
+<p>网站的SSL有什么作用呢？ 如果没有SSL证书，连接可能不安全，与网站交互的信息可能被其他人获取，对于无论是自己或者自己的用户都是一种损失，而且还会造成网站劫持等等问题，使用SSL证书可以大大地减轻网站的安全性的问题。</p>
+<p>使用SSL有什么缺点吗？ 有的 使用SSL证书会增加网站的访问速度，对网站的速度有些许的影响，且还会遇到网站证书过期的问题，直接弹出一个错误页面，很容易让人产生网站中毒的错觉。</p>
+<h1 id="过程">过程</h1>
+<h2 id="预备条件">预备条件</h2>
+<p>本文的环境</p>
+<ol>
+<li>腾讯云轻量云服务器CentOS 7 (安装了 Ngnix Wordpress 等服务 )</li>
+</ol>
+<p>虽然本文章是为Wordpress配置的，但是其中的步骤是对于每一个网站都是通用的，无论是静态页面还是动态的页面，而或是其他的页面都是可以使用的，主要是配置Ngnix.</p>
+<p>主要分为两个步骤：获取SSL证书和配置Ngnix证书</p>
+<h2 id="获取ssl证书">获取SSL证书</h2>
+<p>获取证书的方式有很多，比如购买证书或者使用免费的证书，其中免费的证书也有很多中，比如使用各个云厂商的免费证书，只需要验证很少的东西就可以得到一个一年有效期的证书，或者是采用一直以来比较火的免费证书 let&rsquo;s encrypt ,此种证书有三个月的有效期，可以进行续期，因为其免费，易用备受推崇。</p>
+<p>本文采用的是申请let&rsquo;s encrypt 证书</p>
+<p>采用certbot申请证书，大大的减轻申请证书的复杂程度，可以做到简单，快速直接。</p>
+<p>获取得到证书后，将将会放到指定的位置 /etc/letsencrypt/live/domian.com/ 下面 可以直接放在此目录下，以供后期的使用</p>
+<h2 id="ngnix-配置">Ngnix 配置</h2>
+<p>首先找到自己的配置文件的位置。</p>
+<p>腾讯云的轻量主机配置文件的位置是在 /usr/local/lighthouse/software/ngnix/config</p>
+<p>修改其中的ngnix config 修改其中的配置</p>
+<p>重新启动服务</p>
+<!-- raw HTML omitted -->
+<h1 id="总结">总结</h1>
+<p>本篇博客还没写完，其中的内容，后续（不出意外的话应该尽快）补上。</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">博客优化</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96wordpress%E5%8A%A0%E5%85%A5redis%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8F%90%E9%AB%98%E9%80%9F%E5%BA%A6.html">[博客优化]Wordpress加入redis服务器提高速度</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
+    &copy;  lihui 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

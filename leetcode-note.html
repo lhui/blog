@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>LeetCode刷题笔记 | lihui</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="前言 距离上一次刷LeetCode 好长时间了, 当然上一次也没有刷完, 这次试着刷一遍LeetCode. 使用Java语言, 忽然感觉到有点手生, 需要多刷了. 趁着题目还不多(1956个了&hellip;)
+进度 | 完成情况 | # | 题名 | 题解 | 通过率 | 难度 | | | &mdash;- | &mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; | &mdash;&ndash; | &ndash; | | | :ok: | 1 | 两数之和| 9671| 50.0% | 简单 | | | | 2 | 两数相加| 4776| 39.4% | 中等 | | | | 3 | 无重复字符的最长子串| 4717| 36.3% | 中等 | | | | 4 | 寻找两个正序数组的中位数| 2271| 39.">
+    <meta name="generator" content="Hugo 0.94.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="LeetCode刷题笔记" />
+<meta property="og:description" content="前言 距离上一次刷LeetCode 好长时间了, 当然上一次也没有刷完, 这次试着刷一遍LeetCode. 使用Java语言, 忽然感觉到有点手生, 需要多刷了. 趁着题目还不多(1956个了&hellip;)
+进度 | 完成情况 | # | 题名 | 题解 | 通过率 | 难度 | | | &mdash;- | &mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; | &mdash;&ndash; | &ndash; | | | :ok: | 1 | 两数之和| 9671| 50.0% | 简单 | | | | 2 | 两数相加| 4776| 39.4% | 中等 | | | | 3 | 无重复字符的最长子串| 4717| 36.3% | 中等 | | | | 4 | 寻找两个正序数组的中位数| 2271| 39." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lihui.net/leetcode-note.html" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-02-01T15:06:22+00:00" />
+<meta property="article:modified_time" content="2021-02-01T15:06:22+00:00" />
+
+<meta itemprop="name" content="LeetCode刷题笔记">
+<meta itemprop="description" content="前言 距离上一次刷LeetCode 好长时间了, 当然上一次也没有刷完, 这次试着刷一遍LeetCode. 使用Java语言, 忽然感觉到有点手生, 需要多刷了. 趁着题目还不多(1956个了&hellip;)
+进度 | 完成情况 | # | 题名 | 题解 | 通过率 | 难度 | | | &mdash;- | &mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; | &mdash;&ndash; | &ndash; | | | :ok: | 1 | 两数之和| 9671| 50.0% | 简单 | | | | 2 | 两数相加| 4776| 39.4% | 中等 | | | | 3 | 无重复字符的最长子串| 4717| 36.3% | 中等 | | | | 4 | 寻找两个正序数组的中位数| 2271| 39."><meta itemprop="datePublished" content="2021-02-01T15:06:22+00:00" />
+<meta itemprop="dateModified" content="2021-02-01T15:06:22+00:00" />
+<meta itemprop="wordCount" content="1158">
+<meta itemprop="keywords" content="LeetCode," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="LeetCode刷题笔记"/>
+<meta name="twitter:description" content="前言 距离上一次刷LeetCode 好长时间了, 当然上一次也没有刷完, 这次试着刷一遍LeetCode. 使用Java语言, 忽然感觉到有点手生, 需要多刷了. 趁着题目还不多(1956个了&hellip;)
+进度 | 完成情况 | # | 题名 | 题解 | 通过率 | 难度 | | | &mdash;- | &mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; | &mdash;&ndash; | &ndash; | | | :ok: | 1 | 两数之和| 9671| 50.0% | 简单 | | | | 2 | 两数相加| 4776| 39.4% | 中等 | | | | 3 | 无重复字符的最长子串| 4717| 36.3% | 中等 | | | | 4 | 寻找两个正序数组的中位数| 2271| 39."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        lihui
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">LeetCode刷题笔记</h1>
+      
+      <p class="tracked">
+          By <strong>
+          
+              Li Hui
+          
+          </strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2021-02-01T15:06:22Z">February 1, 2021</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="前言">前言</h1>
+<p>距离上一次刷LeetCode 好长时间了, 当然上一次也没有刷完, 这次试着刷一遍LeetCode. 使用Java语言, 忽然感觉到有点手生, 需要多刷了. 趁着题目还不多(1956个了&hellip;)</p>
+<h1 id="进度">进度</h1>
+<p>| 完成情况 | #   | 题名                                                                                                                                                                                                   | 题解                                                                                                                                                                                           | 通过率   | 难度 |  |
+| &mdash;- | &mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; | &mdash;&ndash; | &ndash; |  |
+| :ok: | 1   | <!-- raw HTML omitted -->两数之和<!-- raw HTML omitted -->                                                                  | <!-- raw HTML omitted -->9671<!-- raw HTML omitted -->                                                 | 50.0% | 简单 |  |
+|      | 2   | <!-- raw HTML omitted -->两数相加<!-- raw HTML omitted -->                                                          | <!-- raw HTML omitted -->4776<!-- raw HTML omitted -->                                         | 39.4% | 中等 |  |
+|      | 3   | <!-- raw HTML omitted -->无重复字符的最长子串<!-- raw HTML omitted -->                     | <!-- raw HTML omitted -->4717<!-- raw HTML omitted -->          | 36.3% | 中等 |  |
+|      | 4   | <!-- raw HTML omitted -->寻找两个正序数组的中位数<!-- raw HTML omitted -->                                      | <!-- raw HTML omitted -->2271<!-- raw HTML omitted -->                             | 39.5% | 困难 |  |
+|      | 5   | <!-- raw HTML omitted -->最长回文子串<!-- raw HTML omitted -->                                          | <!-- raw HTML omitted -->2434<!-- raw HTML omitted -->                           | 32.9% | 中等 |  |
+|      | 6   | <!-- raw HTML omitted -->Z 字形变换<!-- raw HTML omitted -->                                                      | <!-- raw HTML omitted -->1591<!-- raw HTML omitted -->                                       | 49.4% | 中等 |  |
+|      | 7   | <!-- raw HTML omitted -->整数反转<!-- raw HTML omitted -->                                                          | <!-- raw HTML omitted -->3572<!-- raw HTML omitted -->                                         | 34.9% | 简单 |  |
+|      | 8   | <!-- raw HTML omitted -->字符串转换整数 (atoi)<!-- raw HTML omitted -->                                         | <!-- raw HTML omitted -->1947<!-- raw HTML omitted -->                                  | 21.2% | 中等 |  |
+|      | 9   | <!-- raw HTML omitted -->回文数<!-- raw HTML omitted -->                                                         | <!-- raw HTML omitted -->3400<!-- raw HTML omitted -->                                       | 58.7% | 简单 |  |
+|      | 10  | <!-- raw HTML omitted -->正则表达式匹配<!-- raw HTML omitted -->                                           | <!-- raw HTML omitted -->826<!-- raw HTML omitted -->                              | 30.7% | 困难 |  |
+|      | 11  | <!-- raw HTML omitted -->盛最多水的容器<!-- raw HTML omitted -->                                             | <!-- raw HTML omitted -->1957<!-- raw HTML omitted -->                               | 64.7% | 中等 |  |
+|      | 12  | <!-- raw HTML omitted -->整数转罗马数字<!-- raw HTML omitted -->                                                      | <!-- raw HTML omitted -->1007<!-- raw HTML omitted -->                                        | 64.8% | 中等 |  |
+|      | 13  | <!-- raw HTML omitted -->罗马数字转整数<!-- raw HTML omitted -->                                                      | <!-- raw HTML omitted -->2547<!-- raw HTML omitted -->                                        | 62.4% | 简单 |  |
+|      | 14  | <!-- raw HTML omitted -->最长公共前缀<!-- raw HTML omitted -->                                                  | <!-- raw HTML omitted -->2621<!-- raw HTML omitted -->                                   | 39.1% | 简单 |  |
+|      | 15  | <!-- raw HTML omitted -->三数之和<!-- raw HTML omitted -->                                                                     | <!-- raw HTML omitted -->1878<!-- raw HTML omitted -->                                                    | 30.7% | 中等 |  |
+|      | 16  | <!-- raw HTML omitted -->最接近的三数之和<!-- raw HTML omitted -->                                                         | <!-- raw HTML omitted -->942<!-- raw HTML omitted -->                                             | 45.9% | 中等 |  |
+|      | 17  | <!-- raw HTML omitted -->电话号码的字母组合<!-- raw HTML omitted -->                               | <!-- raw HTML omitted -->1926<!-- raw HTML omitted -->                   | 55.7% | 中等 |  |
+|      | 18  | <!-- raw HTML omitted -->四数之和<!-- raw HTML omitted -->                                                                     | <!-- raw HTML omitted -->988<!-- raw HTML omitted -->                                                     | 39.8% | 中等 |  |
+|      | 19  | <!-- raw HTML omitted -->删除链表的倒数第 N 个结点<!-- raw HTML omitted -->                               | <!-- raw HTML omitted -->2403<!-- raw HTML omitted -->                        | 40.8% | 中等 |  |
+|      | 20  | <!-- raw HTML omitted -->有效的括号<!-- raw HTML omitted -->                                                       | <!-- raw HTML omitted -->3804<!-- raw HTML omitted -->                                       | 43.6% | 简单 |  |
+|      | 21  | <!-- raw HTML omitted -->合并两个有序链表<!-- raw HTML omitted -->                                               | <!-- raw HTML omitted -->2214<!-- raw HTML omitted -->                                  | 65.2% | 简单 |  |
+|      | 22  | <!-- raw HTML omitted -->括号生成<!-- raw HTML omitted -->                                                     | <!-- raw HTML omitted -->1685<!-- raw HTML omitted -->                                    | 76.8% | 中等 |  |
+|      | 23  | <!-- raw HTML omitted -->合并K个升序链表<!-- raw HTML omitted -->                                                 | <!-- raw HTML omitted -->1355<!-- raw HTML omitted -->                                    | 54.1% | 困难 |  |
+|      | 24  | <!-- raw HTML omitted -->两两交换链表中的节点<!-- raw HTML omitted -->                                                | <!-- raw HTML omitted -->1773<!-- raw HTML omitted -->                                     | 69.0% | 中等 |  |
+|      | 25  | <!-- raw HTML omitted -->K 个一组翻转链表<!-- raw HTML omitted -->                                            | <!-- raw HTML omitted -->1308<!-- raw HTML omitted -->                                | 64.0% | 困难 |  |
+|      | 26  | <!-- raw HTML omitted -->删除排序数组中的重复项<!-- raw HTML omitted -->                               | <!-- raw HTML omitted -->2928<!-- raw HTML omitted -->                     | 52.8% | 简单 |  |
+|      | 27  | <!-- raw HTML omitted -->移除元素<!-- raw HTML omitted -->                                                           | <!-- raw HTML omitted -->2422<!-- raw HTML omitted -->                                          | 59.1% | 简单 |  |
+|      | 28  | <!-- raw HTML omitted -->实现 strStr()<!-- raw HTML omitted -->                                                  | <!-- raw HTML omitted -->2039<!-- raw HTML omitted -->                                        | 39.7% | 简单 |  |
+|      | 29  | <!-- raw HTML omitted -->两数相除<!-- raw HTML omitted -->                                                      | <!-- raw HTML omitted -->613<!-- raw HTML omitted -->                                      | 20.4% | 中等 |  |
+|      | 30  | <!-- raw HTML omitted -->串联所有单词的子串<!-- raw HTML omitted -->                           | <!-- raw HTML omitted -->387<!-- raw HTML omitted -->                | 33.7% | 困难 |  |
+|      | 31  | <!-- raw HTML omitted -->下一个排列<!-- raw HTML omitted -->                                                        | <!-- raw HTML omitted -->1132<!-- raw HTML omitted -->                                        | 36.4% | 中等 |  |
+|      | 32  | <!-- raw HTML omitted -->最长有效括号<!-- raw HTML omitted -->                                              | <!-- raw HTML omitted -->900<!-- raw HTML omitted -->                                | 34.4% | 困难 |  |
+|      | 33  | <!-- raw HTML omitted -->搜索旋转排序数组<!-- raw HTML omitted -->                                       | <!-- raw HTML omitted -->1470<!-- raw HTML omitted -->                          | 40.3% | 中等 |  |
+|      | 34  | <!-- raw HTML omitted -->在排序数组中查找元素的第一个和最后一个位置<!-- raw HTML omitted --> | <!-- raw HTML omitted -->1973<!-- raw HTML omitted --> | 42.2% | 中等 |  |
+|      | 35  | <!-- raw HTML omitted -->搜索插入位置<!-- raw HTML omitted -->                                                 | <!-- raw HTML omitted -->2412<!-- raw HTML omitted -->                                  | 47.0% | 简单 |  |
+|      | 36  | <!-- raw HTML omitted -->有效的数独<!-- raw HTML omitted -->                                                            | <!-- raw HTML omitted -->714<!-- raw HTML omitted -->                                             | 61.9% | 中等 |  |
+|      | 37  | <!-- raw HTML omitted -->解数独<!-- raw HTML omitted -->                                                             | <!-- raw HTML omitted -->583<!-- raw HTML omitted -->                                            | 66.9% | 困难 |  |
+|      | 38  | <!-- raw HTML omitted -->外观数列<!-- raw HTML omitted -->                                                            | <!-- raw HTML omitted -->1707<!-- raw HTML omitted -->                                           | 57.2% | 简单 |  |
+|      | 39  | <!-- raw HTML omitted -->组合总和<!-- raw HTML omitted -->                                                          | <!-- raw HTML omitted -->1196<!-- raw HTML omitted -->                                         | 71.9% | 中等 |  |
+|      | 40  | <!-- raw HTML omitted -->组合总和 II<!-- raw HTML omitted -->                                                    | <!-- raw HTML omitted -->862<!-- raw HTML omitted -->                                       | 64.2% | 中等 |  |
+|      | 41  | <!-- raw HTML omitted -->缺失的第一个正数<!-- raw HTML omitted -->                                               | <!-- raw HTML omitted -->1076<!-- raw HTML omitted -->                                  | 40.5% | 困难 |  |
+|      | 42  | <!-- raw HTML omitted -->接雨水<!-- raw HTML omitted -->                                                       | <!-- raw HTML omitted -->1617<!-- raw HTML omitted -->                                     | 54.1% | 困难 |  |
+|      | 43  | <!-- raw HTML omitted -->字符串相乘<!-- raw HTML omitted -->                                                        | <!-- raw HTML omitted -->784<!-- raw HTML omitted -->                                         | 44.7% | 中等 |  |
+|      | 44  | <!-- raw HTML omitted -->通配符匹配<!-- raw HTML omitted -->                                                       | <!-- raw HTML omitted -->391<!-- raw HTML omitted -->                                        | 31.8% | 困难 |  |
+|      | 45  | <!-- raw HTML omitted -->跳跃游戏 II<!-- raw HTML omitted -->                                                          | <!-- raw HTML omitted -->814<!-- raw HTML omitted -->                                             | 38.3% | 困难 |  |
+|      | 46  | <!-- raw HTML omitted -->全排列<!-- raw HTML omitted -->                                                              | <!-- raw HTML omitted -->1617<!-- raw HTML omitted -->                                            | 77.5% | 中等 |  |
+|      | 47  | <!-- raw HTML omitted -->全排列 II<!-- raw HTML omitted -->                                                        | <!-- raw HTML omitted -->938<!-- raw HTML omitted -->                                          | 62.7% | 中等 |  |
+|      | 48  | <!-- raw HTML omitted -->旋转图像<!-- raw HTML omitted -->                                                             | <!-- raw HTML omitted -->1283<!-- raw HTML omitted -->                                            | 72.2% | 中等 |  |
+|      | 49  | <!-- raw HTML omitted -->字母异位词分组<!-- raw HTML omitted -->                                                        | <!-- raw HTML omitted -->914<!-- raw HTML omitted -->                                           | 65.4% | 中等 |  |
+|      | 50  | <!-- raw HTML omitted -->Pow(x, n)<!-- raw HTML omitted -->                                                              | <!-- raw HTML omitted -->912<!-- raw HTML omitted -->                                                   | 37.2% | 中等 |  |
+|      | 51  | <!-- raw HTML omitted -->N 皇后<!-- raw HTML omitted -->                                                                 | <!-- raw HTML omitted -->1009<!-- raw HTML omitted -->                                                | 73.6% | 困难 |  |
+|      | 52  | <!-- raw HTML omitted -->N皇后 II<!-- raw HTML omitted -->                                                            | <!-- raw HTML omitted -->463<!-- raw HTML omitted -->                                              | 82.1% | 困难 |  |
+|      | 53  | <!-- raw HTML omitted -->最大子序和<!-- raw HTML omitted -->                                                        | <!-- raw HTML omitted -->2244<!-- raw HTML omitted -->                                        | 53.2% | 简单 |  |
+|      | 54  | <!-- raw HTML omitted -->螺旋矩阵<!-- raw HTML omitted -->                                                            | <!-- raw HTML omitted -->989<!-- raw HTML omitted -->                                            | 42.5% | 中等 |  |
+|      | 55  | <!-- raw HTML omitted -->跳跃游戏<!-- raw HTML omitted -->                                                                | <!-- raw HTML omitted -->1544<!-- raw HTML omitted -->                                               | 41.6% | 中等 |  |
+|      | 56  | <!-- raw HTML omitted -->合并区间<!-- raw HTML omitted -->                                                          | <!-- raw HTML omitted -->1512<!-- raw HTML omitted -->                                         | 44.2% | 中等 |  |
+|      | 57  | <!-- raw HTML omitted -->插入区间<!-- raw HTML omitted -->                                                          | <!-- raw HTML omitted -->700<!-- raw HTML omitted -->                                          | 40.2% | 中等 |  |
+|      | 58  | <!-- raw HTML omitted -->最后一个单词的长度<!-- raw HTML omitted -->                                                 | <!-- raw HTML omitted -->1613<!-- raw HTML omitted -->                                     | 34.1% | 简单 |  |
+|      | 59  | <!-- raw HTML omitted -->螺旋矩阵 II<!-- raw HTML omitted -->                                                      | <!-- raw HTML omitted -->651<!-- raw HTML omitted -->                                         | 78.5% | 中等 |  |
+|      | 60  | <!-- raw HTML omitted -->排列序列<!-- raw HTML omitted -->                                                     | <!-- raw HTML omitted -->730<!-- raw HTML omitted -->                                     | 51.9% | 困难 |  |
+|      | 61  | <!-- raw HTML omitted -->旋转链表<!-- raw HTML omitted -->                                                              | <!-- raw HTML omitted -->1053<!-- raw HTML omitted -->                                             | 40.6% | 中等 |  |
+|      | 62  | <!-- raw HTML omitted -->不同路径<!-- raw HTML omitted -->                                                             | <!-- raw HTML omitted -->1558<!-- raw HTML omitted -->                                            | 64.1% | 中等 |  |
+|      | 63  | <!-- raw HTML omitted -->不同路径 II<!-- raw HTML omitted -->                                                       | <!-- raw HTML omitted -->1088<!-- raw HTML omitted -->                                         | 37.5% | 中等 |  |
+|      | 64  | <!-- raw HTML omitted -->最小路径和<!-- raw HTML omitted -->                                                        | <!-- raw HTML omitted -->1355<!-- raw HTML omitted -->                                        | 68.1% | 中等 |  |
+|      | 65  | <!-- raw HTML omitted -->有效数字<!-- raw HTML omitted -->                                                             | <!-- raw HTML omitted -->273<!-- raw HTML omitted -->                                             | 21.5% | 困难 |  |
+|      | 66  | <!-- raw HTML omitted -->加一<!-- raw HTML omitted -->                                                                   | <!-- raw HTML omitted -->2139<!-- raw HTML omitted -->                                                | 45.6% | 简单 |  |
+|      | 67  | <!-- raw HTML omitted -->二进制求和<!-- raw HTML omitted -->                                                              | <!-- raw HTML omitted -->1287<!-- raw HTML omitted -->                                              | 54.4% | 简单 |  |
+|      | 68  | <!-- raw HTML omitted -->文本左右对齐<!-- raw HTML omitted -->                                                     | <!-- raw HTML omitted -->199<!-- raw HTML omitted -->                                       | 45.7% | 困难 |  |
+|      | 69  | <!-- raw HTML omitted -->x 的平方根<!-- raw HTML omitted -->                                                                  | <!-- raw HTML omitted -->1256<!-- raw HTML omitted -->                                                   | 39.2% | 简单 |  |
+|      | 70  | <!-- raw HTML omitted -->爬楼梯<!-- raw HTML omitted -->                                                           | <!-- raw HTML omitted -->2248<!-- raw HTML omitted -->                                         | 51.4% | 简单 |  |
+|      | 71  | <!-- raw HTML omitted -->简化路径<!-- raw HTML omitted -->                                                            | <!-- raw HTML omitted -->546<!-- raw HTML omitted -->                                            | 41.4% | 中等 |  |
+|      | 72  | <!-- raw HTML omitted -->编辑距离<!-- raw HTML omitted -->                                                            | <!-- raw HTML omitted -->770<!-- raw HTML omitted -->                                            | 60.3% | 困难 |  |
+|      | 73  | <!-- raw HTML omitted -->矩阵置零<!-- raw HTML omitted -->                                                        | <!-- raw HTML omitted -->388<!-- raw HTML omitted -->                                        | 56.0% | 中等 |  |
+|      | 74  | <!-- raw HTML omitted -->搜索二维矩阵<!-- raw HTML omitted -->                                                     | <!-- raw HTML omitted -->702<!-- raw HTML omitted -->                                       | 40.0% | 中等 |  |
+|      | 75  | <!-- raw HTML omitted -->颜色分类<!-- raw HTML omitted -->                                                              | <!-- raw HTML omitted -->1210<!-- raw HTML omitted -->                                             | 57.3% | 中等 |  |
+|      | 76  | <!-- raw HTML omitted -->最小覆盖子串<!-- raw HTML omitted -->                                               | <!-- raw HTML omitted -->702<!-- raw HTML omitted -->                                 | 40.4% | 困难 |  |
+|      | 77  | <!-- raw HTML omitted -->组合<!-- raw HTML omitted -->                                                               | <!-- raw HTML omitted -->740<!-- raw HTML omitted -->                                             | 76.3% | 中等 |  |
+|      | 78  | <!-- raw HTML omitted -->子集<!-- raw HTML omitted -->                                                                    | <!-- raw HTML omitted -->1242<!-- raw HTML omitted -->                                                 | 79.5% | 中等 |  |
+|      | 79  | <!-- raw HTML omitted -->单词搜索<!-- raw HTML omitted -->                                                              | <!-- raw HTML omitted -->893<!-- raw HTML omitted -->                                              | 44.0% | 中等 |  |
+|      | 80  | <!-- raw HTML omitted -->删除排序数组中的重复项 II<!-- raw HTML omitted -->                         | <!-- raw HTML omitted -->612<!-- raw HTML omitted -->                   | 57.0% | 中等 |  |
+|      | 81  | <!-- raw HTML omitted -->搜索旋转排序数组 II<!-- raw HTML omitted -->                                 | <!-- raw HTML omitted -->392<!-- raw HTML omitted -->                        | 36.6% | 中等 |  |
+|      | 82  | <!-- raw HTML omitted -->删除排序链表中的重复元素 II<!-- raw HTML omitted -->                         | <!-- raw HTML omitted -->867<!-- raw HTML omitted -->                    | 50.1% | 中等 |  |
+|      | 83  | <!-- raw HTML omitted -->删除排序链表中的重复元素<!-- raw HTML omitted -->                               | <!-- raw HTML omitted -->1046<!-- raw HTML omitted -->                      | 51.9% | 简单 |  |
+|      | 84  | <!-- raw HTML omitted -->柱状图中最大的矩形<!-- raw HTML omitted -->                                      | <!-- raw HTML omitted -->793<!-- raw HTML omitted -->                           | 42.6% | 困难 |  |
+|      | 85  | <!-- raw HTML omitted -->最大矩形<!-- raw HTML omitted -->                                                        | <!-- raw HTML omitted -->473<!-- raw HTML omitted -->                                        | 51.6% | 困难 |  |
+|      | 86  | <!-- raw HTML omitted -->分隔链表<!-- raw HTML omitted -->                                                           | <!-- raw HTML omitted -->790<!-- raw HTML omitted -->                                           | 62.4% | 中等 |  |
+|      | 87  | <!-- raw HTML omitted -->扰乱字符串<!-- raw HTML omitted -->                                                         | <!-- raw HTML omitted -->121<!-- raw HTML omitted -->                                          | 48.8% | 困难 |  |
+|      | 88  | <!-- raw HTML omitted -->合并两个有序数组<!-- raw HTML omitted -->                                                   | <!-- raw HTML omitted -->1836<!-- raw HTML omitted -->                                      | 49.3% | 简单 |  |
+|      | 89  | <!-- raw HTML omitted -->格雷编码<!-- raw HTML omitted -->                                                                | <!-- raw HTML omitted -->319<!-- raw HTML omitted -->                                                | 69.6% | 中等 |  |
+|      | 90  | <!-- raw HTML omitted -->子集 II<!-- raw HTML omitted -->                                                              | <!-- raw HTML omitted -->525<!-- raw HTML omitted -->                                               | 61.7% | 中等 |  |
+|      | 91  | <!-- raw HTML omitted -->解码方法<!-- raw HTML omitted -->                                                              | <!-- raw HTML omitted -->748<!-- raw HTML omitted -->                                              | 25.4% | 中等 |  |
+|      | 92  | <!-- raw HTML omitted -->反转链表 II<!-- raw HTML omitted -->                                                | <!-- raw HTML omitted -->1024<!-- raw HTML omitted -->                                  | 52.1% | 中等 |  |
+|      | 93  | <!-- raw HTML omitted -->复原IP地址<!-- raw HTML omitted -->                                                   | <!-- raw HTML omitted -->878<!-- raw HTML omitted -->                                     | 51.4% | 中等 |  |
+|      | 94  | <!-- raw HTML omitted -->二叉树的中序遍历<!-- raw HTML omitted -->                                        | <!-- raw HTML omitted -->1382<!-- raw HTML omitted -->                           | 74.7% | 中等 |  |
+|      | 95  | <!-- raw HTML omitted -->不同的二叉搜索树 II<!-- raw HTML omitted -->                                     | <!-- raw HTML omitted -->447<!-- raw HTML omitted -->                            | 67.0% | 中等 |  |
+|      | 96  | <!-- raw HTML omitted -->不同的二叉搜索树<!-- raw HTML omitted -->                                           | <!-- raw HTML omitted -->859<!-- raw HTML omitted -->                               | 69.3% | 中等 |  |
+|      | 97  | <!-- raw HTML omitted -->交错字符串<!-- raw HTML omitted -->                                                     | <!-- raw HTML omitted -->373<!-- raw HTML omitted -->                                      | 45.8% | 困难 |  |
+|      | 98  | <!-- raw HTML omitted -->验证二叉搜索树<!-- raw HTML omitted -->                                           | <!-- raw HTML omitted -->1255<!-- raw HTML omitted -->                             | 33.4% | 中等 |  |
+|      | 99  | <!-- raw HTML omitted -->恢复二叉搜索树<!-- raw HTML omitted -->                                            | <!-- raw HTML omitted -->387<!-- raw HTML omitted -->                               | 62.0% | 困难 |  |
+|      | 100 | <!-- raw HTML omitted -->相同的树<!-- raw HTML omitted -->                                                                |                                                                                                                                                                                              |       |    |  |</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/leetcode" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">LeetCode</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
+    &copy;  lihui 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

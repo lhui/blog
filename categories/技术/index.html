@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>技术 | lihui</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.94.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+      <link href="/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="alternate" type="application/rss+xml" title="lihui" />
+      <link href="/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="feed" type="application/rss+xml" title="lihui" />
+      
+    
+    
+    <meta property="og:title" content="技术" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://lihui.net/categories/%E6%8A%80%E6%9C%AF/" />
+
+<meta itemprop="name" content="技术">
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="技术"/>
+<meta name="twitter:description" content=""/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="pb3-m pb6-l bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        lihui
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv3 ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+          技术
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <article class="cf pa3 pa4-m pa4-l">
+    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links mid-gray">
+      <p>Below you will find pages that utilize the taxonomy term “技术”</p>
+    </div>
+  </article>
+  <div class="mw8 center">
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100  mb4 bg-white">
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        January 2, 2022
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="/springboot-start-mysql.html" class="link black dim">
+        [SpringBoot 指南] 连接 mysql 数据库并进行增删改查测试
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      落库是软件开发中的重要的事情，软件接受完成请求后，对请求的结果进行落入输入库是一件很重要的事情，而本篇文章想写出的内容就是 Springboot 连接本地的数据库的使用方案，本章文章也是入门的文章，因此篇幅可能不大。
+本篇文章的主要内容有哪些呢？ 连接数据库主要分为
+ 启动数据库 设置依赖 连接数据库并测试 增删改查基本功能  因此文章分为下面的三部分
+1. 启动数据库 本文章为了演示比较简便采用的是 docker 创建的数据库
+Docker 安装很容易安装，此处不再赘述 Docker 命令如何使用将单独写出 本文章只涉及几个日常命令 docker run , docker ps
+命令如下:
+命令释义：
+使用 docker ps 查看容器状态
+使用数据库连接工具连接数据库，并创建数据库 person 和数据表 person
+建表语句
+2. 添加依赖并设置连接信息 2.1 添加依赖 在 build.gradle 中添加如下依赖
+本文采用的是最新的依赖，如果企业使用，推荐使用稳定版本
+所在位置如下:
+点击右上角小象标志刷新依赖
+2.2 配置连接信息 在 resources 目录下添加 application.yml 文件并添加如下配置
+3. 测试连接数据库并测试业务逻辑 3.1 查询数据库测试 代码依次如下:
+Person.java
+PersonRepository.java
+PersonService.java
+PersonController.java
+3.2 测试联通 3.2.1 启动时检测 3.2.2 代码检测 可以看到是返回空数组
+    </div>
+  </div>
+
+        </div>
+      
+    </section>
+  </div>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
+    &copy;  lihui 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>
