@@ -1,4 +1,4 @@
 baseURL = 'https://lihui.net/'
-languageCode = 'en-us'
+languageCode = 'zh-CN'
 title = 'lihui'
-theme = "ananke"
+theme = "hugo-theme-cleanwhite"
