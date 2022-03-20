@@ -5,7 +5,7 @@
     <link>https://lihui.net/tags/docker/</link>
     <description>Recent content in Docker on lihui</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Wed, 13 Jan 2021 15:57:45 +0000</lastBuildDate><atom:link href="https://lihui.net/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker基础命令</title>
@@ -13,19 +13,19 @@
       <pubDate>Wed, 13 Jan 2021 15:57:45 +0000</pubDate>
       
       <guid>https://lihui.net/docker-base-command.html</guid>
-      <description>前言 随着容器化技术的推广,在不久的将来,大多数的公司都将采用容器化技术对现有的业务进行改造,因此容器化是一个大趋势, 在当下, 正值云原生的发展的前期, 掌握容器化技术, 对于云原生的业务的了解也是一种帮助, 本文主要还是整理一下Docker的基本命令, Docker基本命令其实很好找到, 本文只是对自己的掌握的命令的一个总结和对Docker命令的整理, 以防自己以后会忘记.
+      <description> 前言 随着容器化技术的推广,在不久的将来,大多数的公司都将采用容器化技术对现有的业务进行改造,因此容器化是一个大趋势, 在当下, 正值云原生的发展的前期, 掌握容器化技术, 对于云原生的业务的了解也是一种帮助, 本文主要还是整理一下Docker的基本命令, Docker基本命令其实很好找到, 本文只是对自己的掌握的命令的一个总结和对Docker命令的整理, 以防自己以后会忘记.
 本文采用的是https://www.docker.com/play-with-docker提供的 每次提供四个小时的试用期, 完全可以满足使用.
 内容 获取镜像(docker pull) 命令 image_name是镜像的名称 后面如果没有tag 则默认拉去最新的镜像,如果有则拉去对应Tag号的镜像
-demo 带Tag 不带Tag 查看镜像信息 命令&amp;amp;&amp;amp;demo 搜寻镜像 命令 参数解释
-demo 删除镜像 删除一个或者多个镜像 注意删除容器时 docker rm CONTAINER
+demo 带Tag  不带Tag  查看镜像信息 命令&amp;amp;&amp;amp;demo  搜寻镜像 命令 参数解释
+demo  删除镜像 删除一个或者多个镜像 注意删除容器时 docker rm CONTAINER
 命令 参数
-demo 创建镜像 从一个变化的容器种创建一个镜像,为何这样说,因为容器是可写的,而镜像也就是image是只读的.
+demo  创建镜像 从一个变化的容器种创建一个镜像,为何这样说,因为容器是可写的,而镜像也就是image是只读的.
 命令 参数
-demo 存入和载入镜像 存入镜像 导出镜像为本地tar文档
+demo   存入和载入镜像 存入镜像 导出镜像为本地tar文档
 命令 参数
-demo 载入镜像 将导出的tar文件导入到本地镜像仓库中,会导入镜像和其元数据信息
+demo  载入镜像 将导出的tar文件导入到本地镜像仓库中,会导入镜像和其元数据信息
 命令 参数
-demo </description>
+demo  </description>
     </item>
     
     <item>
@@ -34,7 +34,7 @@ demo </description>
       <pubDate>Mon, 11 Jan 2021 14:31:31 +0000</pubDate>
       
       <guid>https://lihui.net/docker-init.html</guid>
-      <description>前言 为何要了解原理? 了解原理对于Docker的学习使用有什么好处吗? Docker和其他的虚拟化(比如KVM等虚拟化的方式)有什么区别? 为啥现在人们都开始用Docker了?
+      <description> 前言 为何要了解原理? 了解原理对于Docker的学习使用有什么好处吗? Docker和其他的虚拟化(比如KVM等虚拟化的方式)有什么区别? 为啥现在人们都开始用Docker了?
 首先来说 如果实际使用的话, 涉及到简单的使用方面,其实并不会涉及到原理的问题, 一般的软件也好, 编程语言也好, 其主要目的是为了让人更少的关心原理的问题,将更多的精力放在处理业务逻辑上, 对于原理方面的问题, 最好可以一点都不用考虑, 那对我们来说了解原理有什么好处呢? 花时间了解,很少使用的原理到底值不值?
 我认为,了解原理是对问题本质的一种把握, 其实事情都有相似的地方, 软件的产生都有它存在的意义和目的, Docker解决了什么问题呢? 这个问题好像并没有什么标准的方案? 我在此写一下我自己的看法.
 首先解决的是环境不一致的问题, 常见的情况如下:

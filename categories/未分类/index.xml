@@ -5,7 +5,7 @@
     <link>https://lihui.net/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/</link>
     <description>Recent content in 未分类 on lihui</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Fri, 07 Jan 2022 14:41:37 +0000</lastBuildDate><atom:link href="https://lihui.net/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>React JSX语法再实践</title>
@@ -50,7 +50,7 @@ Mozilla 关于 JSX 语法的描述
 由于 JSX 是 HTML 和 JavaScript 的结合，因此一些开发人员认为它很直观。其他人则说它的混合特性使它变得混乱。但是，一旦熟悉了它，它将使您能够更快，更直观地构建用户界面，并使其他人一眼就能更好地理解您的代码库。
 本文分为下面几个方面 1. 环境预配置, 2. 创建并演示
 1. 环境预配置 环境预配置采用 NodeJS 环境 详情可以参考 Mozilla 安装 NodeJS 环境配置 2. 创建并演示 安装完成 nodejs 后可以使用下列命令创建项目名称为 moz-todo-react 的 React 应用
-在刚才的 terminal 中输入以下命令
+ 在刚才的 terminal 中输入以下命令
 会自动打开地址 http://localhost:3000/ , 效果如下
 未来我们会有新的章节来介绍文章的内容以及如何使用 React 进行软件开发
 实践与写作大约使用 40 分钟
@@ -71,7 +71,7 @@ Mozilla 关于 JSX 语法的描述
 本篇文章的主要思路是，通过实践最简单的 springboot 的项目，实现我们的第一个接口来叩响 Springboot 学习之门。
 本章节分为两个部分 新建项目 和 书写第一个接口
 新建项目 本篇文章采用 IDEA 创建 springboot 项目, IDEA 开发 Spring 项目有很多的优点，比如代码补全，代码优化，环境内置，还有很多的插件系统，可以大幅度地提高效率，推荐使用 IDEA 进行开发
-1. 打开 IDEA 新建项目 2. 选择建立 Springboot 项目并填写项目信息 其中英文名称释义
+1. 打开 IDEA 新建项目  2. 选择建立 Springboot 项目并填写项目信息  其中英文名称释义
 Name: 项目名称
 Location 代码位置
 Type: 这里指的是项目的构建方式 选择 Maven 和 Gradle 在初期体验不到不同，此处我选择的是 Gradle

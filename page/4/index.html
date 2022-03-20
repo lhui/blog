@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta name="generator" content="Hugo 0.94.2" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="lihui">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://lihui.net//">
+    <meta property="twitter:image" content="https://lihui.net//" />
+    
+
+    
+    <meta name="title" content="" />
+    <meta property="og:title" content="" />
+    <meta property="twitter:title" content="" />
+    
+
+    
+    <meta name="description" content="">
+    <meta property="og:description" content="" />
+    <meta property="twitter:description" content="" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>lihui-</title>
+
+    <link rel="canonical" href="/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">lihui</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/cli%E5%BA%94%E7%94%A8">cli应用</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/docker">docker</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/git%E7%B3%BB%E5%88%97">git系列</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/linux">linux</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/shell">shell</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/uncategorized">uncategorized</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E4%BB%8E0%E5%88%B01">从0到1</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96">博客优化</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%90%84%E7%B3%BB%E5%88%97%E6%80%BB%E7%AB%A0%E8%8A%82">各系列总章节</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%91%A8%E5%B9%B4%E6%80%BB%E7%BB%93">周年总结</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%AE%89%E5%85%A8">安全</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93">年度总结</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92">年度计划</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%84%9F%E6%83%B3">感想</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%8A%80%E6%9C%AF">技术</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91">敏捷开发</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB">未分类</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E7%9F%A5%E8%AF%86">知识</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E8%AF%BB%E4%B9%A6">读书</a>
+                        </li>
+                        
+                    
+                    
+		    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+<header class="intro-header" style="background-image: url('/')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading">
+                    <h1>lihui </h1>
+                    
+		    <span class="subheading"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+  
+<div class="container">
+    <div class="row">
+        
+        
+   	    <div class="
+            col-lg-8 col-lg-offset-1
+            col-md-8 col-md-offset-1
+            col-sm-12
+            col-xs-12
+            post-container
+        ">
+            
+
+<div class="post-preview">
+    <a href="https://lihui.net/security-sub-account.html">
+        <h2 class="post-title">
+            [安全相关]使用腾讯云子账号提高账号安全性
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            前言 为什么使用子账号呢？
+子账号可以提高安全性，如果我们采用主账号的key进行授权的时候，其他人一旦获取到我们的key，便对我们形成致命的打击，如果我们采用子账号，一方面，我们可以快速的撤销授权，避免损失，在最差的情况下，我们保证受损的是最少的，这些不妨事一种容灾的好方法。此处仅书写了腾讯云的系统，未涉及到其他的系统，在安全的角度上应该各个系统都有相应的系统，此处仅以腾讯云为例。
+步骤 首先登陆账号 首先在腾讯云的网站上登陆你的账号 https://cloud.tencent.com/进入腾讯云的子账号访问管理系统 https://cloud.tencent.com/创建相对应的账号  也就是上面的用户 ，点击创建用户
+进入下述的界面
+ 此处选择快速创建（因为此处未涉及到重要的步骤，快速过）
+会看到下属的界面 拥有四个项目 用户名 访问方式 用户权限 和可接受消息类型
+用户名随意 按照自己喜好即可
+ 访问方式 软件使用的话可以采用编程登陆（仅允许编程登陆更安全一点）
+ 用户权限 选择你要为子用户分配的权限 比如此处仅授权COS的操作（用于操作对象存储 比如图床等等使用方式）
+ 可接受消息类型 为下述的这几种 比较容易理解（如果为命令行使用的话，此处均不需要）
+  验证安全方式 即可以创建新的用户
+最后的最后 还希望妥善保管好你的key
+ 总结 安全问题，无论何时都是大问题，提早一步进行解决，可以减轻后面的慌张，还是希望在读的你不会出现安全性的问题。
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted byLi Hui  Wednesday, September 16, 2020
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="https://lihui.net/git-5-reset-problem.html">
+        <h2 class="post-title">
+            [Git教程系列]基础教程5 解决修改错分支的问题
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            前言 千辛万苦修改完成了代码，当要提交的时候或者提交后，才发现代码写错了分支，直接在master分支做了修改，哎，千辛万苦写的代码不能扔啊，咋办，下面记录一下我修改的过程。
+步骤 如果没有提交(commit) 之所以将这个提到前面，是因为很多情况下，我们都会在写代码的时候忘情的写代码，提价的时候（尤其是使用工具的时候，会不自觉的看一下相应的分支，也有可能是bash的提醒）
+此时 有三个步骤 将修改的代码放入stash区 切换分支 从stash中取出来，这时候使用stash和使用栈类似
+问题最初的情况 （不巧的是在master分支对hello.txt进行了修改）
+ 直接将所有代码一次写上吧
+返回结果 此时我们已经将修改的结果 转移到了dev分支
+ 如果已经进行了提交commit 此时需要多一个步骤 需要回退到上一个分支(或者需要回退到指定的分支)
+回退到上个commit
+回退到指定分支
+其他的和上面的一致
+操作如下图所示
+    已经提交到远程仓库（github/gitlab etc） Emm.. 这个也有两种情况，无私人信息和有私人信息，尤其是把个人的私钥上传了，如果不撤回来的话，那后果好像很严重的。
+无私人信息 此种情况还比较好，不影响大碍，可以进行反向提交，将上一次的代码如何提交的如何删除即可
+此时本地多了一条commit 将上次的提交内容进行反向提交 即增加了一条删除的commit信息
+此时在提交至远程即可
+有私人信息 此种情况非常非常糟糕，一旦被其他人所使用，后果不堪设想。(如果此篇文章有幸被你看到一定要注意)
+    总结 通过上面的步骤，我们可以将各种情况的git信息进行修改，如果有不全面的，欢迎进行留言。
+参考文章：
+ [https://gorden5566.com/post/1010.html](  
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted byLi Hui  Tuesday, September 15, 2020
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="https://lihui.net/pseudo-static-wordpress.html">
+        <h2 class="post-title">
+            [博客优化]为Wordpress加入伪静态
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            前言 为什么要加入伪静态呢，是Wordpress的网址不好看吗，嗯。。。。确实是不好看，而且网址之间还是不连续的，我都看傻了http://lihui.net/?p=23这种网址 都猜不出写了啥&hellip;
+加入伪静态的优点有哪些呢？
+首先来说 在一定意义上来讲，搜索引擎对于静态的页面的收录的效果要相对来说要好（当然有很多原因，比如网址不易变动，内容固定，访问速度快等等），因此网站做伪静态对于SEO的效果还是很明显的。
+第二点 就是上述的问题，网页无法辨识内容，从p=23能看出啥 反正我看不出和文章的主要内容git有任何关系，因此Wordpress伪静态的优点也就将地址进行自定义化
+涉及的知识： Nginx 配置 Wordpress配置
+步骤 其实伪静态在nginx很简单，只需要添加一些代码即可
+修改配置文件 在配置想要配置的网站的配置文件***.conf中的网站的位置即server里面加入下面的代码即可
+使得nginx生效 此处也是使用的ngnix的命令 进行安全加载 可以首先进行测试 看配置文件修改的是否正确
+当出现 **** test is success 样式的字眼出现时候证明配置修改的是成功的 当出现fail的时候 修改的配置应该是不正确的。
+下面的为执行命令
+此时ngnix 已经生效 伪静态的服务器端已经配置完成
+Wordpress端的配置 Wordpress端的配置相对来说比较简单，直接找到设置，在从中找到固定链接，进行修改，如下图所示
+ 我采用的修改为下图所示
+ 点击保存更改就已经修改成功，此时最好打开一个新的页面（此页面先不关闭），进行测试时候已经修改为伪静态（即上述的形式），如果出现问题，尽快修改回第一个，减少网站的不可访问时间。
+思考 有时候，知识觉得问题很复杂，尝试过后才发现也就那个样子，差不多的。
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted byLi Hui  Monday, September 14, 2020
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="https://lihui.net/2020%E5%B9%B4%E7%9A%8412%E6%9C%AC%E4%B9%A6%E7%B1%8D.html">
+        <h2 class="post-title">
+            2020年的12本书籍
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            读书始终是一个重要的问题,好读书，读好书，始终是读书者关心的问题，2020年要读12本书，在此处记录一下读过的书籍和要读的书籍，一方面记录，一方面思考。
+ 读啥书 读12本书，这十二本书中要有6本计算机的书籍和6本非计算机（技术）的书籍。
+当前读过和再读的书籍
+承蒙很多人为我推荐了，豆瓣读书，为可以找到一个可以看到相同的人喜欢看的书的地方，和相同喜好的人做相同的事情，光是想想就是很高兴啦。
+技术类
+   书名 阅读的开始时间 阅读的结束时间 豆瓣链接 读书感想     人件   https://book.douban.com/subject/25956450/    凤凰项目 购买时间20200901  https://book.douban.com/subject/26644070/    人月神话   https://book.douban.com/subject/2230248/    设计模式   https://book.douban.com/subject/1052241/    编写可读代码的艺术   https://book.douban.com/subject/10797189/    我编程我快乐   https://book.douban.com/subject/4923179/    软件随想录   https://book.douban.com/subject/4163938/    代码大全   https://book.
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted byLi Hui  Sunday, September 13, 2020
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="https://lihui.net/git%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A84-git-log%E7%9A%84%E4%BD%BF%E7%94%A8.html">
+        <h2 class="post-title">
+            [Git系列教程]基本使用4 Git log的使用
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            前言 如果只是使用Git 打标签 推送，合并 无法查看相关的信息，那使用Git的作用可就是太无聊了，使用起来也不是很方便。使用Git log 进行日志的查看是非常有必要的，也是必须的。
+本文章的主要参考资料是git 的官方教程 https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2步骤 无参数版本 命令行 这是最简单的显示，同时也是最全的显示
+返回结果：此处我们可以清晰地看到所有的提交日志 比如commit记录 commit的作者的名字 邮箱 日期 commit的信息 合并的来源 等等
+ 参数版本 参数对于日志的显示很重要，使用参数可以快速的查找出自己想要查找的内容，尤其是我们只想要一部分信息的时候
+命令行
+Git 的常用选项[摘自上述网址的表格]
+&lt;th style=&quot;text-align: left;&quot;&gt; 说明 &lt;/th&gt;  &lt;td style=&quot;text-align: left;&quot;&gt; 按补丁格式显示每个提交引入的差异。 &lt;/td&gt;  &lt;td style=&quot;text-align: left;&quot;&gt; 显示每次提交的文件修改统计信息。 &lt;/td&gt;  &lt;td style=&quot;text-align: left;&quot;&gt; 只显示 --stat 中最后的行数修改添加移除统计。 &lt;/td&gt;  &lt;td style=&quot;text-align: left;&quot;&gt; 仅在提交信息后显示已修改的文件清单。 &lt;/td&gt;  &lt;td style=&quot;text-align: left;&quot;&gt; 显示新增、修改、删除的文件清单。 &lt;/td&gt;  &lt;td style=&quot;text-align: left;&quot;&gt; 仅显示 SHA-1 校验和所有 40 个字符中的前几个字符。 &lt;/td&gt;  &lt;td style=&quot;text-align: left;&quot;&gt; 使用较短的相对时间而不是完整格式显示日期（比如“2 weeks ago”）。 &lt;/td&gt;  &lt;td style=&quot;text-align: left;&quot;&gt; 在日志旁以 ASCII 图形显示分支与合并历史。 &lt;/td&gt;  &lt;td style=&quot;text-align: left;&quot;&gt; 使用其他格式显示历史提交信息。可用的选项包括 oneline、short、full、fuller 和 format（用来定义自己的格式）。 &lt;/td&gt;  &lt;td style=&quot;text-align: left;&quot;&gt; &lt;code&gt;--pretty=oneline --abbrev-commit&lt;/code&gt; 合用的简写。 [也就是说可以直接在pretty中写或者直接在使用这一行命令] &lt;/td&gt;  示例
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted byLi Hui  Sunday, September 13, 2020
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="https://lihui.net/git%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8Bgit%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C3.html">
+        <h2 class="post-title">
+            [Git系列教程]Git基础操作3
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            前言 前两章节 我们详细说了Git基础的信息配置和证书的确认，还有简单的项目项目的创建，分支的建立和分支的拉取和分支的推送，本章节，主要说明的是分支的合并。
+本次采用的分支还是上次使用的仓库 https://github.com/lihuiocean/hello-git)步骤 分支合并 使用场景： 当有不同的人进行开发的时候，或者不同的功能进行开发的时候，即将进入测试或者预生产或者生产的时候，我们就会对不同的分支进行合并，从而合并相应的功能，开始测试或者发布。
+命令行
+切换到目的分支（最终你想要的分支上），使用下述的命令进行合并
+命令行
+示例
+返回信息
+ 冲突合并和解决后续更新。
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted byLi Hui  Saturday, September 12, 2020
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="https://lihui.net/git%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C2.html">
+        <h2 class="post-title">
+            [Git教程系列]基础操作2
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            前言 上一节，学习了Git和Github/或者其他平台连接的比较基础的使用方法，本节开始学习Git的分支的基础操作，基础操作包括，创建Git仓库git init，克隆远程分支git clone，添加到暂存（git add），提交记录（git commit），推送(push)， 拉取更新(pull) ，创建新分支(git checkout)，从远程创建新分支，推送新分支到远端。
+步骤 本文的代码地址： https://github.com/lihuiocean/hello-git)创建Git仓库 克隆远程分支 git clone 命令行的规范
+有两种规范 一种是采用https的规范，一种是采用git的规范，两种方式各有利弊，且对代码无任何差异，可以选择使用。
+https要求每次进行远程交互的时候采用账号和密码进行认证，而ssh则要求使用密钥进行认证（需要事先绑定密钥，如何绑定密钥，可以查看前一节的内容）。
+示例
+第二种
+示例
+ 经过上述的两种方式的一种方式，我们可以将远程的目录clone到本地,我比较推荐下面一种写法，可以快速的将代码进行提交到远端，不用每次都输入密码。
+添加到暂存 git add 使用场景： 当我们修改文件，想将其放入版本管理系统的时候，首先使用git add {{filename}} 将文件放到暂存区域，而后对文件进行提交记录，正式加入版本管理系统
+命令行
+示例
+此时文件已经放到暂存区域(虽然没有返回信息),使用下面的命令可以看到暂存区的文件
+ 其他指令 提交记录 git commit 使用场景：当我们将代码放到暂存区后想要提交到git记录中，就要使用到commit命令
+命令行
+示例
+返回结果
+ 推送分支 git push 使用场景：将本地的分支推送到远端，可以让其他的人看到
+返回结果
+ 拉取更新 git pull 使用场景： 当远程仓库有更新的时候（有人提交了新的代码的时候），我们可以使用git pull 拉取到最新的代码到本地
+返回结果
+ 创建新分支 git checkout 使用场景：想创建新的功能或者多人协作的时候，或者三套环境的时候（开发dev，预生产pre,生产环境prod）分开的时候，不影响其他人的使用。
+创建新分支的方式有两种，基于本地的分支创建和基于远程的分支创建，其实这两者没有什么太大的区别。
+基于本地的分支创建 在当前的分支拉取新分支
+命令行
+示例
+ 将本地分支推送到远程
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted byLi Hui  Friday, September 11, 2020
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="https://lihui.net/git%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97git%E5%88%9D%E6%AC%A1%E9%85%8D%E7%BD%AE.html">
+        <h2 class="post-title">
+            [Git教程系列]Git初次配置
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            前沿 Git作为一个比较优秀的分支管理系统，收到很多的人的喜爱，其分布式的分支系统，可以与远端分离进行独立的开发，大大的减少了分支系统对于网络联通性的依赖。
+且其分支控制方面，轻量级，速度快备受人们所喜爱。
+因为Git的操作比较多，Git的操作分为多部分来书写，以便可以细细记录下来，官方的教程地址https://git-scm.com其中有详细的教程和软件。本文章的作为记录本人 认为重要的指令而书写。
+基本步骤 首先下载软件 此步骤比较简单，直接下载https://git-scm.com下载安装即可。 步骤比较简单，不过多赘述。
+定义自己的信息 打开命令行（terminal/bash/powershell）输入下面的命令行
+通过上述的命令行 我们就对自己的信息做了声明 每一次提交都会带着这些信息，且这些信息不可以删除（特指单独删除，删除分支o r删除commit 不算（连commit都没有了 有用户的信息也没有用了呀（😂））
+进行验证 证书的安装 为什么使用证书，使用证书有必要吗？
+使用证书可以大大的简便代提交者的工作，代码提交者无需每次提交的时候都需要登陆，只需要一次设置证书，以后所有的提交都不需要再次登陆，避免忘记密码无法提交的尴尬（逃
+其实作为命令行Mac版本和Windows版本或者Linux版本其实并无差别，毕竟都是使用的是bash或者类bash
+生成证书 命令为
+首先是选择放置的位置，保持默认即可 再是输入密钥的密码的密钥，可以输入，也可以不输入，我选择的是不输入（直接回车）。
+证书而后生成完成。
+去查找相应的证书 一般是在 用户目录下的.ssh 文件夹中 id_rsa.pub为公钥，可以给其他人，id_rsa为私钥，除了你自己其他人都不能拥有，拥有了私钥就等于有了你的授权书，可以拿着你的授权书去干其他的事情。
+将公钥复制下来，复制到GitHub等软件等ssh连接处进行粘贴，保存，此时密钥的连接就可以建立了。
+建立测试命令
+效果：
+此时输入yes 进行连接即可 而后显示连接成功的信息
+显示上述的显示证明连接成功。
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted byLi Hui  Thursday, September 10, 2020
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="https://lihui.net/%E5%91%A8%E5%B9%B4%E6%80%BB%E7%BB%93%E8%84%89%E8%84%89%E6%B7%B1%E6%83%85%E6%B7%B1%E6%80%9D%E5%BF%97%E8%BF%9C%E5%91%A8%E5%B9%B4%E6%80%BB%E7%BB%93%E8%AE%A1%E5%88%92.html">
+        <h2 class="post-title">
+            [周年总结]脉脉深情,深思志远,周年总结计划
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            前言: 如何想象,如何思考,如何行动,决定着未来的走向.
+ 时光荏苒,岁月如梭,一年前的我,会如何想到现在,当下的我又是在如何思考未来.
+转瞬之间就已经一年的时光,这一年漫长而短暂.
+这一年的过程中我从一个大学生转换成为一个社会人士,不得不多有很大很大的进步. 在大四最后一年中,以优秀校级毕业生的身份毕业,大四学习了机器学习的内容,并且有较为可以的成功率,着实比较不错.
+这一年因为疫情,在家中待了半年的时间,其中体会到了很多的亲情和友情,着实有些感动.
+这一年比较大的成就就是,可以自主的养活自己,不需要再通过供养来生存,重新购买了域名,学会了重新思考,并且形成了自己的价值观.
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted byLi Hui  Thursday, September 10, 2020
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="https://lihui.net/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E4%B8%BA%E7%BD%91%E7%AB%99%E6%B7%BB%E5%8A%A0ssl%E8%AF%81%E4%B9%A6.html">
+        <h2 class="post-title">
+            [博客优化]为网站添加SSL证书
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            前言 网站的SSL有什么作用呢？ 如果没有SSL证书，连接可能不安全，与网站交互的信息可能被其他人获取，对于无论是自己或者自己的用户都是一种损失，而且还会造成网站劫持等等问题，使用SSL证书可以大大地减轻网站的安全性的问题。
+使用SSL有什么缺点吗？ 有的 使用SSL证书会增加网站的访问速度，对网站的速度有些许的影响，且还会遇到网站证书过期的问题，直接弹出一个错误页面，很容易让人产生网站中毒的错觉。
+过程 预备条件 本文的环境
+ 腾讯云轻量云服务器CentOS 7 (安装了 Ngnix Wordpress 等服务 )  虽然本文章是为Wordpress配置的，但是其中的步骤是对于每一个网站都是通用的，无论是静态页面还是动态的页面，而或是其他的页面都是可以使用的，主要是配置Ngnix.
+主要分为两个步骤：获取SSL证书和配置Ngnix证书
+获取SSL证书 获取证书的方式有很多，比如购买证书或者使用免费的证书，其中免费的证书也有很多中，比如使用各个云厂商的免费证书，只需要验证很少的东西就可以得到一个一年有效期的证书，或者是采用一直以来比较火的免费证书 let&rsquo;s encrypt ,此种证书有三个月的有效期，可以进行续期，因为其免费，易用备受推崇。
+本文采用的是申请let&rsquo;s encrypt 证书
+采用certbot申请证书，大大的减轻申请证书的复杂程度，可以做到简单，快速直接。
+获取得到证书后，将将会放到指定的位置 /etc/letsencrypt/live/domian.com/ 下面 可以直接放在此目录下，以供后期的使用
+Ngnix 配置 首先找到自己的配置文件的位置。
+腾讯云的轻量主机配置文件的位置是在 /usr/local/lighthouse/software/ngnix/config
+修改其中的ngnix config 修改其中的配置
+重新启动服务
+总结 本篇博客还没写完，其中的内容，后续（不出意外的话应该尽快）补上。
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted byLi Hui  Wednesday, September 9, 2020
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+
+            
+
+
+<ul class="pager">
+    
+    <li class="previous">
+        <a href="/page/3/">&larr; Newer Posts</a>
+    </li>
+    
+    
+    <li class="next">
+        <a href="/page/5/">Older Posts &rarr;</a>
+    </li>
+    
+</ul>
+
+
+       	</div>
+        
+
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+    
+
+    
+	
+    
+    
+
+    
+    
+</div>
+
+	</div>
+</div>
+
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                    
+
+                    
+                    
+                    
+
+                    
+
+		    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; lihui 2022
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+</body>
+</html>

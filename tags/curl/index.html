@@ -1,154 +1,434 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
+<html lang="zh-CN">
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     
-    <title>CURL | lihui</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.94.2" />
+    <meta property="og:site_name" content="lihui">
+    <meta property="og:type" content="article">
+
     
-    
-    
-    
-      <meta name="robots" content="noindex, nofollow">
+    <meta property="og:image" content="https://lihui.net//">
+    <meta property="twitter:image" content="https://lihui.net//" />
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
-
-
-
-    
-    
-    
-      
-
-    
-
-    
-    
-      <link href="/tags/curl/index.xml" rel="alternate" type="application/rss+xml" title="lihui" />
-      <link href="/tags/curl/index.xml" rel="feed" type="application/rss+xml" title="lihui" />
-      
-    
-    
+    <meta name="title" content="CURL" />
     <meta property="og:title" content="CURL" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://lihui.net/tags/curl/" />
-
-<meta itemprop="name" content="CURL">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="CURL"/>
-<meta name="twitter:description" content=""/>
-
-	
-  </head>
-
-  <body class="ma0 avenir bg-near-white">
-
+    <meta property="twitter:title" content="CURL" />
     
 
-  <header>
-    <div class="pb3-m pb6-l bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
-      
-        lihui
-      
-    </a>
-    <div class="flex-l items-center">
-      
+    
+    <meta name="description" content="">
+    <meta property="og:description" content="" />
+    <meta property="twitter:description" content="" />
+    
 
-      
-      
-<div class="ananke-socials">
-  
-</div>
-    </div>
-  </div>
-</nav>
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
 
-      <div class="tc-l pv3 ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
-          CURL
-        </h1>
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>CURL-</title>
+
+    <link rel="canonical" href="/tags/curl/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
         
-      </div>
-    </div>
-  </header>
-
-
-    <main class="pb7" role="main">
-      
-  <article class="cf pa3 pa4-m pa4-l">
-    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links mid-gray">
-      <p>Below you will find pages that utilize the taxonomy term “CURL”</p>
-    </div>
-  </article>
-  <div class="mw8 center">
-    <section class="flex-ns flex-wrap justify-around mt5">
-      
-        <div class="relative w-100  mb4 bg-white">
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        September 25, 2020
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/learn-curl.html" class="link black dim">
-        CURL学习教程
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      前言 CURL是Linux中使用比较多的软件，我也有所耳闻，我也曾经使用过，不过使用的时间间隔的比较长了，也不知道这篇文章会写多长时间全当记录吧。
-内容 首先看看其帮助的内容，一般cmd帮助中都有其全部命令的信息（不然怎么用啊
-其中有全部的内容 本文章中挑选常用的命令做测试。
-直接请求Get 如果我们不给其指定任何参数 ，其将使用Get请求请求，如果访问某一网址 则返回这个网页
-命令行：
-示例
-返回结果：（因为太多了只是截取了一小部分
-指定用户代理 何为用户代理 当我们使用浏览器等发起网络请求中，就自动的带上浏览器的用户代理，比如我们使用浏览器请求http://lihui.net的时候,使用chrome请求的时候如下图
-最下面的一行，即是用户代理
-在curl加入-A 参数即可以指定用户的user-agent
-那问题来了 curl 不指定user-agent的时候是什么呢 当不指定user-agent的时候默认的为curl/{{version}}
-如何去除呢 可以使用下面的命令可以将user-agent去除
-携带用户cookie 使用参数 -b 可以使得curl 在交互中携带用户的cookie
-命令行如下图所示 下面的命令会向example.com 发送名为A 值为B的cookie 如果要发送多个cookie 要以;分割（都在“”内）
-示例
-返回结果
-因为我的网站没有设置相关的cookie认证 等操作，因此返回的页面是和上面的一样的。
-我们可以发送cookie文件到远端的网站
-发送cookie文件
-命令行
-既然有发送文件了，可不可以接受cookie呢
-答案是肯定的，保存返回的cookie到文件到命令行如下图所示
-总结 curl命令行的作用很大，需要学习的内容还有很多，熟悉命令行的作用也有很大。
-文章引用  http://www.ruanyifeng.com/blog/2019/09/curl-reference.html  
-    </div>
-  </div>
-
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">lihui</a>
         </div>
-      
-    </section>
-  </div>
 
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
-    &copy;  lihui 2022 
-  </a>
-    <div>
-<div class="ananke-socials">
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/cli%E5%BA%94%E7%94%A8">cli应用</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/docker">docker</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/git%E7%B3%BB%E5%88%97">git系列</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/linux">linux</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/shell">shell</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/uncategorized">uncategorized</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E4%BB%8E0%E5%88%B01">从0到1</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96">博客优化</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%90%84%E7%B3%BB%E5%88%97%E6%80%BB%E7%AB%A0%E8%8A%82">各系列总章节</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%91%A8%E5%B9%B4%E6%80%BB%E7%BB%93">周年总结</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%AE%89%E5%85%A8">安全</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93">年度总结</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92">年度计划</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%84%9F%E6%83%B3">感想</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%8A%80%E6%9C%AF">技术</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91">敏捷开发</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB">未分类</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E7%9F%A5%E8%AF%86">知识</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E8%AF%BB%E4%B9%A6">读书</a>
+                        </li>
+                        
+                    
+                    
+		    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+<header class="intro-header" style="background-image: url('/')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading">
+                    <h1>lihui </h1>
+                    
+		    <span class="subheading"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
   
-</div></div>
-  </div>
+<div class="container">
+    <div class="row">
+        
+        
+   	    <div class="
+            col-lg-8 col-lg-offset-1
+            col-md-8 col-md-offset-1
+            col-sm-12
+            col-xs-12
+            post-container
+        ">
+            
+
+
+            
+
+
+
+       	</div>
+        
+
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+    
+
+    
+	
+    
+    
+
+    
+    
+</div>
+
+	</div>
+</div>
+
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                    
+
+                    
+                    
+                    
+
+                    
+
+		    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; lihui 2022
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
 </footer>
 
-  </body>
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+</body>
 </html>

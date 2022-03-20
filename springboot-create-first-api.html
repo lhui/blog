@@ -1,180 +1,276 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
+<html lang="zh-CN">
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     
-    <title>[SpringBoot 指南] 如何开始 Springboot 之旅 实现自己第一个接口 | lihui</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="书写时间 39m59s
-预计发布时间 2022-01-01
-这篇文章是 springboot 系列的第一篇文章，如何从零开始学习 Springboot.
-我认为学习技术，追寻技术的本质没有任何问题，但是在上手技术的时候可能不需要了解太多的技术细节，首先了解如何使用，而后再想办法如何优化也不乏为一条快速学习和实践的道路。
-本篇文章的主要思路是，通过实践最简单的 springboot 的项目，实现我们的第一个接口来叩响 Springboot 学习之门。
-本章节分为两个部分 新建项目 和 书写第一个接口
-新建项目 本篇文章采用 IDEA 创建 springboot 项目, IDEA 开发 Spring 项目有很多的优点，比如代码补全，代码优化，环境内置，还有很多的插件系统，可以大幅度地提高效率，推荐使用 IDEA 进行开发
-1. 打开 IDEA 新建项目 2. 选择建立 Springboot 项目并填写项目信息 其中英文名称释义
-Name: 项目名称
-Location 代码位置
-Type: 这里指的是项目的构建方式 选择 Maven 和 Gradle 在初期体验不到不同，此处我选择的是 Gradle
-Group: 可以理解为项目组的名称，一般为域名的反写 比如域名是 exmaple.com 则 Group 的数值为 com.example
-Project SDK: 这个很好理解 这个是软件开发的环境
-Packaging : 打包的方式， Jar 与 War 的区别是 Jar 打包了运行环境， 直接 java -jar project.">
-    <meta name="generator" content="Hugo 0.94.2" />
+    <meta property="og:site_name" content="lihui">
+    <meta property="og:type" content="article">
+
     
-    
-    
-    
-      <meta name="robots" content="noindex, nofollow">
+    <meta property="og:image" content="https://lihui.net//">
+    <meta property="twitter:image" content="https://lihui.net//" />
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
-
-
-
-    
-    
-    
-      
-
-    
-
-    
-    
+    <meta name="title" content="[SpringBoot 指南] 如何开始 Springboot 之旅 实现自己第一个接口" />
     <meta property="og:title" content="[SpringBoot 指南] 如何开始 Springboot 之旅 实现自己第一个接口" />
-<meta property="og:description" content="书写时间 39m59s
-预计发布时间 2022-01-01
-这篇文章是 springboot 系列的第一篇文章，如何从零开始学习 Springboot.
-我认为学习技术，追寻技术的本质没有任何问题，但是在上手技术的时候可能不需要了解太多的技术细节，首先了解如何使用，而后再想办法如何优化也不乏为一条快速学习和实践的道路。
-本篇文章的主要思路是，通过实践最简单的 springboot 的项目，实现我们的第一个接口来叩响 Springboot 学习之门。
-本章节分为两个部分 新建项目 和 书写第一个接口
-新建项目 本篇文章采用 IDEA 创建 springboot 项目, IDEA 开发 Spring 项目有很多的优点，比如代码补全，代码优化，环境内置，还有很多的插件系统，可以大幅度地提高效率，推荐使用 IDEA 进行开发
-1. 打开 IDEA 新建项目 2. 选择建立 Springboot 项目并填写项目信息 其中英文名称释义
-Name: 项目名称
-Location 代码位置
-Type: 这里指的是项目的构建方式 选择 Maven 和 Gradle 在初期体验不到不同，此处我选择的是 Gradle
-Group: 可以理解为项目组的名称，一般为域名的反写 比如域名是 exmaple.com 则 Group 的数值为 com.example
-Project SDK: 这个很好理解 这个是软件开发的环境
-Packaging : 打包的方式， Jar 与 War 的区别是 Jar 打包了运行环境， 直接 java -jar project." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://lihui.net/springboot-create-first-api.html" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-01-01T15:29:12+00:00" />
-<meta property="article:modified_time" content="2022-01-01T15:29:12+00:00" />
-
-<meta itemprop="name" content="[SpringBoot 指南] 如何开始 Springboot 之旅 实现自己第一个接口">
-<meta itemprop="description" content="书写时间 39m59s
-预计发布时间 2022-01-01
-这篇文章是 springboot 系列的第一篇文章，如何从零开始学习 Springboot.
-我认为学习技术，追寻技术的本质没有任何问题，但是在上手技术的时候可能不需要了解太多的技术细节，首先了解如何使用，而后再想办法如何优化也不乏为一条快速学习和实践的道路。
-本篇文章的主要思路是，通过实践最简单的 springboot 的项目，实现我们的第一个接口来叩响 Springboot 学习之门。
-本章节分为两个部分 新建项目 和 书写第一个接口
-新建项目 本篇文章采用 IDEA 创建 springboot 项目, IDEA 开发 Spring 项目有很多的优点，比如代码补全，代码优化，环境内置，还有很多的插件系统，可以大幅度地提高效率，推荐使用 IDEA 进行开发
-1. 打开 IDEA 新建项目 2. 选择建立 Springboot 项目并填写项目信息 其中英文名称释义
-Name: 项目名称
-Location 代码位置
-Type: 这里指的是项目的构建方式 选择 Maven 和 Gradle 在初期体验不到不同，此处我选择的是 Gradle
-Group: 可以理解为项目组的名称，一般为域名的反写 比如域名是 exmaple.com 则 Group 的数值为 com.example
-Project SDK: 这个很好理解 这个是软件开发的环境
-Packaging : 打包的方式， Jar 与 War 的区别是 Jar 打包了运行环境， 直接 java -jar project."><meta itemprop="datePublished" content="2022-01-01T15:29:12+00:00" />
-<meta itemprop="dateModified" content="2022-01-01T15:29:12+00:00" />
-<meta itemprop="wordCount" content="155">
-<meta itemprop="keywords" content="Springboot," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[SpringBoot 指南] 如何开始 Springboot 之旅 实现自己第一个接口"/>
-<meta name="twitter:description" content="书写时间 39m59s
-预计发布时间 2022-01-01
-这篇文章是 springboot 系列的第一篇文章，如何从零开始学习 Springboot.
-我认为学习技术，追寻技术的本质没有任何问题，但是在上手技术的时候可能不需要了解太多的技术细节，首先了解如何使用，而后再想办法如何优化也不乏为一条快速学习和实践的道路。
-本篇文章的主要思路是，通过实践最简单的 springboot 的项目，实现我们的第一个接口来叩响 Springboot 学习之门。
-本章节分为两个部分 新建项目 和 书写第一个接口
-新建项目 本篇文章采用 IDEA 创建 springboot 项目, IDEA 开发 Spring 项目有很多的优点，比如代码补全，代码优化，环境内置，还有很多的插件系统，可以大幅度地提高效率，推荐使用 IDEA 进行开发
-1. 打开 IDEA 新建项目 2. 选择建立 Springboot 项目并填写项目信息 其中英文名称释义
-Name: 项目名称
-Location 代码位置
-Type: 这里指的是项目的构建方式 选择 Maven 和 Gradle 在初期体验不到不同，此处我选择的是 Gradle
-Group: 可以理解为项目组的名称，一般为域名的反写 比如域名是 exmaple.com 则 Group 的数值为 com.example
-Project SDK: 这个很好理解 这个是软件开发的环境
-Packaging : 打包的方式， Jar 与 War 的区别是 Jar 打包了运行环境， 直接 java -jar project."/>
-
-	
-  </head>
-
-  <body class="ma0 avenir bg-near-white">
+    <meta property="twitter:title" content="[SpringBoot 指南] 如何开始 Springboot 之旅 实现自己第一个接口" />
+    
 
     
-   
-  
+    <meta name="description" content="">
+    <meta property="og:description" content="" />
+    <meta property="twitter:description" content="" />
+    
 
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
-      
-        lihui
-      
-    </a>
-    <div class="flex-l items-center">
-      
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
 
-      
-      
-<div class="ananke-socials">
-  
-</div>
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>[SpringBoot 指南] 如何开始 Springboot 之旅 实现自己第一个接口-</title>
+
+    <link rel="canonical" href="/springboot-create-first-api.html">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">lihui</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/cli%E5%BA%94%E7%94%A8">cli应用</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/docker">docker</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/git%E7%B3%BB%E5%88%97">git系列</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/linux">linux</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/shell">shell</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/uncategorized">uncategorized</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E4%BB%8E0%E5%88%B01">从0到1</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96">博客优化</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%90%84%E7%B3%BB%E5%88%97%E6%80%BB%E7%AB%A0%E8%8A%82">各系列总章节</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%91%A8%E5%B9%B4%E6%80%BB%E7%BB%93">周年总结</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%AE%89%E5%85%A8">安全</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93">年度总结</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92">年度计划</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%84%9F%E6%83%B3">感想</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%8A%80%E6%9C%AF">技术</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91">敏捷开发</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB">未分类</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E7%9F%A5%E8%AF%86">知识</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E8%AF%BB%E4%B9%A6">读书</a>
+                        </li>
+                        
+                    
+                    
+		    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
     </div>
-  </div>
+    
 </nav>
-
-    </div>
-  </header>
-
-
-
-    <main class="pb7" role="main">
-      
-  
-  <article class="flex-l flex-wrap justify-between mw8 center ph3">
-    <header class="mt4 w-100">
-      <aside class="instapaper_ignoref b helvetica tracked">
-          
-        POSTS
-      </aside>
-      
-
-
-
-
-
-
-
-
-
-
-  <div id="sharing" class="mt3 ananke-socials">
+<script>
     
-  </div>
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
 
 
-      <h1 class="f1 athelas mt3 mb1">[SpringBoot 指南] 如何开始 Springboot 之旅 实现自己第一个接口</h1>
-      
-      <p class="tracked">
-          By <strong>
-          
-              Li Hui
-          
-          </strong>
-      </p>
-      
-      
-      
-      <time class="f6 mv4 dib tracked" datetime="2022-01-01T15:29:12Z">January 1, 2022</time>
-      
 
-      
-      
-    </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>书写时间 39m59s</p>
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/springboot" title="Springboot">
+                            Springboot
+                        </a>
+                        
+                    </div>
+                    <h1>[SpringBoot 指南] 如何开始 Springboot 之旅 实现自己第一个接口</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                Li Hui
+                             
+                            on 
+                            Saturday, January 1, 2022
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <p>书写时间 39m59s</p>
 <p>预计发布时间 2022-01-01</p>
 <p>这篇文章是 springboot 系列的第一篇文章，如何从零开始学习 Springboot.</p>
 <p>我认为学习技术，追寻技术的本质没有任何问题，但是在上手技术的时候可能不需要了解太多的技术细节，首先了解如何使用，而后再想办法如何优化也不乏为一条快速学习和实践的道路。</p>
@@ -183,9 +279,15 @@ Packaging : 打包的方式， Jar 与 War 的区别是 Jar 打包了运行环�
 <h2 id="新建项目">新建项目</h2>
 <p>本篇文章采用 IDEA 创建 springboot 项目, IDEA 开发 Spring 项目有很多的优点，比如代码补全，代码优化，环境内置，还有很多的插件系统，可以大幅度地提高效率，推荐使用 IDEA 进行开发</p>
 <h3 id="1-打开-idea-新建项目">1. 打开 IDEA 新建项目</h3>
-<p><img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320221554.png" alt=""></p>
+<p>
+  <img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320221554.png" alt="">
+
+</p>
 <h3 id="2-选择建立-springboot-项目并填写项目信息">2. 选择建立 Springboot 项目并填写项目信息</h3>
-<p><img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320221622.png" alt=""></p>
+<p>
+  <img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320221622.png" alt="">
+
+</p>
 <p>其中英文名称释义</p>
 <p>Name: 项目名称</p>
 <p>Location 代码位置</p>
@@ -195,69 +297,274 @@ Packaging : 打包的方式， Jar 与 War 的区别是 Jar 打包了运行环�
 <p>Packaging : 打包的方式， Jar 与 War 的区别是 Jar 打包了运行环境， 直接 <code>java -jar project.jar</code> 可以启动，而 war 需要放在容器（比如 tomcat）中才可以使用</p>
 <h3 id="3-选择依赖">3. 选择依赖</h3>
 <p>因为我们实现的功能比较简单 我们选择依赖的时候只选择 SpringWeb 即可实现</p>
-<p><img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320221651.png" alt=""></p>
+<p>
+  <img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320221651.png" alt="">
+
+</p>
 <p>注意上面的 Springboot: 后的 2.6.2 这个是 Springboot 的版本号， 其他的依赖会依赖这个号进行兼容性关联，这里我们也不需要关心，点击完成即可进行下一步</p>
 <h3 id="4-等待依赖下载完成-运行项目测试项目可以正常运行">4. 等待依赖下载完成 运行项目测试项目可以正常运行</h3>
-<p><img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320221734.png" alt=""></p>
+<p>
+  <img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320221734.png" alt="">
+
+</p>
 <p>等待箭头所示位置的进度条完成后，点击下图的按钮进行测试</p>
-<p><img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320221804.png" alt=""></p>
+<p>
+  <img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320221804.png" alt="">
+
+</p>
 <p>当出现下图的信息 即代表运行成功 <code>Started FirstApiApplication in 1.793 seconds (JVM running for 2.42)</code></p>
-<p><img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320221843.png" alt=""></p>
+<p>
+  <img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320221843.png" alt="">
+
+</p>
 <p>我们可以从日志中看到 <code>Tomcat started on port(s): 8080 (http) with context path ''</code></p>
 <p>程序运行在 8080 端口 我们现在打开浏览器测试 8080 端口 预期结果如下（因为我们并没有设置 匹配 <code>/</code> 的路由信息，报如下的错误）</p>
-<p><img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320221925.png" alt=""></p>
+<p>
+  <img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320221925.png" alt="">
+
+</p>
 <p>我们下面来实现第一个接口</p>
 <h2 id="实现第一个接口">实现第一个接口</h2>
 <h3 id="1-新建文件">1. 新建文件</h3>
-<p><img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320221949.png" alt=""></p>
+<p>
+  <img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320221949.png" alt="">
+
+</p>
 <p>并输入名称，回车确认创建文件</p>
-<p><img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320222017.png" alt=""></p>
+<p>
+  <img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320222017.png" alt="">
+
+</p>
 <p>第一个接口代码如下</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <p>IDEA 中的界面如下</p>
-<p><img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320222102.png" alt=""></p>
+<p>
+  <img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320222102.png" alt="">
+
+</p>
 <p>点击重新运行按钮 进行重新运行项目 测试我们第一个接口是否成功</p>
-<p><img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320222125.png" alt=""></p>
+<p>
+  <img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320222125.png" alt="">
+
+</p>
 <h3 id="2-测试新接口">2. 测试新接口</h3>
 <p>访问 <!-- raw HTML omitted -->http://localhost:8080/hello<!-- raw HTML omitted --> 我们可以发现 我们所写的代码运行成功</p>
 <p>此处的 <code>GetMapping</code> 指的是从匹配 HTTP Get 请求的注解，代表当匹配到括号里面到内容时候，采用下面的方法来处理。</p>
-<p><img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320222140.png" alt=""></p>
+<p>
+  <img src="https://zimeiti-1253731526.cos.ap-beijing.myqcloud.com/img/20220320222140.png" alt="">
+
+</p>
 <p>由此，我们的 Springboot 指南开始正式入门。</p>
-<ul class="pa0">
-  
-   <li class="list di">
-     <a href="/tags/springboot" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Springboot</a>
-   </li>
-  
-</ul>
-<div class="mt6 instapaper_ignoref">
-      
-      
-      </div>
+
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/leetcode-note.html" data-toggle="tooltip" data-placement="top" title="LeetCode刷题笔记">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/springboot-start-mysql.html" data-toggle="tooltip" data-placement="top" title="[SpringBoot 指南] 连接 mysql 数据库并进行增删改查测试">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+
+                
+                
+            </div>
+        </div>
     </div>
-
-    <aside class="w-30-l mt6-l">
-
+</article>
 
 
 
-</aside>
 
-  </article>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                    
 
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
-    &copy;  lihui 2022 
-  </a>
-    <div>
-<div class="ananke-socials">
-  
-</div></div>
-  </div>
+                    
+                    
+                    
+
+                    
+
+		    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; lihui 2022
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
 </footer>
 
-  </body>
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+</body>
 </html>

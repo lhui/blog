@@ -1,151 +1,434 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
+<html lang="zh-CN">
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     
-    <title>技术 | lihui</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.94.2" />
+    <meta property="og:site_name" content="lihui">
+    <meta property="og:type" content="article">
+
     
-    
-    
-    
-      <meta name="robots" content="noindex, nofollow">
+    <meta property="og:image" content="https://lihui.net//">
+    <meta property="twitter:image" content="https://lihui.net//" />
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
-
-
-
-    
-    
-    
-      
-
-    
-
-    
-    
-      <link href="/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="alternate" type="application/rss+xml" title="lihui" />
-      <link href="/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="feed" type="application/rss+xml" title="lihui" />
-      
-    
-    
+    <meta name="title" content="技术" />
     <meta property="og:title" content="技术" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://lihui.net/categories/%E6%8A%80%E6%9C%AF/" />
-
-<meta itemprop="name" content="技术">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="技术"/>
-<meta name="twitter:description" content=""/>
-
-	
-  </head>
-
-  <body class="ma0 avenir bg-near-white">
-
+    <meta property="twitter:title" content="技术" />
     
 
-  <header>
-    <div class="pb3-m pb6-l bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
-      
-        lihui
-      
-    </a>
-    <div class="flex-l items-center">
-      
+    
+    <meta name="description" content="">
+    <meta property="og:description" content="" />
+    <meta property="twitter:description" content="" />
+    
 
-      
-      
-<div class="ananke-socials">
-  
-</div>
-    </div>
-  </div>
-</nav>
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
 
-      <div class="tc-l pv3 ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
-          技术
-        </h1>
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>技术-</title>
+
+    <link rel="canonical" href="/categories/%E6%8A%80%E6%9C%AF/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
         
-      </div>
-    </div>
-  </header>
-
-
-    <main class="pb7" role="main">
-      
-  <article class="cf pa3 pa4-m pa4-l">
-    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links mid-gray">
-      <p>Below you will find pages that utilize the taxonomy term “技术”</p>
-    </div>
-  </article>
-  <div class="mw8 center">
-    <section class="flex-ns flex-wrap justify-around mt5">
-      
-        <div class="relative w-100  mb4 bg-white">
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        January 2, 2022
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/springboot-start-mysql.html" class="link black dim">
-        [SpringBoot 指南] 连接 mysql 数据库并进行增删改查测试
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      落库是软件开发中的重要的事情，软件接受完成请求后，对请求的结果进行落入输入库是一件很重要的事情，而本篇文章想写出的内容就是 Springboot 连接本地的数据库的使用方案，本章文章也是入门的文章，因此篇幅可能不大。
-本篇文章的主要内容有哪些呢？ 连接数据库主要分为
- 启动数据库 设置依赖 连接数据库并测试 增删改查基本功能  因此文章分为下面的三部分
-1. 启动数据库 本文章为了演示比较简便采用的是 docker 创建的数据库
-Docker 安装很容易安装，此处不再赘述 Docker 命令如何使用将单独写出 本文章只涉及几个日常命令 docker run , docker ps
-命令如下:
-命令释义：
-使用 docker ps 查看容器状态
-使用数据库连接工具连接数据库，并创建数据库 person 和数据表 person
-建表语句
-2. 添加依赖并设置连接信息 2.1 添加依赖 在 build.gradle 中添加如下依赖
-本文采用的是最新的依赖，如果企业使用，推荐使用稳定版本
-所在位置如下:
-点击右上角小象标志刷新依赖
-2.2 配置连接信息 在 resources 目录下添加 application.yml 文件并添加如下配置
-3. 测试连接数据库并测试业务逻辑 3.1 查询数据库测试 代码依次如下:
-Person.java
-PersonRepository.java
-PersonService.java
-PersonController.java
-3.2 测试联通 3.2.1 启动时检测 3.2.2 代码检测 可以看到是返回空数组
-    </div>
-  </div>
-
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">lihui</a>
         </div>
-      
-    </section>
-  </div>
 
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
-    &copy;  lihui 2022 
-  </a>
-    <div>
-<div class="ananke-socials">
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/cli%E5%BA%94%E7%94%A8">cli应用</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/docker">docker</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/git%E7%B3%BB%E5%88%97">git系列</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/linux">linux</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/shell">shell</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/uncategorized">uncategorized</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E4%BB%8E0%E5%88%B01">从0到1</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96">博客优化</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%90%84%E7%B3%BB%E5%88%97%E6%80%BB%E7%AB%A0%E8%8A%82">各系列总章节</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%91%A8%E5%B9%B4%E6%80%BB%E7%BB%93">周年总结</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%AE%89%E5%85%A8">安全</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93">年度总结</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92">年度计划</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%84%9F%E6%83%B3">感想</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%8A%80%E6%9C%AF">技术</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91">敏捷开发</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB">未分类</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E7%9F%A5%E8%AF%86">知识</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E8%AF%BB%E4%B9%A6">读书</a>
+                        </li>
+                        
+                    
+                    
+		    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+<header class="intro-header" style="background-image: url('/')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading">
+                    <h1>lihui </h1>
+                    
+		    <span class="subheading"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
   
-</div></div>
-  </div>
+<div class="container">
+    <div class="row">
+        
+        
+   	    <div class="
+            col-lg-8 col-lg-offset-1
+            col-md-8 col-md-offset-1
+            col-sm-12
+            col-xs-12
+            post-container
+        ">
+            
+
+
+            
+
+
+
+       	</div>
+        
+
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+    
+
+    
+	
+    
+    
+
+    
+    
+</div>
+
+	</div>
+</div>
+
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                    
+
+                    
+                    
+                    
+
+                    
+
+		    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; lihui 2022
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
 </footer>
 
-  </body>
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+</body>
 </html>

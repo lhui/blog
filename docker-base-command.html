@@ -1,176 +1,279 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
+<html lang="zh-CN">
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     
-    <title>Docker基础命令 | lihui</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="前言 随着容器化技术的推广,在不久的将来,大多数的公司都将采用容器化技术对现有的业务进行改造,因此容器化是一个大趋势, 在当下, 正值云原生的发展的前期, 掌握容器化技术, 对于云原生的业务的了解也是一种帮助, 本文主要还是整理一下Docker的基本命令, Docker基本命令其实很好找到, 本文只是对自己的掌握的命令的一个总结和对Docker命令的整理, 以防自己以后会忘记.
-本文采用的是https://www.docker.com/play-with-docker提供的 每次提供四个小时的试用期, 完全可以满足使用.
-内容 获取镜像(docker pull) 命令 image_name是镜像的名称 后面如果没有tag 则默认拉去最新的镜像,如果有则拉去对应Tag号的镜像
-demo 带Tag 不带Tag 查看镜像信息 命令&amp;&amp;demo 搜寻镜像 命令 参数解释
-demo 删除镜像 删除一个或者多个镜像 注意删除容器时 docker rm CONTAINER
-命令 参数
-demo 创建镜像 从一个变化的容器种创建一个镜像,为何这样说,因为容器是可写的,而镜像也就是image是只读的.
-命令 参数
-demo 存入和载入镜像 存入镜像 导出镜像为本地tar文档
-命令 参数
-demo 载入镜像 将导出的tar文件导入到本地镜像仓库中,会导入镜像和其元数据信息
-命令 参数
-demo ">
-    <meta name="generator" content="Hugo 0.94.2" />
+    <meta property="og:site_name" content="lihui">
+    <meta property="og:type" content="article">
+
     
-    
-    
-    
-      <meta name="robots" content="noindex, nofollow">
+    <meta property="og:image" content="https://lihui.net//">
+    <meta property="twitter:image" content="https://lihui.net//" />
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
-
-
-
-    
-    
-    
-      
-
-    
-
-    
-    
+    <meta name="title" content="Docker基础命令" />
     <meta property="og:title" content="Docker基础命令" />
-<meta property="og:description" content="前言 随着容器化技术的推广,在不久的将来,大多数的公司都将采用容器化技术对现有的业务进行改造,因此容器化是一个大趋势, 在当下, 正值云原生的发展的前期, 掌握容器化技术, 对于云原生的业务的了解也是一种帮助, 本文主要还是整理一下Docker的基本命令, Docker基本命令其实很好找到, 本文只是对自己的掌握的命令的一个总结和对Docker命令的整理, 以防自己以后会忘记.
-本文采用的是https://www.docker.com/play-with-docker提供的 每次提供四个小时的试用期, 完全可以满足使用.
-内容 获取镜像(docker pull) 命令 image_name是镜像的名称 后面如果没有tag 则默认拉去最新的镜像,如果有则拉去对应Tag号的镜像
-demo 带Tag 不带Tag 查看镜像信息 命令&amp;&amp;demo 搜寻镜像 命令 参数解释
-demo 删除镜像 删除一个或者多个镜像 注意删除容器时 docker rm CONTAINER
-命令 参数
-demo 创建镜像 从一个变化的容器种创建一个镜像,为何这样说,因为容器是可写的,而镜像也就是image是只读的.
-命令 参数
-demo 存入和载入镜像 存入镜像 导出镜像为本地tar文档
-命令 参数
-demo 载入镜像 将导出的tar文件导入到本地镜像仓库中,会导入镜像和其元数据信息
-命令 参数
-demo " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://lihui.net/docker-base-command.html" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-01-13T15:57:45+00:00" />
-<meta property="article:modified_time" content="2021-01-13T15:57:45+00:00" />
-
-<meta itemprop="name" content="Docker基础命令">
-<meta itemprop="description" content="前言 随着容器化技术的推广,在不久的将来,大多数的公司都将采用容器化技术对现有的业务进行改造,因此容器化是一个大趋势, 在当下, 正值云原生的发展的前期, 掌握容器化技术, 对于云原生的业务的了解也是一种帮助, 本文主要还是整理一下Docker的基本命令, Docker基本命令其实很好找到, 本文只是对自己的掌握的命令的一个总结和对Docker命令的整理, 以防自己以后会忘记.
-本文采用的是https://www.docker.com/play-with-docker提供的 每次提供四个小时的试用期, 完全可以满足使用.
-内容 获取镜像(docker pull) 命令 image_name是镜像的名称 后面如果没有tag 则默认拉去最新的镜像,如果有则拉去对应Tag号的镜像
-demo 带Tag 不带Tag 查看镜像信息 命令&amp;&amp;demo 搜寻镜像 命令 参数解释
-demo 删除镜像 删除一个或者多个镜像 注意删除容器时 docker rm CONTAINER
-命令 参数
-demo 创建镜像 从一个变化的容器种创建一个镜像,为何这样说,因为容器是可写的,而镜像也就是image是只读的.
-命令 参数
-demo 存入和载入镜像 存入镜像 导出镜像为本地tar文档
-命令 参数
-demo 载入镜像 将导出的tar文件导入到本地镜像仓库中,会导入镜像和其元数据信息
-命令 参数
-demo "><meta itemprop="datePublished" content="2021-01-13T15:57:45+00:00" />
-<meta itemprop="dateModified" content="2021-01-13T15:57:45+00:00" />
-<meta itemprop="wordCount" content="54">
-<meta itemprop="keywords" content="Docker," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Docker基础命令"/>
-<meta name="twitter:description" content="前言 随着容器化技术的推广,在不久的将来,大多数的公司都将采用容器化技术对现有的业务进行改造,因此容器化是一个大趋势, 在当下, 正值云原生的发展的前期, 掌握容器化技术, 对于云原生的业务的了解也是一种帮助, 本文主要还是整理一下Docker的基本命令, Docker基本命令其实很好找到, 本文只是对自己的掌握的命令的一个总结和对Docker命令的整理, 以防自己以后会忘记.
-本文采用的是https://www.docker.com/play-with-docker提供的 每次提供四个小时的试用期, 完全可以满足使用.
-内容 获取镜像(docker pull) 命令 image_name是镜像的名称 后面如果没有tag 则默认拉去最新的镜像,如果有则拉去对应Tag号的镜像
-demo 带Tag 不带Tag 查看镜像信息 命令&amp;&amp;demo 搜寻镜像 命令 参数解释
-demo 删除镜像 删除一个或者多个镜像 注意删除容器时 docker rm CONTAINER
-命令 参数
-demo 创建镜像 从一个变化的容器种创建一个镜像,为何这样说,因为容器是可写的,而镜像也就是image是只读的.
-命令 参数
-demo 存入和载入镜像 存入镜像 导出镜像为本地tar文档
-命令 参数
-demo 载入镜像 将导出的tar文件导入到本地镜像仓库中,会导入镜像和其元数据信息
-命令 参数
-demo "/>
-
-	
-  </head>
-
-  <body class="ma0 avenir bg-near-white">
+    <meta property="twitter:title" content="Docker基础命令" />
+    
 
     
-   
-  
+    <meta name="description" content="">
+    <meta property="og:description" content="" />
+    <meta property="twitter:description" content="" />
+    
 
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
-      
-        lihui
-      
-    </a>
-    <div class="flex-l items-center">
-      
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
 
-      
-      
-<div class="ananke-socials">
-  
-</div>
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>Docker基础命令-</title>
+
+    <link rel="canonical" href="/docker-base-command.html">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">lihui</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/cli%E5%BA%94%E7%94%A8">cli应用</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/docker">docker</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/git%E7%B3%BB%E5%88%97">git系列</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/linux">linux</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/shell">shell</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/uncategorized">uncategorized</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E4%BB%8E0%E5%88%B01">从0到1</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96">博客优化</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%90%84%E7%B3%BB%E5%88%97%E6%80%BB%E7%AB%A0%E8%8A%82">各系列总章节</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%91%A8%E5%B9%B4%E6%80%BB%E7%BB%93">周年总结</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%AE%89%E5%85%A8">安全</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93">年度总结</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92">年度计划</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%84%9F%E6%83%B3">感想</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%8A%80%E6%9C%AF">技术</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91">敏捷开发</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB">未分类</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E7%9F%A5%E8%AF%86">知识</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E8%AF%BB%E4%B9%A6">读书</a>
+                        </li>
+                        
+                    
+                    
+		    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
     </div>
-  </div>
+    
 </nav>
-
-    </div>
-  </header>
-
-
-
-    <main class="pb7" role="main">
-      
-  
-  <article class="flex-l flex-wrap justify-between mw8 center ph3">
-    <header class="mt4 w-100">
-      <aside class="instapaper_ignoref b helvetica tracked">
-          
-        POSTS
-      </aside>
-      
-
-
-
-
-
-
-
-
-
-
-  <div id="sharing" class="mt3 ananke-socials">
+<script>
     
-  </div>
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
 
 
-      <h1 class="f1 athelas mt3 mb1">Docker基础命令</h1>
-      
-      <p class="tracked">
-          By <strong>
-          
-              Li Hui
-          
-          </strong>
-      </p>
-      
-      
-      
-      <time class="f6 mv4 dib tracked" datetime="2021-01-13T15:57:45Z">January 13, 2021</time>
-      
 
-      
-      
-    </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210113235714155.png" alt="image-20210113235714155"></p>
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/docker" title="Docker">
+                            Docker
+                        </a>
+                        
+                    </div>
+                    <h1>Docker基础命令</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                Li Hui
+                             
+                            on 
+                            Wednesday, January 13, 2021
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <p>
+  <img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210113235714155.png" alt="image-20210113235714155">
+
+</p>
 <h1 id="前言">前言</h1>
 <p>随着容器化技术的推广,在不久的将来,大多数的公司都将采用容器化技术对现有的业务进行改造,因此容器化是一个大趋势, 在当下, 正值云原生的发展的前期, 掌握容器化技术, 对于云原生的业务的了解也是一种帮助, 本文主要还是整理一下Docker的基本命令, Docker基本命令其实很好找到, 本文只是对自己的掌握的命令的一个总结和对Docker命令的整理, 以防自己以后会忘记.</p>
 <p>本文采用的是<!-- raw HTML omitted --><a href="https://www.docker.com/play-with-docker">https://www.docker.com/play-with-docker</a><!-- raw HTML omitted --> 提供的 每次提供四个小时的试用期, 完全可以满足使用.</p>
@@ -184,16 +287,25 @@ demo "/>
 <h4 id="带tag">带Tag</h4>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210113232024768.png" alt="image-20210113232024768"></p>
+<p>
+  <img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210113232024768.png" alt="image-20210113232024768">
+
+</p>
 <h4 id="不带tag">不带Tag</h4>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210113232044202.png" alt="image-20210113232044202"></p>
+<p>
+  <img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210113232044202.png" alt="image-20210113232044202">
+
+</p>
 <h2 id="查看镜像信息">查看镜像信息</h2>
 <h3 id="命令demo">命令&amp;&amp;demo</h3>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210113232218482.png" alt="image-20210113232218482"></p>
+<p>
+  <img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210113232218482.png" alt="image-20210113232218482">
+
+</p>
 <h2 id="搜寻镜像">搜寻镜像</h2>
 <h3 id="命令-1">命令</h3>
 <!-- raw HTML omitted -->
@@ -204,7 +316,10 @@ demo "/>
 <h3 id="demo-1">demo</h3>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210113233133843.png" alt="image-20210113233133843"></p>
+<p>
+  <img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210113233133843.png" alt="image-20210113233133843">
+
+</p>
 <h2 id="删除镜像">删除镜像</h2>
 <p>删除一个或者多个镜像 注意删除容器时 docker rm CONTAINER</p>
 <h3 id="命令-2">命令</h3>
@@ -216,7 +331,10 @@ demo "/>
 <h3 id="demo-2">demo</h3>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210113233530266.png" alt="image-20210113233530266"></p>
+<p>
+  <img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210113233530266.png" alt="image-20210113233530266">
+
+</p>
 <h2 id="创建镜像">创建镜像</h2>
 <p>从一个变化的容器种创建一个镜像,为何这样说,因为容器是可写的,而镜像也就是image是只读的.</p>
 <h3 id="命令-3">命令</h3>
@@ -228,8 +346,14 @@ demo "/>
 <h3 id="demo-3">demo</h3>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210113234321827.png" alt="image-20210113234321827"></p>
-<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210113234332658.png" alt="image-20210113234332658"></p>
+<p>
+  <img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210113234321827.png" alt="image-20210113234321827">
+
+</p>
+<p>
+  <img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210113234332658.png" alt="image-20210113234332658">
+
+</p>
 <h2 id="存入和载入镜像">存入和载入镜像</h2>
 <h3 id="存入镜像">存入镜像</h3>
 <p>导出镜像为本地tar文档</p>
@@ -242,7 +366,10 @@ demo "/>
 <h3 id="demo-4">demo</h3>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210113234736875.png" alt="image-20210113234736875"></p>
+<p>
+  <img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210113234736875.png" alt="image-20210113234736875">
+
+</p>
 <h3 id="载入镜像">载入镜像</h3>
 <p>将导出的tar文件导入到本地镜像仓库中,会导入镜像和其元数据信息</p>
 <h4 id="命令-5">命令</h4>
@@ -254,52 +381,219 @@ demo "/>
 <h4 id="demo-5">demo</h4>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210113235129588.png" alt="image-20210113235129588"></p>
-<ul class="pa0">
-  
-   <li class="list di">
-     <a href="/tags/docker" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Docker</a>
-   </li>
-  
-</ul>
-<div class="mt6 instapaper_ignoref">
-      
-      
-      </div>
+<p>
+  <img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/img/image-20210113235129588.png" alt="image-20210113235129588">
+
+</p>
+
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/book-intoduction-to-json.html" data-toggle="tooltip" data-placement="top" title="[技术书籍]JSON必知必会">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/treat-time-as-friend.html" data-toggle="tooltip" data-placement="top" title="[人文书籍] 把时间当作朋友">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+
+                
+                
+            </div>
+        </div>
     </div>
-
-    <aside class="w-30-l mt6-l">
-
+</article>
 
 
 
-  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
-    <p class="f5 b mb3">Related</p>
-    <ul class="pa0 list">
-	   
-	     <li  class="mb2">
-          <a href="/docker-init.html">Docker原理研究</a>
-        </li>
-	    
-    </ul>
-</div>
 
-</aside>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                    
 
-  </article>
+                    
+                    
+                    
 
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
-    &copy;  lihui 2022 
-  </a>
-    <div>
-<div class="ananke-socials">
-  
-</div></div>
-  </div>
+                    
+
+		    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; lihui 2022
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
 </footer>
 
-  </body>
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+</body>
 </html>

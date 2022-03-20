@@ -5,7 +5,7 @@
     <link>https://lihui.net/tags/%E7%9F%A5%E8%AF%86/</link>
     <description>Recent content in 知识 on lihui</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Mon, 25 Jan 2021 12:25:51 +0000</lastBuildDate><atom:link href="https://lihui.net/tags/%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VPC笔记</title>
@@ -16,7 +16,7 @@
       <description> 还是介绍的一般的顺序, VPC是什么, 为什么要用, 对未来有什么好处.
  一搜索VPC,发现互联网的顶部厂商, 都排在最前面, 何为VPC(Virtual Private Cloud) 虚拟私有网络, 为何要用VPC, 它可以解决什么问题, VPC有什么好处, 在此学习下.
 何为VPC Amazon 首先实现的亚马逊虚拟私有云VPC网络, 其服务允许用户透过 IPsec虚拟私有网络(VPN) 来连结 Amazon EC2VPC介绍wikipedia的图片如下图所示, 虚拟私有云是存在于共享或公有云中的私有云(Private Cloud),也是一种网际云(Intercloud).
-VPC有何优点 经过参考资料中的几大云服务厂商的对比, 我所了解的VPC的优点是, 不同VPC网络100%逻辑隔离, 保证数据的安全性, 同时采用专线或 IPsec 将现有网络安全地连接到 VPC 网络。保证数据的安全性, 可以做到不同区域的网络进行互通,而无须再公网上进行通信, 还有一个很重要的优点是其的可扩展性, 自定义任意多的IP地址,子网,DHCP等服务, 且对于不同的网络可以采用不同的规则进行控制,可以通过软件定义网络的方式管理VPC网络的控制元素, 且具有容灾恢复(利用应用复制功能创建新的相同的应用), 且具有VPC对等连接的功能, 杜绝带宽瓶颈或单点故障. 且各个云厂商都有基于VPC流的日志系统. 且可以减少部分开销(无需外网的固定IP,这也是保证安全的因素之一).
+ VPC有何优点 经过参考资料中的几大云服务厂商的对比, 我所了解的VPC的优点是, 不同VPC网络100%逻辑隔离, 保证数据的安全性, 同时采用专线或 IPsec 将现有网络安全地连接到 VPC 网络。保证数据的安全性, 可以做到不同区域的网络进行互通,而无须再公网上进行通信, 还有一个很重要的优点是其的可扩展性, 自定义任意多的IP地址,子网,DHCP等服务, 且对于不同的网络可以采用不同的规则进行控制,可以通过软件定义网络的方式管理VPC网络的控制元素, 且具有容灾恢复(利用应用复制功能创建新的相同的应用), 且具有VPC对等连接的功能, 杜绝带宽瓶颈或单点故障. 且各个云厂商都有基于VPC流的日志系统. 且可以减少部分开销(无需外网的固定IP,这也是保证安全的因素之一).
 VPC对于企业来说比较重要,采用VPC网络, 可以直接通过专线或 IPsec 将现有网络安全地连接到 VPC 网络, 在当下云原生的时代越来重要, 内网安全, 减少运维操作, 加固内网安全, 在减少企业自运维主机的基础上, 加强企业数据的安全性和高可用性. 减少企业的成本, 很重要, 且VPC的快速扩展, 任意伸缩, 高效的容灾恢复机制, 以及日志系统都给企业带来了简便和安全的特性.
 add.
  云原生 从本质上来说，云原生是一种设计模式，它要求云原生应用具备可用性和伸缩性，以及自动化部署和管理的能力，可随处运行，并且能够通过持续集成、持续交付工具提升研发、测试与发布的效率。[摘自未来架构: 从服务化到云原生]  参考资料  维基百科 亚马逊VPC介绍 VPC浅谈&amp;ndash;知乎 Google Cloud VPC 腾讯云VPC介绍 alibaba Cloud VPC  </description>

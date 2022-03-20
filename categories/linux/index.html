@@ -1,357 +1,434 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
+<html lang="zh-CN">
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     
-    <title>Linux | lihui</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.94.2" />
+    <meta property="og:site_name" content="lihui">
+    <meta property="og:type" content="article">
+
     
-    
-    
-    
-      <meta name="robots" content="noindex, nofollow">
+    <meta property="og:image" content="https://lihui.net//">
+    <meta property="twitter:image" content="https://lihui.net//" />
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
-
-
-
-    
-    
-    
-      
-
-    
-
-    
-    
-      <link href="/categories/linux/index.xml" rel="alternate" type="application/rss+xml" title="lihui" />
-      <link href="/categories/linux/index.xml" rel="feed" type="application/rss+xml" title="lihui" />
-      
-    
-    
+    <meta name="title" content="Linux" />
     <meta property="og:title" content="Linux" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://lihui.net/categories/linux/" />
-
-<meta itemprop="name" content="Linux">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Linux"/>
-<meta name="twitter:description" content=""/>
-
-	
-  </head>
-
-  <body class="ma0 avenir bg-near-white">
-
+    <meta property="twitter:title" content="Linux" />
     
 
-  <header>
-    <div class="pb3-m pb6-l bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
-      
-        lihui
-      
-    </a>
-    <div class="flex-l items-center">
-      
+    
+    <meta name="description" content="">
+    <meta property="og:description" content="" />
+    <meta property="twitter:description" content="" />
+    
 
-      
-      
-<div class="ananke-socials">
-  
-</div>
-    </div>
-  </div>
-</nav>
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
 
-      <div class="tc-l pv3 ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
-          Linux
-        </h1>
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>Linux-</title>
+
+    <link rel="canonical" href="/categories/linux/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
         
-      </div>
-    </div>
-  </header>
-
-
-    <main class="pb7" role="main">
-      
-  <article class="cf pa3 pa4-m pa4-l">
-    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links mid-gray">
-      <p>Below you will find pages that utilize the taxonomy term “Linux”</p>
-    </div>
-  </article>
-  <div class="mw8 center">
-    <section class="flex-ns flex-wrap justify-around mt5">
-      
-        <div class="relative w-100  mb4 bg-white">
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        January 11, 2021
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/docker-init.html" class="link black dim">
-        Docker原理研究
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      前言 为何要了解原理? 了解原理对于Docker的学习使用有什么好处吗? Docker和其他的虚拟化(比如KVM等虚拟化的方式)有什么区别? 为啥现在人们都开始用Docker了?
-首先来说 如果实际使用的话, 涉及到简单的使用方面,其实并不会涉及到原理的问题, 一般的软件也好, 编程语言也好, 其主要目的是为了让人更少的关心原理的问题,将更多的精力放在处理业务逻辑上, 对于原理方面的问题, 最好可以一点都不用考虑, 那对我们来说了解原理有什么好处呢? 花时间了解,很少使用的原理到底值不值?
-我认为,了解原理是对问题本质的一种把握, 其实事情都有相似的地方, 软件的产生都有它存在的意义和目的, Docker解决了什么问题呢? 这个问题好像并没有什么标准的方案? 我在此写一下我自己的看法.
-首先解决的是环境不一致的问题, 常见的情况如下:
-A: 你的程序跑不起来啊?
-B: 不可能的,在我的机器上好好的,怎么在你的机器上不行了呢? 肯定是你系统环境和我的环境不一致造成的.
-第一个问题: 环境不一致的问题.
-A: 我的应用为啥自从你的应用上线后就不好使了? 是不是你的应用在这台服务器做了什么?
-B: 我修改了
-```,可能对环境造成了影响,没办法的,**环境无法隔离**啊.
-第二个问题: 同一台服务器环境无法隔离,如果采用虚拟化(尤指虚拟机),则会出现下面的情况
-A: 为啥我应用很小,还需要再虚拟机上跑, 还得浪费一个装操作系统的资源,而且启动一个虚拟机还这么慢.
-B: 这没办法,服务机的虚拟化解决的是资源调配的问题,Docker解决的是应用的开发,测试和部署的问题.
-第三个问题: 服务器虚拟化浪费资源,且启动启动过程慢
-所以Docker解决的是什么问题: 1. 隔绝物理硬件差异性和系统差异性 2. 快速分发和部署
-那Docker的原理是什么呢? Docker使用Go语言开发, 使用Linux内核和内核的功能(Cgroup和namspace)来分割进程,以便各进程相互独立运行,Cgroups是Linux的尼日河功能,它让两件事情变为可能,限制Linux进程组的资源占用(内存 CPU);为进程组制作PID UTS IPC 网络 用户及转载命名空间, 而采用Union FS 等技术 可以实现将一个文件系统挂载到其他的文件系统之上.由此可以将系统的进程 网络 文件系统进行隔离,从而实现Docker的环境的隔离.
-引用
- https://juejin.cn/post/6844904039180681229 https://www.jianshu.com/p/7a58ad7fade4  
-    </div>
-  </div>
-
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">lihui</a>
         </div>
-      
-        <div class="relative w-100  mb4 bg-white">
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        January 10, 2021
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/use-ubuntu-bt-install-ghost.html" class="link black dim">
-        使用Ubuntu 及宝塔搭建Ghost平台
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      说明:
- 安装Ghost博客的步骤比较多一点，在此记录下，以备以后学习与检查。
- 所需:
- 服务器或者本地虚拟机*1 SSH 软件*1 电脑*1  安装步骤 1. 安装宝塔面板 这一步骤在上一篇文章发表过,可以查看一下上一篇的文章
-2. 配置安装Ghost 1. 首先使用SSH软件连接实例 这个简单，直接在XShell 或者Putty中填写服务器的信息即可
-2. 创建新用户 本文以ghoster为例 切换到Root权限下：
-为新用户 增加 sudo权限
-切换到ghoster用户 并确定sudo权限
-如上图所示 # 开头则表明已经具有sudo 权限
-3. 更新安装包 使用ghoster 更新系统
-直接使用上面的用户root更新服务器即可
-可能会出现下面的情况 直接点击回车即可
-4. 软件安装（本处只需要安装NodeJS即可，其他软件宝塔面板已经安装上） 本处只需要安装Node.JS即可，其他的环境（Nginx, MySQL）使用宝塔面板已经安装上
-加入源
-安装NodeJS
-５.安装配置Ghost 安装Ghost
-切换到/www/wwwroot/目录下（为了查找的时候方便，原则上任何一个可以操作的目录均可），进行安装配置
-切换目录
-创建文件夹 ghost
-为ghoster用户配置此文件夹的权限
-修改文件夹权限
-进入文件夹安装程序（此时用户仍为ghoster）
-开始使用ghost-cli安装ghost 博客
-前期准备 在宝塔中创建新的数据库
-开始安装Ghost
-此时注意 当需要进行Ngnix的配置的时候输入N (此处不需要进行Nginx的配置),一会我们使用宝塔对Nignx进行配置
-安装结束后 会默认采用2368端口进行监听 注意显示的端口 如果不知道的化 可以查看安装目录的config.production.json 的port字段即可
-    </div>
-  </div>
 
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/cli%E5%BA%94%E7%94%A8">cli应用</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/docker">docker</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/git%E7%B3%BB%E5%88%97">git系列</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/linux">linux</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/shell">shell</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/uncategorized">uncategorized</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E4%BB%8E0%E5%88%B01">从0到1</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96">博客优化</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%90%84%E7%B3%BB%E5%88%97%E6%80%BB%E7%AB%A0%E8%8A%82">各系列总章节</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%91%A8%E5%B9%B4%E6%80%BB%E7%BB%93">周年总结</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%AE%89%E5%85%A8">安全</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93">年度总结</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92">年度计划</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%84%9F%E6%83%B3">感想</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%8A%80%E6%9C%AF">技术</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91">敏捷开发</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB">未分类</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E7%9F%A5%E8%AF%86">知识</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E8%AF%BB%E4%B9%A6">读书</a>
+                        </li>
+                        
+                    
+                    
+		    
+
+                    
+                </ul>
+            </div>
         </div>
-      
-        <div class="relative w-100  mb4 bg-white">
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        January 3, 2021
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/install-bt-panel.html" class="link black dim">
-        [Linux]Ubuntu安装宝塔面板
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      准备:  服务器一个(本机虚拟机也可以) 上网环境 SSH软件(Putty || Xshell)  涉及网址:  https://www.bt.cn/ https://www.netsarang.com/zh/xshell/ https://www.putty.org/  安装步骤: 1. 购买服务器 || 打开虚拟机 这一步骤比较简单,略过
-2. 连接SSH 下载SSH软件,安装,这一步骤比较简单,略过
-3. 安装宝塔 宝塔首页选择对应的系统,选择下面的立即安装
-选择合适的Linux发行版 本文使用的Ubuntu ,不过我更推荐CentOS(本文时间2021年1月3日 CentOS正在经历变革,以后可能会有新的稳定发行版),点击复制代码即可
-打开SSH客户端,并连接服务器
-将上述复制的内容粘贴 根据提示进行操作,下面的地方输入y即可
-最终会出现 下面的提示 面板地址和username 和password 关键信息此处打码 注意在相应的内容服务商开通8888端口的TCP协议访问权限
-输入面板地址 进行访问(若此时访问时间过长,或者地址无法访问,请在此查看是否在服务商中放行了8888端口) 而后出现下面的画面证明安装面板成功
-安装LNPM环境 同意协议后 推荐安装第一个LNMP的环境
-等待程序安装完成即可
-总结 宝塔的安装还是相对来说比较简单的,总结下来需要一下的步骤, 1. 购买服务器 2. 安装SSH软件并登录到服务器 3. 安装宝塔的环境 4. 安装LNPM的环境.
-此处注意:
- 当不需要面板服务进行操作的时候推荐在后台关闭掉面板服务,宝塔面板出现严重性的问题,至少已经发生了两次了,数据安全一定要保证. 注意修改SSH端口 SSH端口一定不要用22 端口 现在有很多工具可以扫描22号端口 修改为其他的端口 防止被扫描  
+        
     </div>
-  </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
 
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+<header class="intro-header" style="background-image: url('/')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading">
+                    <h1>lihui </h1>
+                    
+		    <span class="subheading"></span>
+                </div>
+            </div>
         </div>
-      
-        <div class="relative w-100  mb4 bg-white">
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        September 26, 2020
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/create-linux-user.html" class="link black dim">
-        [Linux系列]创建Linux用户
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      前言 如果直接在Linux中使用root账户,真的十分危险,root拥有最高的权限,一方面如果安装其他的软件,虽然说是畅通无阻,但是与之同时带来的问题是,如果一旦账户让其他人拿到,岂不是很危险,因此推荐采用先创建的账户进入,特殊的时候采用切换到root以保证服务器的安全.
-步骤 创建用户 创建用户是一个重要的问题 当然也特别的简单
-为用户设定密码
-一般推荐是新的服务器首先创建新的组,再在组的基础上创建新的用户,这样子的话比较稳妥,
-创建用户组 命令行
-如果现在是root账户 且命令行前的是#(sharp) 可以直接使用
-示例:
-查看所有的用户组
-返回信息：(一般不要截这张图，这张图会暴露你所有的用户组，我这是开发测试机器，随时重置系统所以无所谓)
-创建一个新用户到用户组中 命令行
-示例：
-检测是否生效
-返回信息：
-总结 创建用户的目的在于什么呢？ 有的是不同的用户操作不同的内容，将用户相互隔离，有的是为了安全起见，就和操作系统一样，如果都是一个root，一个新手 用户直接rm了 岂不是很恐怖，而且也极大的保护了用户的内容不被其他人看到。
     </div>
-  </div>
+</header>
 
-        </div>
-      
-        <div class="relative w-100  mb4 bg-white">
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        September 25, 2020
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/learn-curl.html" class="link black dim">
-        CURL学习教程
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      前言 CURL是Linux中使用比较多的软件，我也有所耳闻，我也曾经使用过，不过使用的时间间隔的比较长了，也不知道这篇文章会写多长时间全当记录吧。
-内容 首先看看其帮助的内容，一般cmd帮助中都有其全部命令的信息（不然怎么用啊
-其中有全部的内容 本文章中挑选常用的命令做测试。
-直接请求Get 如果我们不给其指定任何参数 ，其将使用Get请求请求，如果访问某一网址 则返回这个网页
-命令行：
-示例
-返回结果：（因为太多了只是截取了一小部分
-指定用户代理 何为用户代理 当我们使用浏览器等发起网络请求中，就自动的带上浏览器的用户代理，比如我们使用浏览器请求http://lihui.net的时候,使用chrome请求的时候如下图
-最下面的一行，即是用户代理
-在curl加入-A 参数即可以指定用户的user-agent
-那问题来了 curl 不指定user-agent的时候是什么呢 当不指定user-agent的时候默认的为curl/{{version}}
-如何去除呢 可以使用下面的命令可以将user-agent去除
-携带用户cookie 使用参数 -b 可以使得curl 在交互中携带用户的cookie
-命令行如下图所示 下面的命令会向example.com 发送名为A 值为B的cookie 如果要发送多个cookie 要以;分割（都在“”内）
-示例
-返回结果
-因为我的网站没有设置相关的cookie认证 等操作，因此返回的页面是和上面的一样的。
-我们可以发送cookie文件到远端的网站
-发送cookie文件
-命令行
-既然有发送文件了，可不可以接受cookie呢
-答案是肯定的，保存返回的cookie到文件到命令行如下图所示
-总结 curl命令行的作用很大，需要学习的内容还有很多，熟悉命令行的作用也有很大。
-文章引用  http://www.ruanyifeng.com/blog/2019/09/curl-reference.html  
-    </div>
-  </div>
 
-        </div>
-      
-        <div class="relative w-100  mb4 bg-white">
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        September 23, 2020
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/change-ssh-port.html" class="link black dim">
-        [Linux系列]修改SSH端口 防止端口扫描
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      前言 网络上开的服务器，只要是大的厂商的服务器，都免不了受到很多机器的自动扫描，自动尝试登录，这就很头疼，有几个比较好的方法，第一个只允许特定IP登录（这种方法有些问题，尤其是个人很难申请到固定的外网ip地址（内网不算，内网不会还有人扫描把。。）），还有一种较为常用的方法是修改SSH端口，一定要注意，修改SSH端口的时候，一定要先使用新的客户端进行登录成功后，再关掉原来的连接，否则有可能修改失败，无法连接到服务器，别问我咋知道的
-步骤 这个步骤分为三部分 修改sshd_config配置文件，重启ssh服务（并非服务器），检测效果并注释掉原本端口。
-修改sshd_config文件 sshd_config文件在 /etc/ssh/sshd_config 使用下面的命令编辑
-在此处下面添加Port {{你想改的端口号}}(提示：vi中输入i进度编辑模式)
-我修改的如下图所示
-使用ESC -&gt;:-&gt;wq保存
-重启服务 CentOS7重启ssh服务
-测试连接情况并注释原来的端口 注意：此时一定要注意开启服务商的防火墙，服务商一般都有各自的防火墙，一定要注意开，否则无法使用。
-使用新的端口登陆 比如我这里是22011
-命令行如下 使用工具是一样的
-比如我的
-此时如果连接成功就可以注释掉原来的端口并使用防火墙关闭掉22号端口(双重保障) 注意：发现的问题 腾讯云轻量云22号端口是本来就是注释掉的 但是 还是可以使用
-此时大功告成 再也没有几万次尝试登陆的信息了。
-总结 端口扫描解决起来很麻烦，毕竟对机器扫描的不是真实的人，也是机器，而且机器还无休，所以最好的办法就是修改端口和修改准入ip（也可以使用跳板机），使用这种方法可以大大的减少被爆破的几率。
-    </div>
-  </div>
 
-        </div>
-      
-        <div class="relative w-100  mb4 bg-white">
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        September 20, 2020
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/linux-change-hostname.html" class="link black dim">
-        [linux系列] 修改主机用户名
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      前言 使用腾讯云 阿里云 Google Cloud AWS AZURE 等等云厂商 默认给的用户名都是很奇怪的 一点都没意思，也没得生产力（好像有了好名字就有生产力一样）本问介绍的是，将主机名修改为自己定义的。
-步骤 可以有几种情况修改，仅在本次启动前起效果，永久起效果这两种情况。
-本次生效 命令行
-重启终端生效 但是重启后失效
-长期生效（需要重启） 命令行
-在文件中填写你想要修改的名字即可
-而后输入： 在输入wq(保存并退出)保存并退出
-此时便可以重启 修改即可生效
-总结 这个比较简单 可能有问题的在于vi命令行，先挖个坑，以后慢慢填（😂
-    </div>
-  </div>
-
-        </div>
-      
-    </section>
-  </div>
-
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
-    &copy;  lihui 2022 
-  </a>
-    <div>
-<div class="ananke-socials">
   
-</div></div>
-  </div>
+<div class="container">
+    <div class="row">
+        
+        
+   	    <div class="
+            col-lg-8 col-lg-offset-1
+            col-md-8 col-md-offset-1
+            col-sm-12
+            col-xs-12
+            post-container
+        ">
+            
+
+
+            
+
+
+
+       	</div>
+        
+
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+    
+
+    
+	
+    
+    
+
+    
+    
+</div>
+
+	</div>
+</div>
+
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                    
+
+                    
+                    
+                    
+
+                    
+
+		    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; lihui 2022
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
 </footer>
 
-  </body>
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+</body>
 </html>

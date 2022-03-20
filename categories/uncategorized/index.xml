@@ -5,7 +5,7 @@
     <link>https://lihui.net/categories/uncategorized/</link>
     <description>Recent content in Uncategorized on lihui</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Mon, 07 Dec 2020 00:00:00 +8000</lastBuildDate><atom:link href="https://lihui.net/categories/uncategorized/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[读书笔记]增长黑客</title>
@@ -43,16 +43,14 @@
 GUI(graphical user interface)和CLI(command-line interface）各有各的优点 命令行可以一键直达目标，不需要使用鼠标进行多次寻找和点击 图形化界面可以便捷的操作系统的应用（记忆不用要记忆和使用命令）
 内容 ls显示当前文件夹的内容 使用ls命令可以快速的显示当前文件夹的内容（最常使用的命令 不信你查查你的bash history）
 最常用的命令
-   命令 解释 显示效果     ls 显示当前文件夹的所有内容(不包括隐藏内容)    ls -l 显示当前文件夹的详细内容    ls -A 显示当前文件夹的全部内容（包括隐藏内容 比如.git）     pwd显示当前目录 使用场景： 查找现在在那个目录下
+   命令 解释 显示效果     ls 显示当前文件夹的所有内容(不包括隐藏内容)     ls -l 显示当前文件夹的详细内容     ls -A 显示当前文件夹的全部内容（包括隐藏内容 比如.git）      pwd显示当前目录 使用场景： 查找现在在那个目录下
 返回效果
-sudo 使用管理员权限 使用场景： 诶 当前权限无法安装应用，诶 这个软件需要管理员权限，此时就需要sudo 了
+ sudo 使用管理员权限 使用场景： 诶 当前权限无法安装应用，诶 这个软件需要管理员权限，此时就需要sudo 了
 一般来说 可以切换root进行操作（不推荐在服务器上使用root作为直接登陆账户，推荐采用一个非root用户进行登陆 且密码最好不要与root相同）
 输入密码即可切换为root（输入密码的时候隐藏了 所以无法看到密码）
-当前面的变为#(sharp)的形状的时候就已经是root（或者正在使用管理员权限了）
+  当前面的变为#(sharp)的形状的时候就已经是root（或者正在使用管理员权限了）
 chmod 为文件授权 使用场景：文件要进行执行，发现权限不够/文件无法写入（readonly权限不够）
-此时我们有一个文件 没有执行权限 无法执行 如下图所示
-Chmod 加上执行权限
-我们可以看到 此时软件可以正常的执行了。 ping pong!</description>
+此时我们有一个文件 没有执行权限 无法执行 如下图所示</description>
     </item>
     
   </channel>

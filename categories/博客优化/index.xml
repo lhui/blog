@@ -5,7 +5,7 @@
     <link>https://lihui.net/categories/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/</link>
     <description>Recent content in 博客优化 on lihui</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Mon, 14 Sep 2020 12:07:16 +0000</lastBuildDate><atom:link href="https://lihui.net/categories/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[博客优化]为Wordpress加入伪静态</title>
@@ -25,8 +25,8 @@
 下面的为执行命令
 此时ngnix 已经生效 伪静态的服务器端已经配置完成
 Wordpress端的配置 Wordpress端的配置相对来说比较简单，直接找到设置，在从中找到固定链接，进行修改，如下图所示
-我采用的修改为下图所示
-点击保存更改就已经修改成功，此时最好打开一个新的页面（此页面先不关闭），进行测试时候已经修改为伪静态（即上述的形式），如果出现问题，尽快修改回第一个，减少网站的不可访问时间。
+ 我采用的修改为下图所示
+ 点击保存更改就已经修改成功，此时最好打开一个新的页面（此页面先不关闭），进行测试时候已经修改为伪静态（即上述的形式），如果出现问题，尽快修改回第一个，减少网站的不可访问时间。
 思考 有时候，知识觉得问题很复杂，尝试过后才发现也就那个样子，差不多的。</description>
     </item>
     
@@ -63,9 +63,9 @@ Ngnix 配置 首先找到自己的配置文件的位置。
 安装设置过程 本次的机器配置：
  CentOS 7 腾讯云轻量云服务器一台 终端软件一个（可以直接使用网页）  安装redis(推荐采用yum源) 加入epel源 安装redis 启动服务 此时不会显示任何信息
 此时redis的服务已经启动 可以使用redis-cli进入命令行模式 进行测试 比较可爱的ping pong 就出现了
-Wordpress加入插件 我采用的是下面的插件（下载数量比较高）
-进行配置 进入插件的设置界面 点击 Enable Object Cache 启动后会自动进行连接 当发现connected的时候证明连接成功
-速度对比 加入缓存前（2020-09-08 21:23） 加入缓存后 （2020-09-08 21:31） 结论 经过测试发现有所提升，但是提升的不是很明显（也可以说很明晰），也可能和无线网和腾讯云轻量云晚上的宽带有影响，使用此种方法，可以减少磁盘的读写，更加快速的读取信息。</description>
+ Wordpress加入插件 我采用的是下面的插件（下载数量比较高）
+ 进行配置 进入插件的设置界面 点击 Enable Object Cache 启动后会自动进行连接 当发现connected的时候证明连接成功
+速度对比 加入缓存前（2020-09-08 21:23）  加入缓存后 （2020-09-08 21:31）  结论 经过测试发现有所提升，但是提升的不是很明显（也可以说很明晰），也可能和无线网和腾讯云轻量云晚上的宽带有影响，使用此种方法，可以减少磁盘的读写，更加快速的读取信息。</description>
     </item>
     
   </channel>

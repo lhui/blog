@@ -5,7 +5,7 @@
     <link>https://lihui.net/categories/git%E7%B3%BB%E5%88%97/</link>
     <description>Recent content in Git系列 on lihui</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Sun, 09 Jan 2022 15:43:27 +0000</lastBuildDate><atom:link href="https://lihui.net/categories/git%E7%B3%BB%E5%88%97/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何使用 gitbook cli工具</title>
@@ -33,19 +33,19 @@
 步骤 如果没有提交(commit) 之所以将这个提到前面，是因为很多情况下，我们都会在写代码的时候忘情的写代码，提价的时候（尤其是使用工具的时候，会不自觉的看一下相应的分支，也有可能是bash的提醒）
 此时 有三个步骤 将修改的代码放入stash区 切换分支 从stash中取出来，这时候使用stash和使用栈类似
 问题最初的情况 （不巧的是在master分支对hello.txt进行了修改）
-直接将所有代码一次写上吧
+ 直接将所有代码一次写上吧
 返回结果 此时我们已经将修改的结果 转移到了dev分支
-如果已经进行了提交commit 此时需要多一个步骤 需要回退到上一个分支(或者需要回退到指定的分支)
+ 如果已经进行了提交commit 此时需要多一个步骤 需要回退到上一个分支(或者需要回退到指定的分支)
 回退到上个commit
 回退到指定分支
 其他的和上面的一致
 操作如下图所示
-已经提交到远程仓库（github/gitlab etc） Emm.. 这个也有两种情况，无私人信息和有私人信息，尤其是把个人的私钥上传了，如果不撤回来的话，那后果好像很严重的。
+    已经提交到远程仓库（github/gitlab etc） Emm.. 这个也有两种情况，无私人信息和有私人信息，尤其是把个人的私钥上传了，如果不撤回来的话，那后果好像很严重的。
 无私人信息 此种情况还比较好，不影响大碍，可以进行反向提交，将上一次的代码如何提交的如何删除即可
 此时本地多了一条commit 将上次的提交内容进行反向提交 即增加了一条删除的commit信息
 此时在提交至远程即可
 有私人信息 此种情况非常非常糟糕，一旦被其他人所使用，后果不堪设想。(如果此篇文章有幸被你看到一定要注意)
-总结 通过上面的步骤，我们可以将各种情况的git信息进行修改，如果有不全面的，欢迎进行留言。
+    总结 通过上面的步骤，我们可以将各种情况的git信息进行修改，如果有不全面的，欢迎进行留言。
 参考文章：
  [https://gorden5566.com/post/1010.html](  </description>
     </item>
@@ -59,7 +59,7 @@
       <description>前言 如果只是使用Git 打标签 推送，合并 无法查看相关的信息，那使用Git的作用可就是太无聊了，使用起来也不是很方便。使用Git log 进行日志的查看是非常有必要的，也是必须的。
 本文章的主要参考资料是git 的官方教程 https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2步骤 无参数版本 命令行 这是最简单的显示，同时也是最全的显示
 返回结果：此处我们可以清晰地看到所有的提交日志 比如commit记录 commit的作者的名字 邮箱 日期 commit的信息 合并的来源 等等
-参数版本 参数对于日志的显示很重要，使用参数可以快速的查找出自己想要查找的内容，尤其是我们只想要一部分信息的时候
+ 参数版本 参数对于日志的显示很重要，使用参数可以快速的查找出自己想要查找的内容，尤其是我们只想要一部分信息的时候
 命令行
 Git 的常用选项[摘自上述网址的表格]
 &amp;lt;th style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 说明 &amp;lt;/th&amp;gt;  &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 按补丁格式显示每个提交引入的差异。 &amp;lt;/td&amp;gt;  &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 显示每次提交的文件修改统计信息。 &amp;lt;/td&amp;gt;  &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 只显示 --stat 中最后的行数修改添加移除统计。 &amp;lt;/td&amp;gt;  &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 仅在提交信息后显示已修改的文件清单。 &amp;lt;/td&amp;gt;  &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 显示新增、修改、删除的文件清单。 &amp;lt;/td&amp;gt;  &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 仅显示 SHA-1 校验和所有 40 个字符中的前几个字符。 &amp;lt;/td&amp;gt;  &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 使用较短的相对时间而不是完整格式显示日期（比如“2 weeks ago”）。 &amp;lt;/td&amp;gt;  &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 在日志旁以 ASCII 图形显示分支与合并历史。 &amp;lt;/td&amp;gt;  &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 使用其他格式显示历史提交信息。可用的选项包括 oneline、short、full、fuller 和 format（用来定义自己的格式）。 &amp;lt;/td&amp;gt;  &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; &amp;lt;code&amp;gt;--pretty=oneline --abbrev-commit&amp;lt;/code&amp;gt; 合用的简写。 [也就是说可以直接在pretty中写或者直接在使用这一行命令] &amp;lt;/td&amp;gt;  示例</description>
@@ -78,7 +78,7 @@ Git 的常用选项[摘自上述网址的表格]
 命令行
 示例
 返回信息
-冲突合并和解决后续更新。</description>
+ 冲突合并和解决后续更新。</description>
     </item>
     
     <item>
@@ -94,29 +94,25 @@ https要求每次进行远程交互的时候采用账号和密码进行认证，
 示例
 第二种
 示例
-经过上述的两种方式的一种方式，我们可以将远程的目录clone到本地,我比较推荐下面一种写法，可以快速的将代码进行提交到远端，不用每次都输入密码。
+ 经过上述的两种方式的一种方式，我们可以将远程的目录clone到本地,我比较推荐下面一种写法，可以快速的将代码进行提交到远端，不用每次都输入密码。
 添加到暂存 git add 使用场景： 当我们修改文件，想将其放入版本管理系统的时候，首先使用git add {{filename}} 将文件放到暂存区域，而后对文件进行提交记录，正式加入版本管理系统
 命令行
 示例
 此时文件已经放到暂存区域(虽然没有返回信息),使用下面的命令可以看到暂存区的文件
-其他指令 提交记录 git commit 使用场景：当我们将代码放到暂存区后想要提交到git记录中，就要使用到commit命令
+ 其他指令 提交记录 git commit 使用场景：当我们将代码放到暂存区后想要提交到git记录中，就要使用到commit命令
 命令行
 示例
 返回结果
-推送分支 git push 使用场景：将本地的分支推送到远端，可以让其他的人看到
+ 推送分支 git push 使用场景：将本地的分支推送到远端，可以让其他的人看到
 返回结果
-拉取更新 git pull 使用场景： 当远程仓库有更新的时候（有人提交了新的代码的时候），我们可以使用git pull 拉取到最新的代码到本地
+ 拉取更新 git pull 使用场景： 当远程仓库有更新的时候（有人提交了新的代码的时候），我们可以使用git pull 拉取到最新的代码到本地
 返回结果
-创建新分支 git checkout 使用场景：想创建新的功能或者多人协作的时候，或者三套环境的时候（开发dev，预生产pre,生产环境prod）分开的时候，不影响其他人的使用。
+ 创建新分支 git checkout 使用场景：想创建新的功能或者多人协作的时候，或者三套环境的时候（开发dev，预生产pre,生产环境prod）分开的时候，不影响其他人的使用。
 创建新分支的方式有两种，基于本地的分支创建和基于远程的分支创建，其实这两者没有什么太大的区别。
 基于本地的分支创建 在当前的分支拉取新分支
 命令行
 示例
-将本地分支推送到远程
-命令行
-示例
-基于远端的新分支 命令行
-示例</description>
+ 将本地分支推送到远程</description>
     </item>
     
     <item>

@@ -5,7 +5,7 @@
     <link>https://lihui.net/tags/curl/</link>
     <description>Recent content in CURL on lihui</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Fri, 25 Sep 2020 00:00:28 +0000</lastBuildDate><atom:link href="https://lihui.net/tags/curl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CURL学习教程</title>
@@ -20,8 +20,8 @@
 命令行：
 示例
 返回结果：（因为太多了只是截取了一小部分
-指定用户代理 何为用户代理 当我们使用浏览器等发起网络请求中，就自动的带上浏览器的用户代理，比如我们使用浏览器请求http://lihui.net的时候,使用chrome请求的时候如下图
-最下面的一行，即是用户代理
+ 指定用户代理 何为用户代理 当我们使用浏览器等发起网络请求中，就自动的带上浏览器的用户代理，比如我们使用浏览器请求http://lihui.net的时候,使用chrome请求的时候如下图
+ 最下面的一行，即是用户代理
 在curl加入-A 参数即可以指定用户的user-agent
 那问题来了 curl 不指定user-agent的时候是什么呢 当不指定user-agent的时候默认的为curl/{{version}}
 如何去除呢 可以使用下面的命令可以将user-agent去除
@@ -29,7 +29,7 @@
 命令行如下图所示 下面的命令会向example.com 发送名为A 值为B的cookie 如果要发送多个cookie 要以;分割（都在“”内）
 示例
 返回结果
-因为我的网站没有设置相关的cookie认证 等操作，因此返回的页面是和上面的一样的。
+ 因为我的网站没有设置相关的cookie认证 等操作，因此返回的页面是和上面的一样的。
 我们可以发送cookie文件到远端的网站
 发送cookie文件
 命令行

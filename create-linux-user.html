@@ -1,180 +1,276 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
+<html lang="zh-CN">
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     
-    <title>[Linux系列]创建Linux用户 | lihui</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="前言 如果直接在Linux中使用root账户,真的十分危险,root拥有最高的权限,一方面如果安装其他的软件,虽然说是畅通无阻,但是与之同时带来的问题是,如果一旦账户让其他人拿到,岂不是很危险,因此推荐采用先创建的账户进入,特殊的时候采用切换到root以保证服务器的安全.
-步骤 创建用户 创建用户是一个重要的问题 当然也特别的简单
-为用户设定密码
-一般推荐是新的服务器首先创建新的组,再在组的基础上创建新的用户,这样子的话比较稳妥,
-创建用户组 命令行
-如果现在是root账户 且命令行前的是#(sharp) 可以直接使用
-示例:
-查看所有的用户组
-返回信息：(一般不要截这张图，这张图会暴露你所有的用户组，我这是开发测试机器，随时重置系统所以无所谓)
-创建一个新用户到用户组中 命令行
-示例：
-检测是否生效
-返回信息：
-总结 创建用户的目的在于什么呢？ 有的是不同的用户操作不同的内容，将用户相互隔离，有的是为了安全起见，就和操作系统一样，如果都是一个root，一个新手 用户直接rm了 岂不是很恐怖，而且也极大的保护了用户的内容不被其他人看到。">
-    <meta name="generator" content="Hugo 0.94.2" />
+    <meta property="og:site_name" content="lihui">
+    <meta property="og:type" content="article">
+
     
-    
-    
-    
-      <meta name="robots" content="noindex, nofollow">
+    <meta property="og:image" content="https://lihui.net//">
+    <meta property="twitter:image" content="https://lihui.net//" />
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
-
-
-
-    
-    
-    
-      
-
-    
-
-    
-    
+    <meta name="title" content="[Linux系列]创建Linux用户" />
     <meta property="og:title" content="[Linux系列]创建Linux用户" />
-<meta property="og:description" content="前言 如果直接在Linux中使用root账户,真的十分危险,root拥有最高的权限,一方面如果安装其他的软件,虽然说是畅通无阻,但是与之同时带来的问题是,如果一旦账户让其他人拿到,岂不是很危险,因此推荐采用先创建的账户进入,特殊的时候采用切换到root以保证服务器的安全.
-步骤 创建用户 创建用户是一个重要的问题 当然也特别的简单
-为用户设定密码
-一般推荐是新的服务器首先创建新的组,再在组的基础上创建新的用户,这样子的话比较稳妥,
-创建用户组 命令行
-如果现在是root账户 且命令行前的是#(sharp) 可以直接使用
-示例:
-查看所有的用户组
-返回信息：(一般不要截这张图，这张图会暴露你所有的用户组，我这是开发测试机器，随时重置系统所以无所谓)
-创建一个新用户到用户组中 命令行
-示例：
-检测是否生效
-返回信息：
-总结 创建用户的目的在于什么呢？ 有的是不同的用户操作不同的内容，将用户相互隔离，有的是为了安全起见，就和操作系统一样，如果都是一个root，一个新手 用户直接rm了 岂不是很恐怖，而且也极大的保护了用户的内容不被其他人看到。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://lihui.net/create-linux-user.html" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-09-26T15:46:58+00:00" />
-<meta property="article:modified_time" content="2020-09-26T15:46:58+00:00" />
-
-<meta itemprop="name" content="[Linux系列]创建Linux用户">
-<meta itemprop="description" content="前言 如果直接在Linux中使用root账户,真的十分危险,root拥有最高的权限,一方面如果安装其他的软件,虽然说是畅通无阻,但是与之同时带来的问题是,如果一旦账户让其他人拿到,岂不是很危险,因此推荐采用先创建的账户进入,特殊的时候采用切换到root以保证服务器的安全.
-步骤 创建用户 创建用户是一个重要的问题 当然也特别的简单
-为用户设定密码
-一般推荐是新的服务器首先创建新的组,再在组的基础上创建新的用户,这样子的话比较稳妥,
-创建用户组 命令行
-如果现在是root账户 且命令行前的是#(sharp) 可以直接使用
-示例:
-查看所有的用户组
-返回信息：(一般不要截这张图，这张图会暴露你所有的用户组，我这是开发测试机器，随时重置系统所以无所谓)
-创建一个新用户到用户组中 命令行
-示例：
-检测是否生效
-返回信息：
-总结 创建用户的目的在于什么呢？ 有的是不同的用户操作不同的内容，将用户相互隔离，有的是为了安全起见，就和操作系统一样，如果都是一个root，一个新手 用户直接rm了 岂不是很恐怖，而且也极大的保护了用户的内容不被其他人看到。"><meta itemprop="datePublished" content="2020-09-26T15:46:58+00:00" />
-<meta itemprop="dateModified" content="2020-09-26T15:46:58+00:00" />
-<meta itemprop="wordCount" content="26">
-<meta itemprop="keywords" content="Linux," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[Linux系列]创建Linux用户"/>
-<meta name="twitter:description" content="前言 如果直接在Linux中使用root账户,真的十分危险,root拥有最高的权限,一方面如果安装其他的软件,虽然说是畅通无阻,但是与之同时带来的问题是,如果一旦账户让其他人拿到,岂不是很危险,因此推荐采用先创建的账户进入,特殊的时候采用切换到root以保证服务器的安全.
-步骤 创建用户 创建用户是一个重要的问题 当然也特别的简单
-为用户设定密码
-一般推荐是新的服务器首先创建新的组,再在组的基础上创建新的用户,这样子的话比较稳妥,
-创建用户组 命令行
-如果现在是root账户 且命令行前的是#(sharp) 可以直接使用
-示例:
-查看所有的用户组
-返回信息：(一般不要截这张图，这张图会暴露你所有的用户组，我这是开发测试机器，随时重置系统所以无所谓)
-创建一个新用户到用户组中 命令行
-示例：
-检测是否生效
-返回信息：
-总结 创建用户的目的在于什么呢？ 有的是不同的用户操作不同的内容，将用户相互隔离，有的是为了安全起见，就和操作系统一样，如果都是一个root，一个新手 用户直接rm了 岂不是很恐怖，而且也极大的保护了用户的内容不被其他人看到。"/>
-
-	
-  </head>
-
-  <body class="ma0 avenir bg-near-white">
+    <meta property="twitter:title" content="[Linux系列]创建Linux用户" />
+    
 
     
-   
-  
+    <meta name="description" content="">
+    <meta property="og:description" content="" />
+    <meta property="twitter:description" content="" />
+    
 
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
-      
-        lihui
-      
-    </a>
-    <div class="flex-l items-center">
-      
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
 
-      
-      
-<div class="ananke-socials">
-  
-</div>
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>[Linux系列]创建Linux用户-</title>
+
+    <link rel="canonical" href="/create-linux-user.html">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">lihui</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/cli%E5%BA%94%E7%94%A8">cli应用</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/docker">docker</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/git%E7%B3%BB%E5%88%97">git系列</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/linux">linux</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/shell">shell</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/uncategorized">uncategorized</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E4%BB%8E0%E5%88%B01">从0到1</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96">博客优化</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%90%84%E7%B3%BB%E5%88%97%E6%80%BB%E7%AB%A0%E8%8A%82">各系列总章节</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%91%A8%E5%B9%B4%E6%80%BB%E7%BB%93">周年总结</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%AE%89%E5%85%A8">安全</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93">年度总结</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92">年度计划</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%84%9F%E6%83%B3">感想</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%8A%80%E6%9C%AF">技术</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91">敏捷开发</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB">未分类</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E7%9F%A5%E8%AF%86">知识</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E8%AF%BB%E4%B9%A6">读书</a>
+                        </li>
+                        
+                    
+                    
+		    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
     </div>
-  </div>
+    
 </nav>
-
-    </div>
-  </header>
-
-
-
-    <main class="pb7" role="main">
-      
-  
-  <article class="flex-l flex-wrap justify-between mw8 center ph3">
-    <header class="mt4 w-100">
-      <aside class="instapaper_ignoref b helvetica tracked">
-          
-        POSTS
-      </aside>
-      
-
-
-
-
-
-
-
-
-
-
-  <div id="sharing" class="mt3 ananke-socials">
+<script>
     
-  </div>
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
 
 
-      <h1 class="f1 athelas mt3 mb1">[Linux系列]创建Linux用户</h1>
-      
-      <p class="tracked">
-          By <strong>
-          
-              Li Hui
-          
-          </strong>
-      </p>
-      
-      
-      
-      <time class="f6 mv4 dib tracked" datetime="2020-09-26T15:46:58Z">September 26, 2020</time>
-      
 
-      
-      
-    </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="前言">前言</h1>
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/linux" title="Linux">
+                            Linux
+                        </a>
+                        
+                    </div>
+                    <h1>[Linux系列]创建Linux用户</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                Li Hui
+                             
+                            on 
+                            Saturday, September 26, 2020
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <h1 id="前言">前言</h1>
 <p>如果直接在Linux中使用root账户,真的十分危险,root拥有最高的权限,一方面如果安装其他的软件,虽然说是畅通无阻,但是与之同时带来的问题是,如果一旦账户让其他人拿到,岂不是很危险,因此推荐采用先创建的账户进入,特殊的时候采用切换到root以保证服务器的安全.</p>
 <h1 id="步骤">步骤</h1>
 <h1 id="创建用户">创建用户</h1>
@@ -193,7 +289,10 @@
 <p>查看所有的用户组</p>
 <!-- raw HTML omitted -->
 <p>返回信息：(一般不要截这张图，这张图会暴露你所有的用户组，我这是开发测试机器，随时重置系统所以无所谓)</p>
-<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/Pic/image-20200926233604960.png" alt="image-20200926233604960"></p>
+<p>
+  <img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/Pic/image-20200926233604960.png" alt="image-20200926233604960">
+
+</p>
 <h2 id="创建一个新用户到用户组中">创建一个新用户到用户组中</h2>
 <p>命令行</p>
 <!-- raw HTML omitted -->
@@ -202,58 +301,221 @@
 <p>检测是否生效</p>
 <!-- raw HTML omitted -->
 <p>返回信息：</p>
-<p><img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/Pic/2KUmgT.png" alt="2KUmgT"></p>
+<p>
+  <img src="https://image-cdn-1253731526.cos.ap-beijing.myqcloud.com/Pic/2KUmgT.png" alt="2KUmgT">
+
+</p>
 <h1 id="总结">总结</h1>
 <p>创建用户的目的在于什么呢？ 有的是不同的用户操作不同的内容，将用户相互隔离，有的是为了安全起见，就和操作系统一样，如果都是一个root，一个新手 用户直接rm了 岂不是很恐怖，而且也极大的保护了用户的内容不被其他人看到。</p>
-<ul class="pa0">
-  
-   <li class="list di">
-     <a href="/tags/linux" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Linux</a>
-   </li>
-  
-</ul>
-<div class="mt6 instapaper_ignoref">
-      
-      
-      </div>
+
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/learn-curl.html" data-toggle="tooltip" data-placement="top" title="CURL学习教程">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/one-kanban-day.html" data-toggle="tooltip" data-placement="top" title="使用Kanban工作的第一天">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+
+                
+                
+            </div>
+        </div>
     </div>
-
-    <aside class="w-30-l mt6-l">
-
+</article>
 
 
 
-  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
-    <p class="f5 b mb3">Related</p>
-    <ul class="pa0 list">
-	   
-	     <li  class="mb2">
-          <a href="/change-ssh-port.html">[Linux系列]修改SSH端口 防止端口扫描</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/linux-change-hostname.html">[linux系列] 修改主机用户名</a>
-        </li>
-	    
-    </ul>
-</div>
 
-</aside>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                    
 
-  </article>
+                    
+                    
+                    
 
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lihui.net/" >
-    &copy;  lihui 2022 
-  </a>
-    <div>
-<div class="ananke-socials">
-  
-</div></div>
-  </div>
+                    
+
+		    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; lihui 2022
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
 </footer>
 
-  </body>
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+</body>
 </html>

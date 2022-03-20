@@ -5,7 +5,7 @@
     <link>https://lihui.net/tags/ssh/</link>
     <description>Recent content in SSH on lihui</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Tue, 22 Sep 2020 00:00:39 +0000</lastBuildDate><atom:link href="https://lihui.net/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[安全系列]生成ssh证书</title>
@@ -16,7 +16,7 @@
       <description>前言 生成ssh证书有什么作用，首先可以快速的登陆服务器，无需每次数输入密码，只需要配置一次ssh证书即可，即可以直接通过ssh登陆证书，借此用处我们可以使用ssh证书对git仓库进行操作，无需要每次上载的时候都需要输入密码，输密码想想都麻烦，再说谁不想简单一点呢？
 而且这步骤很简单。此处记录以下指令，以便后续查看。
 内容 因为本步骤记录的是生成证书的代码 这就很简单了，不需要太多的代码，生成证书的前置条件是需要有openssh.Linux/Mac预置了相关的软件，Windows用户只需要安装Git即可。https://git-scm.com/注： 自版本1803起，Windows 10中已包含基于OpenSSH的客户端和服务器程序。默认情况下，SSH客户端和密钥代理已启用并可用，并且SSH服务器是可选的按需功能。
-图源：wikipedia
+ 图源：wikipedia
 最重要的步骤：生成证书 可以生成不带邮箱的和带邮箱，下面先给出带邮箱的，而后给一个不带邮箱的
 带邮箱的(来源：https://docs.github.com/cn/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 执行该命令后会显示你的要储存的位置

@@ -5,7 +5,7 @@
     <link>https://lihui.net/tags/cli/</link>
     <description>Recent content in CLI on lihui</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Thu, 24 Sep 2020 00:00:14 +0000</lastBuildDate><atom:link href="https://lihui.net/tags/cli/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[创造CLI系列]NodeJS环境搭建</title>
@@ -16,15 +16,15 @@
       <description>前言 前面我们看了cli应用的好处和方便之处（不用左右点击，当然方便也是相对的，无非是将任务交给了谁，这其实就和记录软件快捷键和使用鼠标进行层级选择一样，其实都可以实现同样的功能，只是渠道不一样罢了），本问我们开始创建我们的第一个CLI应用，第一步搭建所需要的环境，本系列预估使用NodeJS进行搭建，估计后期会尝试使用Go进行搭建，本文章主要记录NodeJS的安装
 步骤 写作本文的时候采用的是Mac 电脑，Windows电脑更为简单，一样的道理
 下载软件 上述的两个位置都可以下载 本文章采用下面的箭头所指的12.18.4 诶 我记得当时的稳定版本还是8
-然后和其他的安装器一样安装即可(一步一步往下走即可)
-校验是否成功 打开命令行工具 需要检测node和npm是否生效
+ 然后和其他的安装器一样安装即可(一步一步往下走即可)
+   校验是否成功 打开命令行工具 需要检测node和npm是否生效
 输入
 返回结果如下
-当我们看到返回的 v**.**.*的时候证明我们已经安装好了NodeJS的环境
+ 当我们看到返回的 v**.**.*的时候证明我们已经安装好了NodeJS的环境
 检测npm 是否生效
 命令行
 是否生效和上面的类似 返回结果如下图
-总结 NodeJS的环境还是比较简单进行安装的，电脑上也不需要多少配置，今天就算是项目开始启动了，开始创建第一个CLI应用。</description>
+ 总结 NodeJS的环境还是比较简单进行安装的，电脑上也不需要多少配置，今天就算是项目开始启动了，开始创建第一个CLI应用。</description>
     </item>
     
     <item>
@@ -36,15 +36,13 @@
       <description>前言 不久前 GitHub发布了自己的CLI应用，不得不多说，在微软收购GitHub迎来的大的进步，近期出现了很多很多的大动作，发布CLI应用，发布移动端的应用等等，虽然不一定和微软有必然关系，不过GitHub最近确实不错。本期主要是学习GitHub CLI 的应用，并分析GitHub CLI的优缺点。
 问题前置： GitHub api 好像不是那么好连接 要想办法的。
 内容 首先展示GitHub CLI 的功能 支持整个的工作流（处理issue 拉取请求 check 发行 和更多） 脚本和个性化 商业同样适用 代码开源
-首先我们来进行安装 本次采用MacBook来安装 命令如下：
+ 首先我们来进行安装 本次采用MacBook来安装 命令如下：
  此处因为某些原因brew的下载速度不是很理想，可以采用换用清华的源进行调整https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/其中可能会遇到一些其他的问题 比如brew link gh 显示权限不足 可以 chmod 77 {{提示的路径}} 而后再次运行 brew link gh即可
  安装完成后即可以使用
 返回结果
 使用CLI 登陆 命令行
-   获取的token     1. 登陆GitHub的网站 设置（setting）-&amp;gt; 开发者-&amp;gt;    在此处生成token 然后给予相应的权限（推荐给予部分权限，熟练者可以给予全部权限，权限问题，很严重的呀）
-本文示例中 我只给予了token仓库和读组织的的权限（CLI 应用要求的最小的权限），其他的权限都没有给，应该此次使用不会涉及到太多其他方面的问题。
-然后点击生成token 因为token只保留一次 记得要保存（安全期间可以不保存，毕竟连你都不知道，其他人更不知道了）
-进入登陆环节 返回结果</description>
+   获取的token     1. 登陆GitHub的网站 设置（setting）-&amp;gt; 开发者-&amp;gt;       在此处生成token 然后给予相应的权限（推荐给予部分权限，熟练者可以给予全部权限，权限问题，很严重的呀）
+ 本文示例中 我只给予了token仓库和读组织的的权限（CLI 应用要求的最小的权限），其他的权限都没有给，应该此次使用不会涉及到太多其他方面的问题。</description>
     </item>
     
     <item>
@@ -54,7 +52,7 @@
       
       <guid>https://lihui.net/cli-collection.html</guid>
       <description>前言 在以前的文章中，写了一部分cli应用和GUI应用的好处和坏处，以前的我认为使用gui应用是一件轻松的事情，只需要简单的用鼠标点击几下，就可以完成需要的操作，为何还要去学习上个世纪的命令行呢，学习命令行会好用吗。但是现在的我开始悄无声息地喜欢上了命令行，重复的工作直接使用命令行，就会变得轻松起来，双手不必离开键盘就可以将所有的事情都办了，而且命令行是一件酷酷的事情。
-图片来源：https://www.avast.com/c-hacker内容 不出意外的话，我将书写一系列的文章，说明如何使用各个命令行工具，快速的使用命令行操作我们需要操作的事情，并对其中的优势进行分析和总结。
+ 图片来源：https://www.avast.com/c-hacker内容 不出意外的话，我将书写一系列的文章，说明如何使用各个命令行工具，快速的使用命令行操作我们需要操作的事情，并对其中的优势进行分析和总结。
 写这篇文章时候我们想到的CLI的应用（我在日常生活中可能会用到的）有这些，对这些进行一些说明。
    应用名称 应用简评 应用网站 应用说明博文     Github CLI(gh) 操作使用GitHub https://cli.github.com/    wordpress CLI(wp) 操作使用Wordpress https://wp-cli.org/    Rancher CLI 操作使用rancher https://rancher.com/docs/rancher/v2.x/en/cli/                 还有一些CLI应用也是很棒的，但是鉴于时间因素，无法一一的进行说明分析，暂时列到下面，有兴趣的可以尝试。可能不全欢迎进行添加。
    应用名称 应用简评 应用网站     Vue CLI vue.js 开发的标准工具 https://cli.vuejs.org/   Angular CLI Angular开发的标准工具 https://cli.</description>
