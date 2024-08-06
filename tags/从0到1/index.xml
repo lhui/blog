@@ -4,28 +4,16 @@
     <title>从0到1 on lihui</title>
     <link>https://lihui.net/tags/%E4%BB%8E0%E5%88%B01/</link>
     <description>Recent content in 从0到1 on lihui</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 24 Sep 2020 00:00:14 +0000</lastBuildDate><atom:link href="https://lihui.net/tags/%E4%BB%8E0%E5%88%B01/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Sep 2020 00:00:14 +0000</lastBuildDate>
+    <atom:link href="https://lihui.net/tags/%E4%BB%8E0%E5%88%B01/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[创造CLI系列]NodeJS环境搭建</title>
       <link>https://lihui.net/create-cli-application-1.html</link>
       <pubDate>Thu, 24 Sep 2020 00:00:14 +0000</pubDate>
-      
       <guid>https://lihui.net/create-cli-application-1.html</guid>
-      <description>前言 前面我们看了cli应用的好处和方便之处（不用左右点击，当然方便也是相对的，无非是将任务交给了谁，这其实就和记录软件快捷键和使用鼠标进行层级选择一样，其实都可以实现同样的功能，只是渠道不一样罢了），本问我们开始创建我们的第一个CLI应用，第一步搭建所需要的环境，本系列预估使用NodeJS进行搭建，估计后期会尝试使用Go进行搭建，本文章主要记录NodeJS的安装
-步骤 写作本文的时候采用的是Mac 电脑，Windows电脑更为简单，一样的道理
-下载软件 上述的两个位置都可以下载 本文章采用下面的箭头所指的12.18.4 诶 我记得当时的稳定版本还是8
- 然后和其他的安装器一样安装即可(一步一步往下走即可)
-   校验是否成功 打开命令行工具 需要检测node和npm是否生效
-输入
-返回结果如下
- 当我们看到返回的 v**.**.*的时候证明我们已经安装好了NodeJS的环境
-检测npm 是否生效
-命令行
-是否生效和上面的类似 返回结果如下图
- 总结 NodeJS的环境还是比较简单进行安装的，电脑上也不需要多少配置，今天就算是项目开始启动了，开始创建第一个CLI应用。</description>
+      <description>前言 前面我们看了cli应用的好处和方便之处（不用左右点击，当然方便也是相对的，无非是将任务交给了谁，这其实就和记录软件快捷键和使用鼠标进行层级选择一样，其实都可以实现同样的功能，只是渠道不一样罢了），本问我们开始创建我们的第一个CLI应用，第一步搭建所需要的环境，本系列预估使用NodeJS进行搭建，估计后期会尝试使用Go进行搭建，本文章主要记录NodeJS的安装&#xA;步骤 写作本文的时候采用的是Mac 电脑，Windows电脑更为简单，一样的道理&#xA;下载软件 上述的两个位置都可以下载 本文章采用下面的箭头所指的12.18.4 诶 我记得当时的稳定版本还是8&#xA;然后和其他的安装器一样安装即可(一步一步往下走即可)&#xA;校验是否成功 打开命令行工具 需要检测node和npm是否生效&#xA;输入&#xA;返回结果如下&#xA;当我们看到返回的 v**.**.*的时候证明我们已经安装好了NodeJS的环境&#xA;检测npm 是否生效&#xA;命令行&#xA;是否生效和上面的类似 返回结果如下图&#xA;总结 NodeJS的环境还是比较简单进行安装的，电脑上也不需要多少配置，今天就算是项目开始启动了，开始创建第一个CLI应用。</description>
     </item>
-    
   </channel>
 </rss>

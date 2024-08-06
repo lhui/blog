@@ -4,37 +4,16 @@
     <title>技术 on lihui</title>
     <link>https://lihui.net/categories/%E6%8A%80%E6%9C%AF/</link>
     <description>Recent content in 技术 on lihui</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 02 Jan 2022 15:56:05 +0000</lastBuildDate><atom:link href="https://lihui.net/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jan 2022 15:56:05 +0000</lastBuildDate>
+    <atom:link href="https://lihui.net/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[SpringBoot 指南] 连接 mysql 数据库并进行增删改查测试</title>
       <link>https://lihui.net/springboot-start-mysql.html</link>
       <pubDate>Sun, 02 Jan 2022 15:56:05 +0000</pubDate>
-      
       <guid>https://lihui.net/springboot-start-mysql.html</guid>
-      <description>落库是软件开发中的重要的事情，软件接受完成请求后，对请求的结果进行落入输入库是一件很重要的事情，而本篇文章想写出的内容就是 Springboot 连接本地的数据库的使用方案，本章文章也是入门的文章，因此篇幅可能不大。
-本篇文章的主要内容有哪些呢？ 连接数据库主要分为
- 启动数据库 设置依赖 连接数据库并测试 增删改查基本功能  因此文章分为下面的三部分
-1. 启动数据库 本文章为了演示比较简便采用的是 docker 创建的数据库
-Docker 安装很容易安装，此处不再赘述 Docker 命令如何使用将单独写出 本文章只涉及几个日常命令 docker run , docker ps
-命令如下:
-命令释义：
-使用 docker ps 查看容器状态
- 使用数据库连接工具连接数据库，并创建数据库 person 和数据表 person
-建表语句
-2. 添加依赖并设置连接信息 2.1 添加依赖 在 build.gradle 中添加如下依赖
-本文采用的是最新的依赖，如果企业使用，推荐使用稳定版本
-所在位置如下:
- 点击右上角小象标志刷新依赖
- 2.2 配置连接信息 在 resources 目录下添加 application.yml 文件并添加如下配置
-3. 测试连接数据库并测试业务逻辑 3.1 查询数据库测试 代码依次如下:
-Person.java
-PersonRepository.java
-PersonService.java
-PersonController.java
-3.2 测试联通 3.2.1 启动时检测  3.</description>
+      <description>落库是软件开发中的重要的事情，软件接受完成请求后，对请求的结果进行落入输入库是一件很重要的事情，而本篇文章想写出的内容就是 Springboot 连接本地的数据库的使用方案，本章文章也是入门的文章，因此篇幅可能不大。&#xA;本篇文章的主要内容有哪些呢？ 连接数据库主要分为&#xA;启动数据库 设置依赖 连接数据库并测试 增删改查基本功能 因此文章分为下面的三部分&#xA;1. 启动数据库 本文章为了演示比较简便采用的是 docker 创建的数据库&#xA;Docker 安装很容易安装，此处不再赘述 Docker 命令如何使用将单独写出 本文章只涉及几个日常命令 docker run , docker ps&#xA;命令如下:&#xA;命令释义：&#xA;使用 docker ps 查看容器状态&#xA;使用数据库连接工具连接数据库，并创建数据库 person 和数据表 person&#xA;建表语句&#xA;2. 添加依赖并设置连接信息 2.1 添加依赖 在 build.gradle 中添加如下依赖&#xA;本文采用的是最新的依赖，如果企业使用，推荐使用稳定版本&#xA;所在位置如下:&#xA;点击右上角小象标志刷新依赖&#xA;2.2 配置连接信息 在 resources 目录下添加 application.yml 文件并添加如下配置&#xA;3. 测试连接数据库并测试业务逻辑 3.1 查询数据库测试 代码依次如下:&#xA;Person.java&#xA;PersonRepository.java&#xA;PersonService.java&#xA;PersonController.java&#xA;3.2 测试联通 3.2.1 启动时检测 3.2.2 代码检测 可以看到是返回空数组&#xA;我们在数据库中插入数据</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,62 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>react on lihui</title>
+    <title>React on lihui</title>
     <link>https://lihui.net/tags/react/</link>
-    <description>Recent content in react on lihui</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in React on lihui</description>
+    <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 07 Jan 2022 14:41:37 +0000</lastBuildDate><atom:link href="https://lihui.net/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Jan 2022 14:41:37 +0000</lastBuildDate>
+    <atom:link href="https://lihui.net/tags/react/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>React JSX语法再实践</title>
       <link>https://lihui.net/react-jsx-re-action.html</link>
       <pubDate>Fri, 07 Jan 2022 14:41:37 +0000</pubDate>
-      
       <guid>https://lihui.net/react-jsx-re-action.html</guid>
-      <description>我们上一节封装了一个按钮，这一节我们继续理解封装的概念和了解封装组件需要注意的事项
-首先我们回顾上一篇最后的代码，代码如下
-我们最终调用的形式如下所示 Button({color:&amp;lsquo;blue&amp;rsquo;, text:&amp;lsquo;Confirm&amp;rsquo;}) 进行创建，其实我们发现 Button 和 button 或者和 em 一样都可以 作为一个元素存在，我们可以以 Button 为基础创建特定属性的按钮，将其称为自定义类型的元素 或者可以称为组件元素。和上一节相同，我们可以采用 JSON 结构来描述它
-上述结构和我们文中的第一个结果，因此可以进一步的对其中的元素做封装
-比如我们对通常使用警告的颜色为红色, 但是我们红色提示的文字可能不同，此处我们封装一个危险的按钮的示例
-比如书中给了一个很好的示例
-这是一个弹出的删除账户的组件，其中有文字以及确定和取消的按钮，删除账户的组件就完成了。
-我们后面将继续介绍 JSX 的语法</description>
+      <description>我们上一节封装了一个按钮，这一节我们继续理解封装的概念和了解封装组件需要注意的事项&#xA;首先我们回顾上一篇最后的代码，代码如下&#xA;我们最终调用的形式如下所示 Button({color:&amp;lsquo;blue&amp;rsquo;, text:&amp;lsquo;Confirm&amp;rsquo;}) 进行创建，其实我们发现 Button 和 button 或者和 em 一样都可以 作为一个元素存在，我们可以以 Button 为基础创建特定属性的按钮，将其称为自定义类型的元素 或者可以称为组件元素。和上一节相同，我们可以采用 JSON 结构来描述它&#xA;上述结构和我们文中的第一个结果，因此可以进一步的对其中的元素做封装&#xA;比如我们对通常使用警告的颜色为红色, 但是我们红色提示的文字可能不同，此处我们封装一个危险的按钮的示例&#xA;比如书中给了一个很好的示例&#xA;这是一个弹出的删除账户的组件，其中有文字以及确定和取消的按钮，删除账户的组件就完成了。&#xA;我们后面将继续介绍 JSX 的语法</description>
     </item>
-    
     <item>
       <title>React 组件示例</title>
       <link>https://lihui.net/create-react-component.html</link>
       <pubDate>Thu, 06 Jan 2022 15:13:02 +0000</pubDate>
-      
       <guid>https://lihui.net/create-react-component.html</guid>
-      <description>上一节，我们使用 create-react-app 生成示例程序的代码，这一节我们详细介绍下如何进行修改代码
-看了一些 React 的书籍，其实 React 使用 JSX 语法，将程序的模块化和抽象做的很好。
-我们新建立的程序的目录如下
-关于目录结构的表述我这里直接引用 Mozilla 的描述
-目录 src 是我们花费时间最多的地方，因为它是我们 React 应用源码存放的目录。
-目录 public 包含了开发应用时浏览器会读取的文件，其中最重要的就是 index.html。React 将目录 src 中的代码嵌入这个文件，从而浏览器才能运行此文件。 index.html 中的有些内容关乎 create-react-app 的运作，因此除非你知道自己在做什么样的修改，否则不建议编辑这个文件。当然，你可以修改 index.html 中的 </description>
+      <description>上一节，我们使用 create-react-app 生成示例程序的代码，这一节我们详细介绍下如何进行修改代码&#xA;看了一些 React 的书籍，其实 React 使用 JSX 语法，将程序的模块化和抽象做的很好。&#xA;我们新建立的程序的目录如下&#xA;关于目录结构的表述我这里直接引用 Mozilla 的描述&#xA;目录 src 是我们花费时间最多的地方，因为它是我们 React 应用源码存放的目录。&#xA;目录 public 包含了开发应用时浏览器会读取的文件，其中最重要的就是 index.html。React 将目录 src 中的代码嵌入这个文件，从而浏览器才能运行此文件。 index.html 中的有些内容关乎 create-react-app 的运作，因此除非你知道自己在做什么样的修改，否则不建议编辑这个文件。当然，你可以修改 index.html 中的 </description>
     </item>
-    
     <item>
       <title>如何搭建第一个 React 程序</title>
       <link>https://lihui.net/how-to-create-first-react-app.html</link>
       <pubDate>Wed, 05 Jan 2022 14:22:22 +0000</pubDate>
-      
       <guid>https://lihui.net/how-to-create-first-react-app.html</guid>
-      <description>最近在公司中的项目中是一个 React native 开发的程序，因此就有了这个文章，搭建第一个 React 的程序。
-这个应该会很快写完，毕竟比较简单，这篇文章的目的还是尝试如何创建第一个React程序
-学习一个事物，我认为最大限度的降低初学者的成本是最重要的，毕竟创造一个新的软件为了让其他人使用，而不是让做出来的软件自己都不用。
-Mozilla 关于 JSX 语法的描述
-由于 JSX 是 HTML 和 JavaScript 的结合，因此一些开发人员认为它很直观。其他人则说它的混合特性使它变得混乱。但是，一旦熟悉了它，它将使您能够更快，更直观地构建用户界面，并使其他人一眼就能更好地理解您的代码库。
-本文分为下面几个方面 1. 环境预配置, 2. 创建并演示
-1. 环境预配置 环境预配置采用 NodeJS 环境 详情可以参考 Mozilla 安装 NodeJS 环境配置 2. 创建并演示 安装完成 nodejs 后可以使用下列命令创建项目名称为 moz-todo-react 的 React 应用
- 在刚才的 terminal 中输入以下命令
-会自动打开地址 http://localhost:3000/ , 效果如下
-未来我们会有新的章节来介绍文章的内容以及如何使用 React 进行软件开发
-实践与写作大约使用 40 分钟
-遗留问题：
- npm vs yarn 有什么不同，日常使用哪一个最好？  参考文章</description>
+      <description>最近在公司中的项目中是一个 React native 开发的程序，因此就有了这个文章，搭建第一个 React 的程序。&#xA;这个应该会很快写完，毕竟比较简单，这篇文章的目的还是尝试如何创建第一个React程序&#xA;学习一个事物，我认为最大限度的降低初学者的成本是最重要的，毕竟创造一个新的软件为了让其他人使用，而不是让做出来的软件自己都不用。&#xA;Mozilla 关于 JSX 语法的描述&#xA;由于 JSX 是 HTML 和 JavaScript 的结合，因此一些开发人员认为它很直观。其他人则说它的混合特性使它变得混乱。但是，一旦熟悉了它，它将使您能够更快，更直观地构建用户界面，并使其他人一眼就能更好地理解您的代码库。&#xA;本文分为下面几个方面 1. 环境预配置, 2. 创建并演示&#xA;1. 环境预配置 环境预配置采用 NodeJS 环境 详情可以参考 Mozilla 安装 NodeJS 环境配置 2. 创建并演示 安装完成 nodejs 后可以使用下列命令创建项目名称为 moz-todo-react 的 React 应用&#xA;在刚才的 terminal 中输入以下命令&#xA;会自动打开地址 http://localhost:3000/ , 效果如下&#xA;未来我们会有新的章节来介绍文章的内容以及如何使用 React 进行软件开发&#xA;实践与写作大约使用 40 分钟&#xA;遗留问题：&#xA;npm vs yarn 有什么不同，日常使用哪一个最好？ 参考文章&#xA;https://developer.mozilla.org/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started</description>
     </item>
-    
   </channel>
 </rss>

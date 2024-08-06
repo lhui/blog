@@ -4,126 +4,44 @@
     <title>Git系列 on lihui</title>
     <link>https://lihui.net/tags/git%E7%B3%BB%E5%88%97/</link>
     <description>Recent content in Git系列 on lihui</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 15 Sep 2020 14:02:14 +0000</lastBuildDate><atom:link href="https://lihui.net/tags/git%E7%B3%BB%E5%88%97/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Sep 2020 14:02:14 +0000</lastBuildDate>
+    <atom:link href="https://lihui.net/tags/git%E7%B3%BB%E5%88%97/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Git教程系列]基础教程5 解决修改错分支的问题</title>
       <link>https://lihui.net/git-5-reset-problem.html</link>
       <pubDate>Tue, 15 Sep 2020 14:02:14 +0000</pubDate>
-      
       <guid>https://lihui.net/git-5-reset-problem.html</guid>
-      <description>前言 千辛万苦修改完成了代码，当要提交的时候或者提交后，才发现代码写错了分支，直接在master分支做了修改，哎，千辛万苦写的代码不能扔啊，咋办，下面记录一下我修改的过程。
-步骤 如果没有提交(commit) 之所以将这个提到前面，是因为很多情况下，我们都会在写代码的时候忘情的写代码，提价的时候（尤其是使用工具的时候，会不自觉的看一下相应的分支，也有可能是bash的提醒）
-此时 有三个步骤 将修改的代码放入stash区 切换分支 从stash中取出来，这时候使用stash和使用栈类似
-问题最初的情况 （不巧的是在master分支对hello.txt进行了修改）
- 直接将所有代码一次写上吧
-返回结果 此时我们已经将修改的结果 转移到了dev分支
- 如果已经进行了提交commit 此时需要多一个步骤 需要回退到上一个分支(或者需要回退到指定的分支)
-回退到上个commit
-回退到指定分支
-其他的和上面的一致
-操作如下图所示
-    已经提交到远程仓库（github/gitlab etc） Emm.. 这个也有两种情况，无私人信息和有私人信息，尤其是把个人的私钥上传了，如果不撤回来的话，那后果好像很严重的。
-无私人信息 此种情况还比较好，不影响大碍，可以进行反向提交，将上一次的代码如何提交的如何删除即可
-此时本地多了一条commit 将上次的提交内容进行反向提交 即增加了一条删除的commit信息
-此时在提交至远程即可
-有私人信息 此种情况非常非常糟糕，一旦被其他人所使用，后果不堪设想。(如果此篇文章有幸被你看到一定要注意)
-    总结 通过上面的步骤，我们可以将各种情况的git信息进行修改，如果有不全面的，欢迎进行留言。
-参考文章：
- [https://gorden5566.com/post/1010.html](  </description>
+      <description>前言 千辛万苦修改完成了代码，当要提交的时候或者提交后，才发现代码写错了分支，直接在master分支做了修改，哎，千辛万苦写的代码不能扔啊，咋办，下面记录一下我修改的过程。&#xA;步骤 如果没有提交(commit) 之所以将这个提到前面，是因为很多情况下，我们都会在写代码的时候忘情的写代码，提价的时候（尤其是使用工具的时候，会不自觉的看一下相应的分支，也有可能是bash的提醒）&#xA;此时 有三个步骤 将修改的代码放入stash区 切换分支 从stash中取出来，这时候使用stash和使用栈类似&#xA;问题最初的情况 （不巧的是在master分支对hello.txt进行了修改）&#xA;直接将所有代码一次写上吧&#xA;返回结果 此时我们已经将修改的结果 转移到了dev分支&#xA;如果已经进行了提交commit 此时需要多一个步骤 需要回退到上一个分支(或者需要回退到指定的分支)&#xA;回退到上个commit&#xA;回退到指定分支&#xA;其他的和上面的一致&#xA;操作如下图所示&#xA;已经提交到远程仓库（github/gitlab etc） Emm.. 这个也有两种情况，无私人信息和有私人信息，尤其是把个人的私钥上传了，如果不撤回来的话，那后果好像很严重的。&#xA;无私人信息 此种情况还比较好，不影响大碍，可以进行反向提交，将上一次的代码如何提交的如何删除即可&#xA;此时本地多了一条commit 将上次的提交内容进行反向提交 即增加了一条删除的commit信息&#xA;此时在提交至远程即可&#xA;有私人信息 此种情况非常非常糟糕，一旦被其他人所使用，后果不堪设想。(如果此篇文章有幸被你看到一定要注意)&#xA;总结 通过上面的步骤，我们可以将各种情况的git信息进行修改，如果有不全面的，欢迎进行留言。&#xA;参考文章：&#xA;[https://gorden5566.com/post/1010.html]( </description>
     </item>
-    
     <item>
       <title>[Git系列教程]基本使用4 Git log的使用</title>
       <link>https://lihui.net/git%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A84-git-log%E7%9A%84%E4%BD%BF%E7%94%A8.html</link>
       <pubDate>Sun, 13 Sep 2020 13:04:32 +0000</pubDate>
-      
       <guid>https://lihui.net/git%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A84-git-log%E7%9A%84%E4%BD%BF%E7%94%A8.html</guid>
-      <description>前言 如果只是使用Git 打标签 推送，合并 无法查看相关的信息，那使用Git的作用可就是太无聊了，使用起来也不是很方便。使用Git log 进行日志的查看是非常有必要的，也是必须的。
-本文章的主要参考资料是git 的官方教程 https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2步骤 无参数版本 命令行 这是最简单的显示，同时也是最全的显示
-返回结果：此处我们可以清晰地看到所有的提交日志 比如commit记录 commit的作者的名字 邮箱 日期 commit的信息 合并的来源 等等
- 参数版本 参数对于日志的显示很重要，使用参数可以快速的查找出自己想要查找的内容，尤其是我们只想要一部分信息的时候
-命令行
-Git 的常用选项[摘自上述网址的表格]
-&amp;lt;th style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 说明 &amp;lt;/th&amp;gt;  &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 按补丁格式显示每个提交引入的差异。 &amp;lt;/td&amp;gt;  &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 显示每次提交的文件修改统计信息。 &amp;lt;/td&amp;gt;  &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 只显示 --stat 中最后的行数修改添加移除统计。 &amp;lt;/td&amp;gt;  &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 仅在提交信息后显示已修改的文件清单。 &amp;lt;/td&amp;gt;  &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 显示新增、修改、删除的文件清单。 &amp;lt;/td&amp;gt;  &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 仅显示 SHA-1 校验和所有 40 个字符中的前几个字符。 &amp;lt;/td&amp;gt;  &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 使用较短的相对时间而不是完整格式显示日期（比如“2 weeks ago”）。 &amp;lt;/td&amp;gt;  &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 在日志旁以 ASCII 图形显示分支与合并历史。 &amp;lt;/td&amp;gt;  &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 使用其他格式显示历史提交信息。可用的选项包括 oneline、short、full、fuller 和 format（用来定义自己的格式）。 &amp;lt;/td&amp;gt;  &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; &amp;lt;code&amp;gt;--pretty=oneline --abbrev-commit&amp;lt;/code&amp;gt; 合用的简写。 [也就是说可以直接在pretty中写或者直接在使用这一行命令] &amp;lt;/td&amp;gt;  示例</description>
+      <description>前言 如果只是使用Git 打标签 推送，合并 无法查看相关的信息，那使用Git的作用可就是太无聊了，使用起来也不是很方便。使用Git log 进行日志的查看是非常有必要的，也是必须的。&#xA;本文章的主要参考资料是git 的官方教程 https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2&#xA;步骤 无参数版本 命令行 这是最简单的显示，同时也是最全的显示&#xA;返回结果：此处我们可以清晰地看到所有的提交日志 比如commit记录 commit的作者的名字 邮箱 日期 commit的信息 合并的来源 等等&#xA;参数版本 参数对于日志的显示很重要，使用参数可以快速的查找出自己想要查找的内容，尤其是我们只想要一部分信息的时候&#xA;命令行&#xA;Git 的常用选项[摘自上述网址的表格]&#xA;&amp;lt;th style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 说明 &amp;lt;/th&amp;gt; &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 按补丁格式显示每个提交引入的差异。 &amp;lt;/td&amp;gt; &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 显示每次提交的文件修改统计信息。 &amp;lt;/td&amp;gt; &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 只显示 --stat 中最后的行数修改添加移除统计。 &amp;lt;/td&amp;gt; &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 仅在提交信息后显示已修改的文件清单。 &amp;lt;/td&amp;gt; &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 显示新增、修改、删除的文件清单。 &amp;lt;/td&amp;gt; &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 仅显示 SHA-1 校验和所有 40 个字符中的前几个字符。 &amp;lt;/td&amp;gt; &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 使用较短的相对时间而不是完整格式显示日期（比如“2 weeks ago”）。 &amp;lt;/td&amp;gt; &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 在日志旁以 ASCII 图形显示分支与合并历史。 &amp;lt;/td&amp;gt; &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; 使用其他格式显示历史提交信息。可用的选项包括 oneline、short、full、fuller 和 format（用来定义自己的格式）。 &amp;lt;/td&amp;gt; &amp;lt;td style=&amp;quot;text-align: left;&amp;quot;&amp;gt; &amp;lt;code&amp;gt;--pretty=oneline --abbrev-commit&amp;lt;/code&amp;gt; 合用的简写。 [也就是说可以直接在pretty中写或者直接在使用这一行命令] &amp;lt;/td&amp;gt; 示例</description>
     </item>
-    
     <item>
       <title>[Git系列教程]Git基础操作3</title>
       <link>https://lihui.net/git%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8Bgit%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C3.html</link>
       <pubDate>Sat, 12 Sep 2020 15:01:01 +0000</pubDate>
-      
       <guid>https://lihui.net/git%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8Bgit%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C3.html</guid>
-      <description>前言 前两章节 我们详细说了Git基础的信息配置和证书的确认，还有简单的项目项目的创建，分支的建立和分支的拉取和分支的推送，本章节，主要说明的是分支的合并。
-本次采用的分支还是上次使用的仓库 https://github.com/lihuiocean/hello-git)步骤 分支合并 使用场景： 当有不同的人进行开发的时候，或者不同的功能进行开发的时候，即将进入测试或者预生产或者生产的时候，我们就会对不同的分支进行合并，从而合并相应的功能，开始测试或者发布。
-命令行
-切换到目的分支（最终你想要的分支上），使用下述的命令进行合并
-命令行
-示例
-返回信息
- 冲突合并和解决后续更新。</description>
+      <description>前言 前两章节 我们详细说了Git基础的信息配置和证书的确认，还有简单的项目项目的创建，分支的建立和分支的拉取和分支的推送，本章节，主要说明的是分支的合并。&#xA;本次采用的分支还是上次使用的仓库 https://github.com/lihuiocean/hello-git)&#xA;步骤 分支合并 使用场景： 当有不同的人进行开发的时候，或者不同的功能进行开发的时候，即将进入测试或者预生产或者生产的时候，我们就会对不同的分支进行合并，从而合并相应的功能，开始测试或者发布。&#xA;命令行&#xA;切换到目的分支（最终你想要的分支上），使用下述的命令进行合并&#xA;命令行&#xA;示例&#xA;返回信息&#xA;冲突合并和解决后续更新。</description>
     </item>
-    
     <item>
       <title>[Git教程系列]基础操作2</title>
       <link>https://lihui.net/git%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C2.html</link>
       <pubDate>Fri, 11 Sep 2020 15:57:36 +0000</pubDate>
-      
       <guid>https://lihui.net/git%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C2.html</guid>
-      <description>前言 上一节，学习了Git和Github/或者其他平台连接的比较基础的使用方法，本节开始学习Git的分支的基础操作，基础操作包括，创建Git仓库git init，克隆远程分支git clone，添加到暂存（git add），提交记录（git commit），推送(push)， 拉取更新(pull) ，创建新分支(git checkout)，从远程创建新分支，推送新分支到远端。
-步骤 本文的代码地址： https://github.com/lihuiocean/hello-git)创建Git仓库 克隆远程分支 git clone 命令行的规范
-有两种规范 一种是采用https的规范，一种是采用git的规范，两种方式各有利弊，且对代码无任何差异，可以选择使用。
-https要求每次进行远程交互的时候采用账号和密码进行认证，而ssh则要求使用密钥进行认证（需要事先绑定密钥，如何绑定密钥，可以查看前一节的内容）。
-示例
-第二种
-示例
- 经过上述的两种方式的一种方式，我们可以将远程的目录clone到本地,我比较推荐下面一种写法，可以快速的将代码进行提交到远端，不用每次都输入密码。
-添加到暂存 git add 使用场景： 当我们修改文件，想将其放入版本管理系统的时候，首先使用git add {{filename}} 将文件放到暂存区域，而后对文件进行提交记录，正式加入版本管理系统
-命令行
-示例
-此时文件已经放到暂存区域(虽然没有返回信息),使用下面的命令可以看到暂存区的文件
- 其他指令 提交记录 git commit 使用场景：当我们将代码放到暂存区后想要提交到git记录中，就要使用到commit命令
-命令行
-示例
-返回结果
- 推送分支 git push 使用场景：将本地的分支推送到远端，可以让其他的人看到
-返回结果
- 拉取更新 git pull 使用场景： 当远程仓库有更新的时候（有人提交了新的代码的时候），我们可以使用git pull 拉取到最新的代码到本地
-返回结果
- 创建新分支 git checkout 使用场景：想创建新的功能或者多人协作的时候，或者三套环境的时候（开发dev，预生产pre,生产环境prod）分开的时候，不影响其他人的使用。
-创建新分支的方式有两种，基于本地的分支创建和基于远程的分支创建，其实这两者没有什么太大的区别。
-基于本地的分支创建 在当前的分支拉取新分支
-命令行
-示例
- 将本地分支推送到远程</description>
+      <description>前言 上一节，学习了Git和Github/或者其他平台连接的比较基础的使用方法，本节开始学习Git的分支的基础操作，基础操作包括，创建Git仓库git init，克隆远程分支git clone，添加到暂存（git add），提交记录（git commit），推送(push)， 拉取更新(pull) ，创建新分支(git checkout)，从远程创建新分支，推送新分支到远端。&#xA;步骤 本文的代码地址： https://github.com/lihuiocean/hello-git)&#xA;创建Git仓库 克隆远程分支 git clone 命令行的规范&#xA;有两种规范 一种是采用https的规范，一种是采用git的规范，两种方式各有利弊，且对代码无任何差异，可以选择使用。&#xA;https要求每次进行远程交互的时候采用账号和密码进行认证，而ssh则要求使用密钥进行认证（需要事先绑定密钥，如何绑定密钥，可以查看前一节的内容）。&#xA;示例&#xA;第二种&#xA;示例&#xA;经过上述的两种方式的一种方式，我们可以将远程的目录clone到本地,我比较推荐下面一种写法，可以快速的将代码进行提交到远端，不用每次都输入密码。&#xA;添加到暂存 git add 使用场景： 当我们修改文件，想将其放入版本管理系统的时候，首先使用git add {{filename}} 将文件放到暂存区域，而后对文件进行提交记录，正式加入版本管理系统&#xA;命令行&#xA;示例&#xA;此时文件已经放到暂存区域(虽然没有返回信息),使用下面的命令可以看到暂存区的文件&#xA;其他指令 提交记录 git commit 使用场景：当我们将代码放到暂存区后想要提交到git记录中，就要使用到commit命令&#xA;命令行&#xA;示例&#xA;返回结果&#xA;推送分支 git push 使用场景：将本地的分支推送到远端，可以让其他的人看到&#xA;返回结果&#xA;拉取更新 git pull 使用场景： 当远程仓库有更新的时候（有人提交了新的代码的时候），我们可以使用git pull 拉取到最新的代码到本地&#xA;返回结果&#xA;创建新分支 git checkout 使用场景：想创建新的功能或者多人协作的时候，或者三套环境的时候（开发dev，预生产pre,生产环境prod）分开的时候，不影响其他人的使用。&#xA;创建新分支的方式有两种，基于本地的分支创建和基于远程的分支创建，其实这两者没有什么太大的区别。&#xA;基于本地的分支创建 在当前的分支拉取新分支&#xA;命令行&#xA;示例&#xA;将本地分支推送到远程&#xA;命令行&#xA;示例&#xA;基于远端的新分支 命令行</description>
     </item>
-    
     <item>
       <title>[Git教程系列]Git初次配置</title>
       <link>https://lihui.net/git%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97git%E5%88%9D%E6%AC%A1%E9%85%8D%E7%BD%AE.html</link>
       <pubDate>Thu, 10 Sep 2020 15:51:27 +0000</pubDate>
-      
       <guid>https://lihui.net/git%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97git%E5%88%9D%E6%AC%A1%E9%85%8D%E7%BD%AE.html</guid>
-      <description>前沿 Git作为一个比较优秀的分支管理系统，收到很多的人的喜爱，其分布式的分支系统，可以与远端分离进行独立的开发，大大的减少了分支系统对于网络联通性的依赖。
-且其分支控制方面，轻量级，速度快备受人们所喜爱。
-因为Git的操作比较多，Git的操作分为多部分来书写，以便可以细细记录下来，官方的教程地址https://git-scm.com其中有详细的教程和软件。本文章的作为记录本人 认为重要的指令而书写。
-基本步骤 首先下载软件 此步骤比较简单，直接下载https://git-scm.com下载安装即可。 步骤比较简单，不过多赘述。
-定义自己的信息 打开命令行（terminal/bash/powershell）输入下面的命令行
-通过上述的命令行 我们就对自己的信息做了声明 每一次提交都会带着这些信息，且这些信息不可以删除（特指单独删除，删除分支o r删除commit 不算（连commit都没有了 有用户的信息也没有用了呀（😂））
-进行验证 证书的安装 为什么使用证书，使用证书有必要吗？
-使用证书可以大大的简便代提交者的工作，代码提交者无需每次提交的时候都需要登陆，只需要一次设置证书，以后所有的提交都不需要再次登陆，避免忘记密码无法提交的尴尬（逃
-其实作为命令行Mac版本和Windows版本或者Linux版本其实并无差别，毕竟都是使用的是bash或者类bash
-生成证书 命令为
-首先是选择放置的位置，保持默认即可 再是输入密钥的密码的密钥，可以输入，也可以不输入，我选择的是不输入（直接回车）。
-证书而后生成完成。
-去查找相应的证书 一般是在 用户目录下的.ssh 文件夹中 id_rsa.pub为公钥，可以给其他人，id_rsa为私钥，除了你自己其他人都不能拥有，拥有了私钥就等于有了你的授权书，可以拿着你的授权书去干其他的事情。
-将公钥复制下来，复制到GitHub等软件等ssh连接处进行粘贴，保存，此时密钥的连接就可以建立了。
-建立测试命令
-效果：
-此时输入yes 进行连接即可 而后显示连接成功的信息
-显示上述的显示证明连接成功。</description>
+      <description>前沿 Git作为一个比较优秀的分支管理系统，收到很多的人的喜爱，其分布式的分支系统，可以与远端分离进行独立的开发，大大的减少了分支系统对于网络联通性的依赖。&#xA;且其分支控制方面，轻量级，速度快备受人们所喜爱。&#xA;因为Git的操作比较多，Git的操作分为多部分来书写，以便可以细细记录下来，官方的教程地址https://git-scm.com 其中有详细的教程和软件。本文章的作为记录本人 认为重要的指令而书写。&#xA;基本步骤 首先下载软件 此步骤比较简单，直接下载https://git-scm.com 下载安装即可。 步骤比较简单，不过多赘述。&#xA;定义自己的信息 打开命令行（terminal/bash/powershell）输入下面的命令行&#xA;通过上述的命令行 我们就对自己的信息做了声明 每一次提交都会带着这些信息，且这些信息不可以删除（特指单独删除，删除分支o r删除commit 不算（连commit都没有了 有用户的信息也没有用了呀（😂））&#xA;进行验证 证书的安装 为什么使用证书，使用证书有必要吗？&#xA;使用证书可以大大的简便代提交者的工作，代码提交者无需每次提交的时候都需要登陆，只需要一次设置证书，以后所有的提交都不需要再次登陆，避免忘记密码无法提交的尴尬（逃&#xA;其实作为命令行Mac版本和Windows版本或者Linux版本其实并无差别，毕竟都是使用的是bash或者类bash&#xA;生成证书 命令为&#xA;首先是选择放置的位置，保持默认即可 再是输入密钥的密码的密钥，可以输入，也可以不输入，我选择的是不输入（直接回车）。&#xA;证书而后生成完成。&#xA;去查找相应的证书 一般是在 用户目录下的.ssh 文件夹中 id_rsa.pub为公钥，可以给其他人，id_rsa为私钥，除了你自己其他人都不能拥有，拥有了私钥就等于有了你的授权书，可以拿着你的授权书去干其他的事情。&#xA;将公钥复制下来，复制到GitHub等软件等ssh连接处进行粘贴，保存，此时密钥的连接就可以建立了。&#xA;建立测试命令&#xA;效果：&#xA;此时输入yes 进行连接即可 而后显示连接成功的信息&#xA;显示上述的显示证明连接成功。</description>
     </item>
-    
   </channel>
 </rss>

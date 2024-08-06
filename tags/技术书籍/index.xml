@@ -4,31 +4,16 @@
     <title>技术书籍 on lihui</title>
     <link>https://lihui.net/tags/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/</link>
     <description>Recent content in 技术书籍 on lihui</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 12 Jan 2021 15:59:34 +0000</lastBuildDate><atom:link href="https://lihui.net/tags/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Jan 2021 15:59:34 +0000</lastBuildDate>
+    <atom:link href="https://lihui.net/tags/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[技术书籍]JSON必知必会</title>
       <link>https://lihui.net/book-intoduction-to-json.html</link>
       <pubDate>Tue, 12 Jan 2021 15:59:34 +0000</pubDate>
-      
       <guid>https://lihui.net/book-intoduction-to-json.html</guid>
-      <description>引言 2021年1月12号 看完了 2021年的第一本书, 也是第一本技术书籍, 这本书挺简单的, 没有记录花了多长时间读完, 也就是2-3个小时吧, 11号晚上和12号晚上两个晚上读完的 对了 写这篇文章的时候 是2021-01-12 22:24.
-简短的总结一下这篇文章: &amp;ldquo;这本书介绍了 JSON是什么,可以用JSON做什么和那些别有用心的人会用它做什么&amp;rdquo;
-JSON是什么: JSON全称为 JavaScript Object Notation(JavaScript 对象表示法),虽然带有JavaScript的字样,但是和JavaScript并没有强绑定,JSON是一种信息的表示法,只不过其中的类型定义有借鉴JavaScript的地方. 简而言之 JSON是一种数据的表示方法,一般用来传输交互数据,保存配置文件等.
-可以用JSON做什么: JSON一般使用来用于传输数据和保存配置信息.
-别有用心的人会拿来做什么: 其实这一点也是我们进行安全防范的地方, 本书中讲述的主要是和数据传输相关的跨站请求伪造CSRF(cross-site request forgery，读作sea-surf) [利用新人机制进行攻击] 和注入攻击(通过像网站注入恶意代码来实现) 比如苦熬站脚本攻击(Cross-site scripting,XSS) 在使用JSON 时常见的安全漏洞通常发生在JavaScript 从服务器获取到一段JSON字符串并将其转化为JavaScript 对象时。此时如果将相应转换后的代码装载到内存中,再运行,将会产生一项不到的麻烦,毕竟谁都不知道被修改过的数据是好还是坏.
-本书的主要内容 什么是JSON JSON是一种数据交换格式,JSON独立于编程语言,JSON基于JavaScript对象字面量表示法,JSON表达数据的方式对通用的编程概念都很友好.
-表示法是指一个用于表示诸如数字或单词等数据的字符系统,比如用象形文字表示数量和什么动物
-JSON的格式 这个是重点 JSON是什么格式的,什么格式正确,什么格式重要很重要. 首先JSON是键值对(key-value), 且键值对的键需要用&amp;quot;&amp;ldquo;引起来,值可以遵循数据类型的形式,比
-JSON的键(key)中的&amp;quot;&amp;ldquo;中可以包括 &amp;rsquo; (单引号)比如 &amp;quot;Lindsay&#39;s anmail&amp;quot;:&amp;quot;cat&amp;quot; 便是合法的, 可以使用的扩展名 .json
-如下面的示例
-鞋子的示例 从上大小依次是 字符串, 字符串, 数值型, 布尔型
-书中提到了一个比较简单解释JSON中开始结束的示例如下:
-• {（左花括号）指“开始读取对象”
-• }（右花括号）指“结束读取对象”
-• [（左方括号）指“开始读取数组”</description>
+      <description>引言 2021年1月12号 看完了 2021年的第一本书, 也是第一本技术书籍, 这本书挺简单的, 没有记录花了多长时间读完, 也就是2-3个小时吧, 11号晚上和12号晚上两个晚上读完的 对了 写这篇文章的时候 是2021-01-12 22:24.&#xA;简短的总结一下这篇文章: &amp;ldquo;这本书介绍了 JSON是什么,可以用JSON做什么和那些别有用心的人会用它做什么&amp;rdquo;&#xA;JSON是什么: JSON全称为 JavaScript Object Notation(JavaScript 对象表示法),虽然带有JavaScript的字样,但是和JavaScript并没有强绑定,JSON是一种信息的表示法,只不过其中的类型定义有借鉴JavaScript的地方. 简而言之 JSON是一种数据的表示方法,一般用来传输交互数据,保存配置文件等.&#xA;可以用JSON做什么: JSON一般使用来用于传输数据和保存配置信息.&#xA;别有用心的人会拿来做什么: 其实这一点也是我们进行安全防范的地方, 本书中讲述的主要是和数据传输相关的跨站请求伪造CSRF(cross-site request forgery，读作sea-surf) [利用新人机制进行攻击] 和注入攻击(通过像网站注入恶意代码来实现) 比如苦熬站脚本攻击(Cross-site scripting,XSS) 在使用JSON 时常见的安全漏洞通常发生在JavaScript 从服务器获取到一段JSON字符串并将其转化为JavaScript 对象时。此时如果将相应转换后的代码装载到内存中,再运行,将会产生一项不到的麻烦,毕竟谁都不知道被修改过的数据是好还是坏.&#xA;本书的主要内容 什么是JSON JSON是一种数据交换格式,JSON独立于编程语言,JSON基于JavaScript对象字面量表示法,JSON表达数据的方式对通用的编程概念都很友好.&#xA;表示法是指一个用于表示诸如数字或单词等数据的字符系统,比如用象形文字表示数量和什么动物&#xA;JSON的格式 这个是重点 JSON是什么格式的,什么格式正确,什么格式重要很重要. 首先JSON是键值对(key-value), 且键值对的键需要用&amp;quot;&amp;ldquo;引起来,值可以遵循数据类型的形式,比&#xA;JSON的键(key)中的&amp;quot;&amp;ldquo;中可以包括 &amp;rsquo; (单引号)比如 &amp;quot;Lindsay&#39;s anmail&amp;quot;:&amp;quot;cat&amp;quot; 便是合法的, 可以使用的扩展名 .json&#xA;如下面的示例&#xA;鞋子的示例 从上大小依次是 字符串, 字符串, 数值型, 布尔型&#xA;书中提到了一个比较简单解释JSON中开始结束的示例如下:&#xA;• {（左花括号）指“开始读取对象”&#xA;• }（右花括号）指“结束读取对象”&#xA;• [（左方括号）指“开始读取数组”</description>
     </item>
-    
   </channel>
 </rss>

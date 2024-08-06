@@ -4,26 +4,16 @@
     <title>GitHub on lihui</title>
     <link>https://lihui.net/tags/github/</link>
     <description>Recent content in GitHub on lihui</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 21 Sep 2020 00:00:21 +0000</lastBuildDate><atom:link href="https://lihui.net/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Sep 2020 00:00:21 +0000</lastBuildDate>
+    <atom:link href="https://lihui.net/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[CLI应用学习]时间使用GitHub CLI</title>
       <link>https://lihui.net/learn-gh-cli.html</link>
       <pubDate>Mon, 21 Sep 2020 00:00:21 +0000</pubDate>
-      
       <guid>https://lihui.net/learn-gh-cli.html</guid>
-      <description>前言 不久前 GitHub发布了自己的CLI应用，不得不多说，在微软收购GitHub迎来的大的进步，近期出现了很多很多的大动作，发布CLI应用，发布移动端的应用等等，虽然不一定和微软有必然关系，不过GitHub最近确实不错。本期主要是学习GitHub CLI 的应用，并分析GitHub CLI的优缺点。
-问题前置： GitHub api 好像不是那么好连接 要想办法的。
-内容 首先展示GitHub CLI 的功能 支持整个的工作流（处理issue 拉取请求 check 发行 和更多） 脚本和个性化 商业同样适用 代码开源
- 首先我们来进行安装 本次采用MacBook来安装 命令如下：
- 此处因为某些原因brew的下载速度不是很理想，可以采用换用清华的源进行调整https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/其中可能会遇到一些其他的问题 比如brew link gh 显示权限不足 可以 chmod 77 {{提示的路径}} 而后再次运行 brew link gh即可
- 安装完成后即可以使用
-返回结果
-使用CLI 登陆 命令行
-   获取的token     1. 登陆GitHub的网站 设置（setting）-&amp;gt; 开发者-&amp;gt;       在此处生成token 然后给予相应的权限（推荐给予部分权限，熟练者可以给予全部权限，权限问题，很严重的呀）
- 本文示例中 我只给予了token仓库和读组织的的权限（CLI 应用要求的最小的权限），其他的权限都没有给，应该此次使用不会涉及到太多其他方面的问题。</description>
+      <description>前言 不久前 GitHub发布了自己的CLI应用，不得不多说，在微软收购GitHub迎来的大的进步，近期出现了很多很多的大动作，发布CLI应用，发布移动端的应用等等，虽然不一定和微软有必然关系，不过GitHub最近确实不错。本期主要是学习GitHub CLI 的应用，并分析GitHub CLI的优缺点。&#xA;问题前置： GitHub api 好像不是那么好连接 要想办法的。&#xA;内容 首先展示GitHub CLI 的功能 支持整个的工作流（处理issue 拉取请求 check 发行 和更多） 脚本和个性化 商业同样适用 代码开源&#xA;首先我们来进行安装 本次采用MacBook来安装 命令如下：&#xA;此处因为某些原因brew的下载速度不是很理想，可以采用换用清华的源进行调整https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/ 其中可能会遇到一些其他的问题 比如brew link gh 显示权限不足 可以 chmod 77 {{提示的路径}} 而后再次运行 brew link gh即可&#xA;安装完成后即可以使用&#xA;返回结果&#xA;使用CLI 登陆 命令行&#xA;获取的token 1. 登陆GitHub的网站 设置（setting）-&amp;gt; 开发者-&amp;gt; 在此处生成token 然后给予相应的权限（推荐给予部分权限，熟练者可以给予全部权限，权限问题，很严重的呀）&#xA;本文示例中 我只给予了token仓库和读组织的的权限（CLI 应用要求的最小的权限），其他的权限都没有给，应该此次使用不会涉及到太多其他方面的问题。&#xA;然后点击生成token 因为token只保留一次 记得要保存（安全期间可以不保存，毕竟连你都不知道，其他人更不知道了）&#xA;进入登陆环节 返回结果&#xA;此时选择第一个 商业服务器选择第二个&#xA;而后开始选择登陆方式[两种 第一种通过浏览器登录 第二种通过 token登陆]，我们前面申请了token 此处使用token登陆。&#xA;而后填入自己的token&#xA;注意此处最小的权限是repo和读取组织权限&#xA;此后是通过何种方式进行连接（我个人比较倾向于ssh连接方式）</description>
     </item>
-    
   </channel>
 </rss>
